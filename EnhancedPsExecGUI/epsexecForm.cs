@@ -770,5 +770,9 @@ using System.Net.Sockets;
             this.TopMost = alwaysOnTopToolStripMenuItem.Checked;
         }
 
+        private void NircmdAboutLabel_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("NirCmd is a command-line utility that allows you to do some useful tasks\nWithout displaying any user interface\n\nAnd it is required for all of the features in the Misc tab.", "NirCmd?", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

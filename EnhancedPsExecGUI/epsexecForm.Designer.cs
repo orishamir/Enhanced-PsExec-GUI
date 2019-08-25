@@ -134,6 +134,7 @@
             this.creditsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.howToUseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.nircmdAboutLabel = new System.Windows.Forms.Label();
             this.main.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.urlTab.SuspendLayout();
@@ -936,6 +937,7 @@
             // 
             // miscTab
             // 
+            this.miscTab.Controls.Add(this.nircmdAboutLabel);
             this.miscTab.Controls.Add(this.label24);
             this.miscTab.Controls.Add(this.sendKeyboardDelayBox);
             this.miscTab.Controls.Add(this.label23);
@@ -1360,9 +1362,9 @@
             // 
             // downloadNirBtn
             // 
-            this.downloadNirBtn.Location = new System.Drawing.Point(1012, 13);
+            this.downloadNirBtn.Location = new System.Drawing.Point(995, 25);
             this.downloadNirBtn.Name = "downloadNirBtn";
-            this.downloadNirBtn.Size = new System.Drawing.Size(197, 43);
+            this.downloadNirBtn.Size = new System.Drawing.Size(190, 43);
             this.downloadNirBtn.TabIndex = 1;
             this.downloadNirBtn.Text = "Download NirCmd";
             this.downloadNirBtn.UseVisualStyleBackColor = true;
@@ -1470,6 +1472,17 @@
             this.menuStrip1.Size = new System.Drawing.Size(1225, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // nircmdAboutLabel
+            // 
+            this.nircmdAboutLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nircmdAboutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.nircmdAboutLabel.Location = new System.Drawing.Point(1186, 3);
+            this.nircmdAboutLabel.Name = "nircmdAboutLabel";
+            this.nircmdAboutLabel.Size = new System.Drawing.Size(23, 22);
+            this.nircmdAboutLabel.TabIndex = 51;
+            this.nircmdAboutLabel.Text = "?";
+            this.nircmdAboutLabel.Click += new System.EventHandler(this.NircmdAboutLabel_Click);
             // 
             // epsexecForm
             // 
@@ -1624,6 +1637,7 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.NumericUpDown sendKeyboardDelayBox;
+        private System.Windows.Forms.Label nircmdAboutLabel;
     }
 }
 

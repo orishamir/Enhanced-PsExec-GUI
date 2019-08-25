@@ -33,5 +33,10 @@ namespace EnhancedPsExec
         {
             System.Diagnostics.Process.Start("https://github.com/orishamir/");
         }
+
+        private void NircmdLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.nirsoft.net/utils/nircmd.html");
+        }
     }
 }

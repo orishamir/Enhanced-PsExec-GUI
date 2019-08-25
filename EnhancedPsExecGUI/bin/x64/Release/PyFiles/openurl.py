@@ -4,9 +4,9 @@ import time
 import os
 
 # Usage: openurl -ip [ip] -u [username] -p [password] -url [url]
-print("ahahasd123")
+
 if len(sys.argv) < 7:
-    exit("Not Enough Arguments.")
+    sys.exit("Not Enough Arguments.")
 incognito = False
 new_window = False
 invisible = False
@@ -98,7 +98,6 @@ def openurl(fromFile="fileName.txt", delimiter=' '):
         return_code = p.returncode
         if return_code == 0:
             # Its in program files x86
-
             Installation_location = 'c:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
 
         else:

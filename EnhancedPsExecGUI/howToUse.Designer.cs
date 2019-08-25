@@ -51,6 +51,9 @@
             this.label17 = new System.Windows.Forms.Label();
             this.logoHowToUseLbl = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.nircmdLabel = new System.Windows.Forms.LinkLabel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -141,7 +144,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label8.Location = new System.Drawing.Point(39, 342);
+            this.label8.Location = new System.Drawing.Point(39, 346);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(210, 31);
             this.label8.TabIndex = 8;
@@ -151,7 +154,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label9.Location = new System.Drawing.Point(100, 385);
+            this.label9.Location = new System.Drawing.Point(100, 389);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(854, 22);
             this.label9.TabIndex = 9;
@@ -161,7 +164,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.textBox1.Location = new System.Drawing.Point(137, 410);
+            this.textBox1.Location = new System.Drawing.Point(137, 414);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(817, 26);
@@ -172,7 +175,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label10.Location = new System.Drawing.Point(100, 452);
+            this.label10.Location = new System.Drawing.Point(100, 456);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(669, 22);
             this.label10.TabIndex = 11;
@@ -183,7 +186,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label11.Location = new System.Drawing.Point(100, 474);
+            this.label11.Location = new System.Drawing.Point(100, 478);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(855, 22);
             this.label11.TabIndex = 12;
@@ -193,7 +196,7 @@
             // adminEnableBox
             // 
             this.adminEnableBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.adminEnableBox.Location = new System.Drawing.Point(137, 499);
+            this.adminEnableBox.Location = new System.Drawing.Point(137, 503);
             this.adminEnableBox.Multiline = true;
             this.adminEnableBox.Name = "adminEnableBox";
             this.adminEnableBox.ReadOnly = true;
@@ -204,7 +207,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label13.Location = new System.Drawing.Point(100, 567);
+            this.label13.Location = new System.Drawing.Point(100, 571);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(299, 22);
             this.label13.TabIndex = 15;
@@ -214,7 +217,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label14.Location = new System.Drawing.Point(100, 589);
+            this.label14.Location = new System.Drawing.Point(100, 593);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(950, 18);
             this.label14.TabIndex = 16;
@@ -224,7 +227,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.textBox2.Location = new System.Drawing.Point(137, 610);
+            this.textBox2.Location = new System.Drawing.Point(137, 614);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(827, 23);
@@ -236,7 +239,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label15.Location = new System.Drawing.Point(100, 647);
+            this.label15.Location = new System.Drawing.Point(100, 651);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(882, 22);
             this.label15.TabIndex = 18;
@@ -247,17 +250,17 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label16.Location = new System.Drawing.Point(100, 701);
+            this.label16.Location = new System.Drawing.Point(100, 705);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(377, 22);
+            this.label16.Size = new System.Drawing.Size(391, 22);
             this.label16.TabIndex = 19;
-            this.label16.Text = "     To do this, go to the <????????????> tab.";
+            this.label16.Text = "     To do this, go to the <Not Implemented> tab.";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label17.Location = new System.Drawing.Point(100, 679);
+            this.label17.Location = new System.Drawing.Point(100, 683);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(437, 22);
             this.label17.TabIndex = 20;
@@ -282,11 +285,45 @@
             this.label18.TabIndex = 22;
             this.label18.Text = "to execute programs on remote systems.";
             // 
+            // nircmdLabel
+            // 
+            this.nircmdLabel.AutoSize = true;
+            this.nircmdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.nircmdLabel.Location = new System.Drawing.Point(673, 737);
+            this.nircmdLabel.Name = "nircmdLabel";
+            this.nircmdLabel.Size = new System.Drawing.Size(72, 22);
+            this.nircmdLabel.TabIndex = 26;
+            this.nircmdLabel.TabStop = true;
+            this.nircmdLabel.Text = "Nircmd";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label12.Location = new System.Drawing.Point(100, 737);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(576, 22);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "WARNING: There are multiple features that require you to have";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label19.Location = new System.Drawing.Point(738, 737);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(217, 22);
+            this.label19.TabIndex = 27;
+            this.label19.Text = "On the remote machine";
+            // 
             // howToUse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1165, 786);
+            this.ClientSize = new System.Drawing.Size(1295, 787);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.nircmdLabel);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
@@ -345,5 +382,8 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label logoHowToUseLbl;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.LinkLabel nircmdLabel;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label19;
     }
 }
