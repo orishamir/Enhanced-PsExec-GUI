@@ -365,7 +365,7 @@
             this.delayBetweenBox.TabIndex = 18;
             this.delayBetweenBox.ThousandsSeparator = true;
             this.delayBetweenBox.Value = new decimal(new int[] {
-            100,
+            200,
             0,
             0,
             0});
@@ -401,7 +401,7 @@
             this.delayBeforeBox.TabIndex = 16;
             this.delayBeforeBox.ThousandsSeparator = true;
             this.delayBeforeBox.Value = new decimal(new int[] {
-            100,
+            200,
             0,
             0,
             0});
@@ -424,7 +424,7 @@
             this.delayTerminate.TabIndex = 15;
             this.delayTerminate.ThousandsSeparator = true;
             this.delayTerminate.Value = new decimal(new int[] {
-            100,
+            200,
             0,
             0,
             0});
@@ -609,7 +609,7 @@
             this.processDelay.TabIndex = 20;
             this.processDelay.ThousandsSeparator = true;
             this.processDelay.Value = new decimal(new int[] {
-            100,
+            200,
             0,
             0,
             0});
@@ -874,7 +874,7 @@
             this.soundDelayBox.TabIndex = 16;
             this.soundDelayBox.ThousandsSeparator = true;
             this.soundDelayBox.Value = new decimal(new int[] {
-            100,
+            200,
             0,
             0,
             0});
@@ -1010,7 +1010,7 @@
             this.sendKeyboardDelayBox.TabIndex = 49;
             this.sendKeyboardDelayBox.ThousandsSeparator = true;
             this.sendKeyboardDelayBox.Value = new decimal(new int[] {
-            100,
+            200,
             0,
             0,
             0});
@@ -1056,7 +1056,7 @@
             this.moveMouseDelayBox.TabIndex = 46;
             this.moveMouseDelayBox.ThousandsSeparator = true;
             this.moveMouseDelayBox.Value = new decimal(new int[] {
-            100,
+            200,
             0,
             0,
             0});
@@ -1093,7 +1093,7 @@
             this.clickDelayBox.TabIndex = 44;
             this.clickDelayBox.ThousandsSeparator = true;
             this.clickDelayBox.Value = new decimal(new int[] {
-            100,
+            200,
             0,
             0,
             0});
@@ -1336,7 +1336,7 @@
             this.ttsDelayBox.TabIndex = 17;
             this.ttsDelayBox.ThousandsSeparator = true;
             this.ttsDelayBox.Value = new decimal(new int[] {
-            100,
+            200,
             0,
             0,
             0});

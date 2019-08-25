@@ -642,18 +642,62 @@ using System.Net.Sockets;
             string sendMe = "";
             
             int i = 0;
-            foreach (char c in sendKeyboardBox.Text.ToCharArray())
+            foreach (char c in sendKeyboardBox.Text)
             {
-                if (c == '\n')
-                    sendMe += "enter+";
-                else
-                    if (c == sendKeyboardBox.Text.Last())
-                        sendMe += c;
-                    else
-                        sendMe += $"{c}+";
+                if (i % 15 == 0)
+                    sendMe += " ";
+                switch (c)
+                {
+                    case '\r':
+                        sendMe += "+enter+";
+                        break;
+                    case ' ':
+                        sendMe += "spc+";
+                        break;
+
+
+                    case '!':
+                        sendMe += "shift+1";
+                        break;
+                    case '@':
+                        sendMe += "shift+2";
+                        break;
+                    case '#':
+                        sendMe += "shift+3";
+                        break;
+                    case '%':
+                        sendMe += "shift+5";
+                        break;
+                    case '^':
+                        sendMe += "shift+6";
+                        break;
+                    case '&':
+                        sendMe += "shift+7";
+                        break;
+                    case '*':
+                        sendMe += "shift+8";
+                        break;
+                    case '(':
+                        sendMe += "shift+9";
+                        break;
+                    case ')':
+                        sendMe += "shift+0";
+                        break;
+
+
+                    default:
+                        if (c != '\n')
+                            sendMe += $"{c}+";
+                        else
+                            sendMe += "";
+                        break;
+                }
                 i++;
             }
-
+            // 15
+            sendMe = sendMe.Replace("\n", "");
+            sendMe = sendMe.Replace("\r", "");
+            //Console.WriteLine(sendMe);
             
             var proc2 = new Process
             {
