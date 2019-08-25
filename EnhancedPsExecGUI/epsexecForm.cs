@@ -112,7 +112,7 @@ using System.Net.Sockets;
                     //Mouse&Keyboard
                     if (line.StartsWith("mouseX="))
                         moveMouseXBox.Text = line.Substring(line.IndexOf("mouseX=") + 7);
-
+                    
                     if (line.StartsWith("mouseY="))
                         moveMouseYBox.Text = line.Substring(line.IndexOf("mouseY=") + 7);
                 }
@@ -247,7 +247,7 @@ using System.Net.Sockets;
                     lines.Add("autoclear=true");
 
                 if (caseInsensitiveBox.Checked)
-                    lines.Add("canseinsensitive=true");
+                    lines.Add("caseinsensitive=true");
 
                 if (excludeBox.Checked)
                     lines.Add("everythingexcept=true");
@@ -256,11 +256,6 @@ using System.Net.Sockets;
             if (volumeBox.Value != 70)
                 lines.Add($"volume={volumeBox.Value}");
             
-            if (fileName != "c21f969b5f03d33d43e04f8f136e7682")
-            {
-                File.WriteAllLines(fileName, lines);
-                return;
-            }
             // Mouse&Keyboard
             if (moveMouseXBox.Text != "")
                 lines.Add($"mouseX={moveMouseXBox.Text}");
@@ -268,6 +263,12 @@ using System.Net.Sockets;
             if (moveMouseYBox.Text != "")
                 lines.Add($"mouseY={moveMouseYBox.Text}");
 
+            // KEEP THIS AT END
+            if (fileName != "c21f969b5f03d33d43e04f8f136e7682")
+            {
+                File.WriteAllLines(fileName, lines);
+                return;
+            }
             using (SaveFileDialog fbd = new SaveFileDialog())
             {
                 fbd.Filter = "Enhanced Psexec files | *.epsx";
@@ -657,37 +658,40 @@ using System.Net.Sockets;
 
 
                     case '!':
-                        sendMe += "shift+1";
+                        sendMe += " shift+1 ";
                         break;
                     case '@':
-                        sendMe += "shift+2";
+                        sendMe += " shift+2 ";
                         break;
                     case '#':
-                        sendMe += "shift+3";
+                        sendMe += " shift+3 ";
                         break;
                     case '%':
-                        sendMe += "shift+5";
+                        sendMe += " shift+5 ";
                         break;
                     case '^':
-                        sendMe += "shift+6";
+                        sendMe += " shift+6 ";
                         break;
                     case '&':
-                        sendMe += "shift+7";
+                        sendMe += " shift+7 ";
                         break;
                     case '*':
-                        sendMe += "shift+8";
+                        sendMe += " shift+8 ";
                         break;
                     case '(':
-                        sendMe += "shift+9";
+                        sendMe += " shift+9 ";
                         break;
                     case ')':
-                        sendMe += "shift+0";
+                        sendMe += " shift+0 ";
                         break;
 
 
                     default:
                         if (c != '\n')
-                            sendMe += $"{c}+";
+                            if (Encoding.ASCII.GetBytes(c.ToString())[0] >= 65 && Encoding.ASCII.GetBytes(c.ToString())[0] <= 90)
+                                sendMe += $" shift+{c} ";
+                            else
+                                sendMe += $"{c}+";
                         else
                             sendMe += "";
                         break;

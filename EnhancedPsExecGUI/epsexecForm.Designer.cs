@@ -542,7 +542,7 @@
             // 
             this.urlBox.Location = new System.Drawing.Point(193, 28);
             this.urlBox.Name = "urlBox";
-            this.urlBox.Size = new System.Drawing.Size(189, 30);
+            this.urlBox.Size = new System.Drawing.Size(449, 30);
             this.urlBox.TabIndex = 2;
             // 
             // urlLabel
