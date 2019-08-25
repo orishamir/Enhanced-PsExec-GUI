@@ -1,0 +1,10 @@
+D:\ori\hacking\programming\python\package\EnhancedPsExecGUI\obj\Release\EnhancedPsExecGUI.Form1.resources
+D:\ori\hacking\programming\python\package\EnhancedPsExecGUI\obj\Release\EnhancedPsExecGUI.csproj.GenerateResource.cache
+D:\ori\hacking\programming\python\package\EnhancedPsExecGUI\obj\Release\EnhancedPsExecGUI.csproj.CoreCompileInputs.cache
+D:\ori\hacking\programming\python\package\EnhancedPsExecGUI\obj\Release\EnhancedPsExecGUI.csprojAssemblyReference.cache
+D:\ori\hacking\programming\python\package\EnhancedPsExecGUI\bin\Release\EnhancedPsExec.exe.config
+D:\ori\hacking\programming\python\package\EnhancedPsExecGUI\bin\Release\EnhancedPsExec.exe
+D:\ori\hacking\programming\python\package\EnhancedPsExecGUI\bin\Release\EnhancedPsExec.pdb
+D:\ori\hacking\programming\python\package\EnhancedPsExecGUI\obj\Release\EnhancedPsExec.Properties.Resources.resources
+D:\ori\hacking\programming\python\package\EnhancedPsExecGUI\obj\Release\EnhancedPsExec.exe
+D:\ori\hacking\programming\python\package\EnhancedPsExecGUI\obj\Release\EnhancedPsExec.pdb
