@@ -32,8 +32,10 @@ using System.Net.Sockets;
         string username = "";
         string password = "";
         string fileName = "c21f969b5f03d33d43e04f8f136e7682";
+        bool fileJustGotEdited = false;
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             void loadFile(string filePath)
             {
                 
@@ -41,7 +43,6 @@ using System.Net.Sockets;
                 bool run = false;
                 foreach (string line in lines)
                 {
-
                     if (line.StartsWith("ip="))
                         ipBox.Text = line.Substring(line.IndexOf("ip=") + 3);
 
@@ -128,7 +129,7 @@ using System.Net.Sockets;
                 this.saveToolStripMenuItem.Text = $"Save {fileName.Split('\\').Last()}";
                 loadFile(fileName);
             }
-            
+            fileJustGotEdited = false;
         }
 
         private void RunBtn_Click(object sender, EventArgs e){
@@ -283,6 +284,7 @@ using System.Net.Sockets;
 
                 this.Text = fileName == ("c21f969b5f03d33d43e04f8f136e7682") ? "Enhanced-PsExec Control Panel": $"{fileName.Split('\\').Last()} - Control Panel";
                 this.saveToolStripMenuItem.Text = (fileName == "c21f969b5f03d33d43e04f8f136e7682") ? "Save as" : $"Save {fileName.Split('\\').Last()}";
+                fileJustGotEdited = false;
             }
             
         }
@@ -383,7 +385,7 @@ using System.Net.Sockets;
                 if (line.StartsWith("mouseY="))
                     moveMouseYBox.Text = line.Substring(line.IndexOf("mouseY=") + 7);
             }
-
+            fileJustGotEdited = false;
             if(run)
                 RunBtn_Click(sender, e);
         }
@@ -470,6 +472,7 @@ using System.Net.Sockets;
 
         private void GetReloadBtn_Click(object sender, EventArgs e)
         {
+            fileJustGotEdited = true;
             // get processes
             if (autoClearBox.Checked)
                 processesBox.Items.Clear();
@@ -773,6 +776,59 @@ using System.Net.Sockets;
         private void NircmdAboutLabel_Click(object sender, EventArgs e)
         {
             MessageBox.Show("NirCmd is a command-line utility that allows you to do some useful tasks\nWithout displaying any user interface\n\nAnd it is required for all of the features in the Misc tab.", "NirCmd?", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void FirewallRun_Click(object sender, EventArgs e)
+        {
+            string network_command = "";
+            var proc2 = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = "psexec.exe",
+                    Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -d -i -accepteula {network_command}",
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true,
+
+                    CreateNoWindow = true
+                }
+            };
+            
+            if (networkOffBox.Checked)
+            {
+                network_command = "netsh advfirewall set allprofiles state off";
+                proc2.Start();
+                proc2.Close();
+            }
+            else if (networkOnBox.Checked)
+            {
+                network_command = "netsh advfirewall set allprofiles state on";
+                proc2.Start();
+                proc2.Close();
+            }
+            else if (networkSmbBox.Checked)
+            {
+                network_command = "netsh advfirewall firewall set rule group=\"File and Printer Sharing(SMB-In)\" new profile=private & netsh advfirewall firewall set rule name=\"File and Printer Sharing(SMB-In)\" dir=in new enable=Yes";
+                proc2.Start();
+                proc2.Close();
+            }
+        }
+
+        private void EpsexecForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (fileName == "c21f969b5f03d33d43e04f8f136e7682" || fileJustGotEdited)
+            {
+                var result = MessageBox.Show("Would you like to save your file?", "You have unsaved changes", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                    saveToolStripMenuItem.PerformClick();
+                else if (result == DialogResult.Cancel)
+                    e.Cancel = true;
+                
+            }
+        }
+        private void on_Edit(object sender, EventArgs e)
+        {
+            fileJustGotEdited = true;
         }
     }
 }

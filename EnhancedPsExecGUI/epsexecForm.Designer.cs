@@ -90,7 +90,14 @@
             this.volumeBox = new System.Windows.Forms.TrackBar();
             this.muteLabel = new System.Windows.Forms.Label();
             this.unmuteLabel = new System.Windows.Forms.Label();
+            this.networkTab = new System.Windows.Forms.TabPage();
+            this.networkSmbBox = new System.Windows.Forms.RadioButton();
+            this.networkOnBox = new System.Windows.Forms.RadioButton();
+            this.networkOffBox = new System.Windows.Forms.RadioButton();
+            this.label25 = new System.Windows.Forms.Label();
+            this.firewallRun = new System.Windows.Forms.Button();
             this.miscTab = new System.Windows.Forms.TabPage();
+            this.nircmdAboutLabel = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.sendKeyboardDelayBox = new System.Windows.Forms.NumericUpDown();
             this.label23 = new System.Windows.Forms.Label();
@@ -134,7 +141,6 @@
             this.creditsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.howToUseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.nircmdAboutLabel = new System.Windows.Forms.Label();
             this.main.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.urlTab.SuspendLayout();
@@ -149,6 +155,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.frequencySoundBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soundDelayBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBox)).BeginInit();
+            this.networkTab.SuspendLayout();
             this.miscTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sendKeyboardDelayBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moveMouseDelayBox)).BeginInit();
@@ -166,6 +173,7 @@
             this.main.Controls.Add(this.urlTab);
             this.main.Controls.Add(this.processControlTab);
             this.main.Controls.Add(this.soundTab);
+            this.main.Controls.Add(this.networkTab);
             this.main.Controls.Add(this.miscTab);
             this.main.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.main.Location = new System.Drawing.Point(0, 27);
@@ -264,6 +272,7 @@
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.Size = new System.Drawing.Size(199, 30);
             this.passwordBox.TabIndex = 5;
+            this.passwordBox.TextChanged += new System.EventHandler(this.on_Edit);
             this.passwordBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.any_DragDrop);
             this.passwordBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.any_DragEnter);
             // 
@@ -273,6 +282,7 @@
             this.usrBox.Name = "usrBox";
             this.usrBox.Size = new System.Drawing.Size(199, 30);
             this.usrBox.TabIndex = 3;
+            this.usrBox.TextChanged += new System.EventHandler(this.on_Edit);
             this.usrBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.any_DragDrop);
             this.usrBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.any_DragEnter);
             // 
@@ -282,6 +292,7 @@
             this.ipBox.Name = "ipBox";
             this.ipBox.Size = new System.Drawing.Size(199, 30);
             this.ipBox.TabIndex = 1;
+            this.ipBox.TextChanged += new System.EventHandler(this.on_Edit);
             this.ipBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.any_DragDrop);
             this.ipBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.any_DragEnter);
             // 
@@ -370,6 +381,7 @@
             0,
             0,
             0});
+            this.delayBetweenBox.ValueChanged += new System.EventHandler(this.on_Edit);
             // 
             // label5
             // 
@@ -406,6 +418,7 @@
             0,
             0,
             0});
+            this.delayBeforeBox.ValueChanged += new System.EventHandler(this.on_Edit);
             // 
             // delayTerminate
             // 
@@ -473,6 +486,7 @@
             this.invisibleBox.Size = new System.Drawing.Size(16, 30);
             this.invisibleBox.TabIndex = 9;
             this.invisibleBox.UseVisualStyleBackColor = true;
+            this.invisibleBox.CheckedChanged += new System.EventHandler(this.on_Edit);
             // 
             // label2
             // 
@@ -490,6 +504,7 @@
             this.incognitoBox.Size = new System.Drawing.Size(16, 30);
             this.incognitoBox.TabIndex = 7;
             this.incognitoBox.UseVisualStyleBackColor = true;
+            this.incognitoBox.CheckedChanged += new System.EventHandler(this.on_Edit);
             // 
             // newWindowBox
             // 
@@ -499,6 +514,7 @@
             this.newWindowBox.Size = new System.Drawing.Size(16, 30);
             this.newWindowBox.TabIndex = 6;
             this.newWindowBox.UseVisualStyleBackColor = true;
+            this.newWindowBox.CheckedChanged += new System.EventHandler(this.on_Edit);
             // 
             // label1
             // 
@@ -538,6 +554,7 @@
             0,
             0,
             0});
+            this.tabsBox.ValueChanged += new System.EventHandler(this.on_Edit);
             // 
             // urlBox
             // 
@@ -545,6 +562,7 @@
             this.urlBox.Name = "urlBox";
             this.urlBox.Size = new System.Drawing.Size(449, 30);
             this.urlBox.TabIndex = 2;
+            this.urlBox.TextChanged += new System.EventHandler(this.on_Edit);
             // 
             // urlLabel
             // 
@@ -914,7 +932,7 @@
             this.muteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.muteLabel.ForeColor = System.Drawing.Color.Red;
             this.muteLabel.Image = ((System.Drawing.Image)(resources.GetObject("muteLabel.Image")));
-            this.muteLabel.Location = new System.Drawing.Point(27, 89);
+            this.muteLabel.Location = new System.Drawing.Point(27, 123);
             this.muteLabel.Name = "muteLabel";
             this.muteLabel.Size = new System.Drawing.Size(122, 129);
             this.muteLabel.TabIndex = 3;
@@ -927,13 +945,81 @@
             this.unmuteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.unmuteLabel.ForeColor = System.Drawing.Color.Blue;
             this.unmuteLabel.Image = ((System.Drawing.Image)(resources.GetObject("unmuteLabel.Image")));
-            this.unmuteLabel.Location = new System.Drawing.Point(1047, 89);
+            this.unmuteLabel.Location = new System.Drawing.Point(1048, 123);
             this.unmuteLabel.Name = "unmuteLabel";
             this.unmuteLabel.Size = new System.Drawing.Size(140, 129);
             this.unmuteLabel.TabIndex = 4;
             this.unmuteLabel.Text = "Unmute";
             this.unmuteLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.unmuteLabel.Click += new System.EventHandler(this.UnmuteLabel_Click);
+            // 
+            // networkTab
+            // 
+            this.networkTab.Controls.Add(this.networkSmbBox);
+            this.networkTab.Controls.Add(this.networkOnBox);
+            this.networkTab.Controls.Add(this.networkOffBox);
+            this.networkTab.Controls.Add(this.label25);
+            this.networkTab.Controls.Add(this.firewallRun);
+            this.networkTab.Location = new System.Drawing.Point(4, 34);
+            this.networkTab.Name = "networkTab";
+            this.networkTab.Padding = new System.Windows.Forms.Padding(3);
+            this.networkTab.Size = new System.Drawing.Size(1217, 670);
+            this.networkTab.TabIndex = 6;
+            this.networkTab.Text = "Network Control";
+            this.networkTab.ToolTipText = "Network Stuff";
+            this.networkTab.UseVisualStyleBackColor = true;
+            // 
+            // networkSmbBox
+            // 
+            this.networkSmbBox.AutoSize = true;
+            this.networkSmbBox.Location = new System.Drawing.Point(456, 73);
+            this.networkSmbBox.Name = "networkSmbBox";
+            this.networkSmbBox.Size = new System.Drawing.Size(131, 29);
+            this.networkSmbBox.TabIndex = 4;
+            this.networkSmbBox.TabStop = true;
+            this.networkSmbBox.Text = "Allow SMB ";
+            this.networkSmbBox.UseVisualStyleBackColor = true;
+            // 
+            // networkOnBox
+            // 
+            this.networkOnBox.AutoSize = true;
+            this.networkOnBox.Location = new System.Drawing.Point(604, 73);
+            this.networkOnBox.Name = "networkOnBox";
+            this.networkOnBox.Size = new System.Drawing.Size(57, 29);
+            this.networkOnBox.TabIndex = 3;
+            this.networkOnBox.TabStop = true;
+            this.networkOnBox.Text = "On";
+            this.networkOnBox.UseVisualStyleBackColor = true;
+            // 
+            // networkOffBox
+            // 
+            this.networkOffBox.AutoSize = true;
+            this.networkOffBox.Location = new System.Drawing.Point(371, 73);
+            this.networkOffBox.Name = "networkOffBox";
+            this.networkOffBox.Size = new System.Drawing.Size(56, 29);
+            this.networkOffBox.TabIndex = 2;
+            this.networkOffBox.TabStop = true;
+            this.networkOffBox.Text = "Off";
+            this.networkOffBox.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(441, 36);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(160, 25);
+            this.label25.TabIndex = 1;
+            this.label25.Text = "Firewall Settings:";
+            // 
+            // firewallRun
+            // 
+            this.firewallRun.Location = new System.Drawing.Point(499, 598);
+            this.firewallRun.Name = "firewallRun";
+            this.firewallRun.Size = new System.Drawing.Size(139, 47);
+            this.firewallRun.TabIndex = 0;
+            this.firewallRun.Text = "Run";
+            this.firewallRun.UseVisualStyleBackColor = true;
+            this.firewallRun.Click += new System.EventHandler(this.FirewallRun_Click);
             // 
             // miscTab
             // 
@@ -979,6 +1065,17 @@
             this.miscTab.Text = "Misc";
             this.miscTab.ToolTipText = "Keyboard, Mouse, TTS";
             this.miscTab.UseVisualStyleBackColor = true;
+            // 
+            // nircmdAboutLabel
+            // 
+            this.nircmdAboutLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nircmdAboutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.nircmdAboutLabel.Location = new System.Drawing.Point(1186, 3);
+            this.nircmdAboutLabel.Name = "nircmdAboutLabel";
+            this.nircmdAboutLabel.Size = new System.Drawing.Size(23, 22);
+            this.nircmdAboutLabel.TabIndex = 51;
+            this.nircmdAboutLabel.Text = "?";
+            this.nircmdAboutLabel.Click += new System.EventHandler(this.NircmdAboutLabel_Click);
             // 
             // label24
             // 
@@ -1111,7 +1208,7 @@
             // 
             // sendKeyboardTextBtn
             // 
-            this.sendKeyboardTextBtn.Location = new System.Drawing.Point(802, 466);
+            this.sendKeyboardTextBtn.Location = new System.Drawing.Point(801, 483);
             this.sendKeyboardTextBtn.Name = "sendKeyboardTextBtn";
             this.sendKeyboardTextBtn.Size = new System.Drawing.Size(81, 29);
             this.sendKeyboardTextBtn.TabIndex = 42;
@@ -1124,7 +1221,7 @@
             this.sendKeyboardBox.Location = new System.Drawing.Point(622, 293);
             this.sendKeyboardBox.Multiline = true;
             this.sendKeyboardBox.Name = "sendKeyboardBox";
-            this.sendKeyboardBox.Size = new System.Drawing.Size(463, 167);
+            this.sendKeyboardBox.Size = new System.Drawing.Size(463, 184);
             this.sendKeyboardBox.TabIndex = 41;
             // 
             // label15
@@ -1142,6 +1239,7 @@
             this.moveMouseYBox.Name = "moveMouseYBox";
             this.moveMouseYBox.Size = new System.Drawing.Size(61, 30);
             this.moveMouseYBox.TabIndex = 39;
+            this.moveMouseYBox.TextChanged += new System.EventHandler(this.on_Edit);
             // 
             // moveMouseXBox
             // 
@@ -1149,6 +1247,7 @@
             this.moveMouseXBox.Name = "moveMouseXBox";
             this.moveMouseXBox.Size = new System.Drawing.Size(61, 30);
             this.moveMouseXBox.TabIndex = 38;
+            this.moveMouseXBox.TextChanged += new System.EventHandler(this.on_Edit);
             // 
             // moveBtn
             // 
@@ -1473,17 +1572,6 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // nircmdAboutLabel
-            // 
-            this.nircmdAboutLabel.BackColor = System.Drawing.Color.Transparent;
-            this.nircmdAboutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.nircmdAboutLabel.Location = new System.Drawing.Point(1186, 3);
-            this.nircmdAboutLabel.Name = "nircmdAboutLabel";
-            this.nircmdAboutLabel.Size = new System.Drawing.Size(23, 22);
-            this.nircmdAboutLabel.TabIndex = 51;
-            this.nircmdAboutLabel.Text = "?";
-            this.nircmdAboutLabel.Click += new System.EventHandler(this.NircmdAboutLabel_Click);
-            // 
             // epsexecForm
             // 
             this.AllowDrop = true;
@@ -1492,10 +1580,12 @@
             this.ClientSize = new System.Drawing.Size(1225, 730);
             this.Controls.Add(this.main);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "epsexecForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Enhanced-PsExec Control Panel";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EpsexecForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.any_DragEnter);
             this.main.ResumeLayout(false);
@@ -1516,6 +1606,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.frequencySoundBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.soundDelayBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBox)).EndInit();
+            this.networkTab.ResumeLayout(false);
+            this.networkTab.PerformLayout();
             this.miscTab.ResumeLayout(false);
             this.miscTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sendKeyboardDelayBox)).EndInit();
@@ -1638,6 +1730,12 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.NumericUpDown sendKeyboardDelayBox;
         private System.Windows.Forms.Label nircmdAboutLabel;
+        private System.Windows.Forms.TabPage networkTab;
+        private System.Windows.Forms.RadioButton networkOnBox;
+        private System.Windows.Forms.RadioButton networkOffBox;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button firewallRun;
+        private System.Windows.Forms.RadioButton networkSmbBox;
     }
 }
 

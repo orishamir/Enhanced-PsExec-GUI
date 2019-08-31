@@ -51,6 +51,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_CDAD6C636CE94B38B425EAF37821DF76"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_F9BA95AE3C714D1DBC8E4BE889AA4FA7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -126,10 +132,10 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.2"
                     {
-                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    "Name" = "8:Microsoft .NET Framework 4.6.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.2"
                     }
                 }
             }
@@ -139,6 +145,35 @@
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_51E6C70524804FEEAA0E692E228423F9"
+            {
+            "Name" = "8:Run after installation"
+            "Condition" = "8:"
+            "Object" = "8:_16D78F3B37D546E0973B101AD9BF8FED"
+            "FileType" = "3:2"
+            "InstallAction" = "3:2"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_DF72B42B_5CA7_40DA_8007_94CED8C16476"
+            "InstallerClass" = "11:FALSE"
+            "CustomActionData" = "8:"
+            "Run64Bit" = "11:TRUE"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_66993313AFAA4EF4ADDA6C57C273BC9C"
+            {
+            "Name" = "8:uninstall"
+            "Condition" = "8:"
+            "Object" = "8:_CDAD6C636CE94B38B425EAF37821DF76"
+            "FileType" = "3:4"
+            "InstallAction" = "3:4"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_5D8A5BC2_20F8_4CF4_A9C6_CBAE2DE8B8C9"
+            "InstallerClass" = "11:FALSE"
+            "CustomActionData" = "8:"
+            }
         }
         "DefaultFeature"
         {
@@ -257,6 +292,26 @@
             {
             "SourcePath" = "8:..\\EnhancedPsExecGUI\\bin\\x64\\Release\\logo_big.ico"
             "TargetName" = "8:logo_big.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_1E4DC9BCE628423BB15AFE2F63665E84"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:TRUE"
+            "Hidden" = "11:TRUE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CDAD6C636CE94B38B425EAF37821DF76"
+            {
+            "SourcePath" = "8:..\\EnhancedPsExecGUI\\uninstall.vbs"
+            "TargetName" = "8:uninstall.vbs"
             "Tag" = "8:"
             "Folder" = "8:_1E4DC9BCE628423BB15AFE2F63665E84"
             "Condition" = "8:"
@@ -406,13 +461,13 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Enhanced-PsExec"
         "ProductCode" = "8:{A52EF195-19A2-4AB8-9F8D-2E2B8E4FF5D6}"
-        "PackageCode" = "8:{BAE5B184-85EF-4ADA-AFDF-77B67412DB15}"
+        "PackageCode" = "8:{8BC8236B-F7F7-4209-B939-C3A05A4E1D8C}"
         "UpgradeCode" = "8:{8CD340A1-0FA4-4E12-B05C-4E6922648986}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:FALSE"
+        "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:1.0.0"
         "Manufacturer" = "8:epsexec"
         "ARPHELPTELEPHONE" = "8:"
