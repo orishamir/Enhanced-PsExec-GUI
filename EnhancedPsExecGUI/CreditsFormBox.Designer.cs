@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreditsFormBox));
             this.label1 = new System.Windows.Forms.Label();
             this.ytStart = new System.Windows.Forms.Button();
             this.githubBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -44,35 +46,40 @@
             this.label1.Size = new System.Drawing.Size(366, 84);
             this.label1.TabIndex = 0;
             this.label1.Text = "Enhanced PsExec was made by Ori Shamir.";
-            
             // 
             // ytStart
             // 
             this.ytStart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ytStart.BackgroundImage")));
+            this.ytStart.Cursor = System.Windows.Forms.Cursors.Help;
             this.ytStart.Location = new System.Drawing.Point(572, 361);
             this.ytStart.Name = "ytStart";
             this.ytStart.Size = new System.Drawing.Size(131, 106);
             this.ytStart.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.ytStart, "Visit My YouTube Channel");
             this.ytStart.UseVisualStyleBackColor = true;
             this.ytStart.Click += new System.EventHandler(this.YtStart_Click);
             // 
             // githubBtn
             // 
             this.githubBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("githubBtn.BackgroundImage")));
+            this.githubBtn.Cursor = System.Windows.Forms.Cursors.Help;
             this.githubBtn.Location = new System.Drawing.Point(12, 361);
             this.githubBtn.Name = "githubBtn";
             this.githubBtn.Size = new System.Drawing.Size(110, 106);
             this.githubBtn.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.githubBtn, "Visit My GitHub Page");
             this.githubBtn.UseVisualStyleBackColor = true;
             this.githubBtn.Click += new System.EventHandler(this.GithubBtn_Click);
             // 
             // label2
             // 
+            this.label2.Cursor = System.Windows.Forms.Cursors.Help;
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
             this.label2.Location = new System.Drawing.Point(298, 361);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 109);
             this.label2.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.label2, "Visit This Project On PyPi");
             this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // CreditsFormBox
@@ -95,6 +102,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Credits";
+            this.Load += new System.EventHandler(this.CreditsFormBox_Load);
             this.ResumeLayout(false);
 
         }
@@ -105,5 +113,6 @@
         private System.Windows.Forms.Button ytStart;
         private System.Windows.Forms.Button githubBtn;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

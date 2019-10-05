@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(howToUse));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@
             this.nircmdLabel = new System.Windows.Forms.LinkLabel();
             this.label12 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -81,7 +83,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label3.Location = new System.Drawing.Point(359, 123);
+            this.label3.Location = new System.Drawing.Point(360, 126);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(357, 22);
             this.label3.TabIndex = 2;
@@ -121,6 +123,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.linkLabel1.Location = new System.Drawing.Point(261, 279);
             this.linkLabel1.Name = "linkLabel1";
@@ -128,6 +131,7 @@
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "psexec installed";
+            this.toolTip1.SetToolTip(this.linkLabel1, "https://docs.microsoft.com/en-us/sysinternals/downloads/psexec");
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
             // 
             // label7
@@ -268,18 +272,20 @@
             // 
             // logoHowToUseLbl
             // 
+            this.logoHowToUseLbl.Cursor = System.Windows.Forms.Cursors.Help;
             this.logoHowToUseLbl.Image = ((System.Drawing.Image)(resources.GetObject("logoHowToUseLbl.Image")));
             this.logoHowToUseLbl.Location = new System.Drawing.Point(947, 9);
             this.logoHowToUseLbl.Name = "logoHowToUseLbl";
             this.logoHowToUseLbl.Size = new System.Drawing.Size(206, 204);
             this.logoHowToUseLbl.TabIndex = 21;
+            this.toolTip1.SetToolTip(this.logoHowToUseLbl, "Visit My GitHub Page");
             this.logoHowToUseLbl.Click += new System.EventHandler(this.LogoHowToUseLbl_Click);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label18.Location = new System.Drawing.Point(30, 123);
+            this.label18.Location = new System.Drawing.Point(30, 126);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(333, 22);
             this.label18.TabIndex = 22;
@@ -288,6 +294,7 @@
             // nircmdLabel
             // 
             this.nircmdLabel.AutoSize = true;
+            this.nircmdLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.nircmdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.nircmdLabel.Location = new System.Drawing.Point(673, 737);
             this.nircmdLabel.Name = "nircmdLabel";
@@ -295,6 +302,8 @@
             this.nircmdLabel.TabIndex = 26;
             this.nircmdLabel.TabStop = true;
             this.nircmdLabel.Text = "Nircmd";
+            this.toolTip1.SetToolTip(this.nircmdLabel, "https://www.nirsoft.net/utils/nircmd.html");
+            this.nircmdLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.nircmdLabel_LinkClicked);
             // 
             // label12
             // 
@@ -385,5 +394,6 @@
         private System.Windows.Forms.LinkLabel nircmdLabel;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

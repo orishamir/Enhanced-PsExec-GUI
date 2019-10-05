@@ -38,5 +38,11 @@ namespace EnhancedPsExec
         {
             System.Diagnostics.Process.Start("https://pypi.org/project/Enhanced-PsExec/");
         }
+
+        private void CreditsFormBox_Load(object sender, EventArgs e)
+        {
+            
+            label1.Focus();
+        }
     }
 }

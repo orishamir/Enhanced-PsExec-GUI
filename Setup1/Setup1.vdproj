@@ -33,6 +33,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_763E4C630A514AE893B8C9576254B156"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_7D502DC7C51649F7B40554B355305064"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -127,15 +133,15 @@
             {
             "Enabled" = "11:TRUE"
             "PromptEnabled" = "11:TRUE"
-            "PrerequisitesLocation" = "2:1"
+            "PrerequisitesLocation" = "2:2"
             "Url" = "8:"
-            "ComponentsUrl" = "8:"
+            "ComponentsUrl" = "8:http://go.microsoft.com/fwlink/?linkid=863265"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.2"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
                     {
-                    "Name" = "8:Microsoft .NET Framework 4.6.2 (x86 and x64)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.6.2"
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
                     }
                 }
             }
@@ -245,6 +251,26 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_763E4C630A514AE893B8C9576254B156"
+            {
+            "SourcePath" = "8:D:\\Downloads\\NDP472-KB4054530-x86-x64-AllOS-ENU.exe"
+            "TargetName" = "8:NDP472-KB4054530-x86-x64-AllOS-ENU.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_1E4DC9BCE628423BB15AFE2F63665E84"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
@@ -461,7 +487,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Enhanced-PsExec"
         "ProductCode" = "8:{A52EF195-19A2-4AB8-9F8D-2E2B8E4FF5D6}"
-        "PackageCode" = "8:{8BC8236B-F7F7-4209-B939-C3A05A4E1D8C}"
+        "PackageCode" = "8:{86459062-6624-49A1-9E9E-BDA814B71E13}"
         "UpgradeCode" = "8:{8CD340A1-0FA4-4E12-B05C-4E6922648986}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

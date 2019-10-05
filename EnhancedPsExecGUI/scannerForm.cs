@@ -84,5 +84,20 @@ namespace EnhancedPsExec
             mainForm.ipBox.Text = ((string)networkPCsBox.SelectedItem).Substring(0,((string)networkPCsBox.SelectedItem).Length - 15);
             this.Close();
         }
+
+        private void SelectAllBtn_Click(object sender, EventArgs e)
+        {
+            var temp = networkPCsBox.Items;
+            if (networkPCsBox.SelectedIndices.Count == networkPCsBox.Items.Count)
+            {
+                networkPCsBox.SelectedIndices.Clear();
+                return;
+            }
+            for (int i = 0; i < temp.Count; i++)
+            {
+
+                networkPCsBox.SelectedIndices.Add(i);
+            }
+        }
     }
 }

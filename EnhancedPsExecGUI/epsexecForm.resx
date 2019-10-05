@@ -117,153 +117,164 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="soundRunBtn.Text" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="deleteAfterBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="incognitoBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="soundTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="loadSetting.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        /oT/C372s/8J/Y5bO4SB7ZwAAAAASUVORK5CYII=
-</value>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 6</value>
+  </data>
+  <data name="&gt;&gt;firewallRun.Name" xml:space="preserve">
+    <value>firewallRun</value>
+  </data>
+  <data name="&gt;&gt;terminateChromeBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;processDelay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="nircmdAboutLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="terminateChromeBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="label29.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 205</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;label26.Name" xml:space="preserve">
+    <value>label26</value>
+  </data>
+  <data name="&gt;&gt;filterTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;processDelay.Parent" xml:space="preserve">
+    <value>processControlTab</value>
+  </data>
+  <data name="soundTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1217, 670</value>
+  </data>
+  <data name="&gt;&gt;delayTerminate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;caseInsensitiveBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;networkOnBox.Parent" xml:space="preserve">
+    <value>networkTab</value>
+  </data>
+  <data name="&gt;&gt;moveMouseXBox.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
+    <value>fileToolStripMenuItem</value>
+  </data>
+  <data name="caseInsensitiveBox.Text" xml:space="preserve">
+    <value>Case insensitive</value>
+  </data>
+  <data name="&gt;&gt;delayBetweenBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;delayBetweenBox.Name" xml:space="preserve">
+    <value>delayBetweenBox</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 48</value>
+  </data>
+  <data name="muteLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomCenter</value>
+  </data>
+  <data name="&gt;&gt;processDelay.Name" xml:space="preserve">
+    <value>processDelay</value>
+  </data>
+  <data name="&gt;&gt;usrBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label27.Name" xml:space="preserve">
+    <value>label27</value>
+  </data>
+  <data name="&gt;&gt;saveIcon.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Delay Between Tabs</value>
+  </data>
+  <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 25</value>
+  </data>
+  <data name="getFile.Text" xml:space="preserve">
+    <value>GO</value>
+  </data>
+  <data name="ttsDelayBox.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;loadToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="processesLabel.Text" xml:space="preserve">
+    <value>Click on your processes</value>
+  </data>
+  <data name="&gt;&gt;getReloadBtn.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="loadToolStripMenuItem.Text" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="&gt;&gt;maleVoiceBox.Name" xml:space="preserve">
+    <value>maleVoiceBox</value>
+  </data>
+  <data name="&gt;&gt;muteLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exitToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;configToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openScannerBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="delayBeforeBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>482, 576</value>
+  </data>
+  <data name="label19.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="moveBtn.Text" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="soundDelayBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>531, 151</value>
+  </data>
+  <data name="&gt;&gt;sendKeyboardBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="screenWidthBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 246</value>
   </data>
   <data name="saveIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -428,91 +439,1111 @@
         Q1WJAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="label3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="label5.Text" xml:space="preserve">
+    <value>Delay Before Opening</value>
+  </data>
+  <data name="&gt;&gt;toolStripComboBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;networkOnBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;networkOnBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>processControlTab</value>
+  </data>
+  <data name="&gt;&gt;label25.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="networkSmbBox.Text" xml:space="preserve">
+    <value>Allow SMB </value>
+  </data>
+  <data name="configToolStripMenuItem.Text" xml:space="preserve">
+    <value>Config</value>
+  </data>
+  <data name="&gt;&gt;loadSetting.Name" xml:space="preserve">
+    <value>loadSetting</value>
+  </data>
+  <data name="invisibleLabel.Text" xml:space="preserve">
+    <value>Invisible</value>
+  </data>
+  <data name="passwdLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="homeTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1217, 670</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;screenHeightBox.Parent" xml:space="preserve">
+    <value>fileSystemTab</value>
+  </data>
+  <data name="&gt;&gt;openScannerBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;urlLabel.Name" xml:space="preserve">
+    <value>urlLabel</value>
+  </data>
+  <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="homeTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="usrnameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="ttsSpeedBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 30</value>
+  </data>
+  <data name="unmuteLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 129</value>
+  </data>
+  <data name="ipBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;leftMouseBtn.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 25</value>
+  </data>
+  <data name="&gt;&gt;label22.Name" xml:space="preserve">
+    <value>label22</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 85</value>
+  </data>
+  <data name="&gt;&gt;screenshotGoBtn.Parent" xml:space="preserve">
+    <value>fileSystemTab</value>
+  </data>
+  <data name="caseInsensitiveBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>962, 115</value>
+  </data>
+  <data name="&gt;&gt;label23.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label30.Parent" xml:space="preserve">
+    <value>fileSystemTab</value>
+  </data>
+  <data name="&gt;&gt;homeTab.Name" xml:space="preserve">
+    <value>homeTab</value>
+  </data>
+  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="urlBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>449, 30</value>
+  </data>
+  <data name="&gt;&gt;firewallRun.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="unmuteLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1048, 123</value>
+  </data>
+  <data name="&gt;&gt;toolStripTextBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moveMouseYBox.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="saveToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
 </value>
   </data>
-  <data name="label4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="&gt;&gt;processControlTab.Name" xml:space="preserve">
+    <value>processControlTab</value>
+  </data>
+  <data name="loadSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 72</value>
+  </data>
+  <data name="processControlTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1217, 670</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Filter By Text: </value>
+  </data>
+  <data name="&gt;&gt;clickDelayBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="ttsVolumeBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 30</value>
+  </data>
+  <data name="miscTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1217, 670</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="percentLabel.Text" xml:space="preserve">
+    <value>70%</value>
+  </data>
+  <data name="&gt;&gt;screenWidthBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="miscTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 34</value>
+  </data>
+  <data name="soundTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 34</value>
+  </data>
+  <data name="&gt;&gt;label19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label28.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Incognito</value>
+  </data>
+  <data name="getFileLocationBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 13pt</value>
+  </data>
+  <data name="&gt;&gt;filterTextBox.Name" xml:space="preserve">
+    <value>filterTextBox</value>
+  </data>
+  <data name="moveMouseDelayBox.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;screenWidthBox.Name" xml:space="preserve">
+    <value>screenWidthBox</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="saveIcon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 87</value>
+  </data>
+  <data name="urlBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 28</value>
+  </data>
+  <data name="configToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 20</value>
+  </data>
+  <data name="&gt;&gt;label28.Name" xml:space="preserve">
+    <value>label28</value>
+  </data>
+  <data name="&gt;&gt;label20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>956, 201</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>477, 483</value>
+  </data>
+  <data name="&gt;&gt;sendKeyboardDelayBox.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="homeTab.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt</value>
+  </data>
+  <data name="&gt;&gt;autoClearBox.Name" xml:space="preserve">
+    <value>autoClearBox</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 411</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;urlBox.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="&gt;&gt;label29.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="frequencySoundBox.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="maleVoiceBox.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;durationSoundBox.Parent" xml:space="preserve">
+    <value>soundTab</value>
+  </data>
+  <data name="&gt;&gt;deleteAfterBox.Name" xml:space="preserve">
+    <value>deleteAfterBox</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
+  </data>
+  <data name="&gt;&gt;label29.Name" xml:space="preserve">
+    <value>label29</value>
+  </data>
+  <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 396</value>
+  </data>
+  <data name="&gt;&gt;upClickBtn.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="&gt;&gt;moveBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="runBeepSoundBtn.Text" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;ttsDelayBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="moveMouseDelayBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 424</value>
+  </data>
+  <data name="excludeBox.Text" xml:space="preserve">
+    <value>Everything Except...</value>
+  </data>
+  <data name="delyLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;miscTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>New Window</value>
+  </data>
+  <data name="&gt;&gt;getFile.Name" xml:space="preserve">
+    <value>getFile</value>
+  </data>
+  <data name="miscTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;label26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="passwdLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 17pt</value>
+  </data>
+  <data name="excludeBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>962, 151</value>
+  </data>
+  <data name="getFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 30</value>
+  </data>
+  <data name="&gt;&gt;fileSystemTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;middleMouseBtn.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="alwaysOnTopToolStripMenuItem.Text" xml:space="preserve">
+    <value>Always On Top</value>
+  </data>
+  <data name="openScannerBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 41</value>
+  </data>
+  <data name="moveBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 447</value>
+  </data>
+  <data name="tabsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 37</value>
+  </data>
+  <data name="loadSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 405</value>
+  </data>
+  <data name="&gt;&gt;percentLabel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;maleVoiceBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="saveToBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>415, 602</value>
+  </data>
+  <data name="&gt;&gt;runBeepSoundBtn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;sendKeyboardDelayBox.Name" xml:space="preserve">
+    <value>sendKeyboardDelayBox</value>
+  </data>
+  <data name="networkOnBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>604, 73</value>
+  </data>
+  <data name="&gt;&gt;label27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miscTab.Name" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="&gt;&gt;getFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;passwdLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ttsVolumeBox.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;getReloadBtn.Parent" xml:space="preserve">
+    <value>processControlTab</value>
+  </data>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 25</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Send Keyboard Text</value>
+  </data>
+  <data name="&gt;&gt;passwordBox.Parent" xml:space="preserve">
+    <value>homeTab</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="&gt;&gt;creditsToolStripMenuItem.Name" xml:space="preserve">
+    <value>creditsToolStripMenuItem</value>
+  </data>
+  <data name="ttsVolumeBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 113</value>
+  </data>
+  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="&gt;&gt;networkSmbBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;nircmdAboutLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;main.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;excludeBox.Name" xml:space="preserve">
+    <value>excludeBox</value>
+  </data>
+  <data name="&gt;&gt;doubleClickBtn.Name" xml:space="preserve">
+    <value>doubleClickBtn</value>
+  </data>
+  <data name="durationSoundBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>527, 414</value>
+  </data>
+  <data name="&gt;&gt;muteLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Mouse Events:</value>
+  </data>
+  <data name="&gt;&gt;processControlTab.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="&gt;&gt;passwdLabel.Name" xml:space="preserve">
+    <value>passwdLabel</value>
+  </data>
+  <data name="&gt;&gt;runBeepSoundBtn.Name" xml:space="preserve">
+    <value>runBeepSoundBtn</value>
+  </data>
+  <data name="&gt;&gt;deleteAfterBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;upClickBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabsBox.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="loadToolStripMenuItem.ToolTipText" xml:space="preserve">
+    <value>Load Settings from A config file</value>
+  </data>
+  <data name="label17.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;tabsLabel.Name" xml:space="preserve">
+    <value>tabsLabel</value>
+  </data>
+  <data name="&gt;&gt;autoClearBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;passwordBox.Name" xml:space="preserve">
+    <value>passwordBox</value>
+  </data>
+  <data name="fileSystemTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 34</value>
+  </data>
+  <data name="&gt;&gt;soundRunBtn.Parent" xml:space="preserve">
+    <value>soundTab</value>
+  </data>
+  <data name="durationSoundBox.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;processesBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="clickDelayBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 30</value>
+  </data>
+  <data name="clearBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 47</value>
+  </data>
+  <data name="speakNowBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 36</value>
+  </data>
+  <data name="&gt;&gt;homeTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;percentLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;excludeBox.Parent" xml:space="preserve">
+    <value>processControlTab</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;usrnameLabel.Parent" xml:space="preserve">
+    <value>homeTab</value>
+  </data>
+  <data name="screenWidthBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 30</value>
+  </data>
+  <data name="loadToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="soundRunBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="processesLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>File Location on the remote pc:</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="ttsRunBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="delayBetweenBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 30</value>
+  </data>
+  <data name="openScannerBtn.Text" xml:space="preserve">
+    <value>Open Scanner</value>
+  </data>
+  <data name="saveIcon.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;clearBtn.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;networkTab.Parent" xml:space="preserve">
+    <value>main</value>
+  </data>
+  <data name="&gt;&gt;label30.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label26.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="moveMouseYBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 396</value>
+  </data>
+  <data name="chooseSaveBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>440, 287</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;ipBox.Parent" xml:space="preserve">
+    <value>homeTab</value>
+  </data>
+  <data name="label30.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="urlTab.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="label11.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="sendKeyboardBox.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="soundTab.ToolTipText" xml:space="preserve">
+    <value>Sound Settings</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="leftMouseBtn.Text" xml:space="preserve">
+    <value>Left Mouse</value>
+  </data>
+  <data name="ttsBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 31</value>
+  </data>
+  <data name="&gt;&gt;loadSetting.Parent" xml:space="preserve">
+    <value>homeTab</value>
+  </data>
+  <data name="tabsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="delyLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="autoClearBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 29</value>
+  </data>
+  <data name="&gt;&gt;soundTab.Parent" xml:space="preserve">
+    <value>main</value>
+  </data>
+  <data name="ttsDelayBox.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;saveIcon.Parent" xml:space="preserve">
+    <value>homeTab</value>
+  </data>
+  <data name="&gt;&gt;invisibleBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nircmdAboutLabel.Name" xml:space="preserve">
+    <value>nircmdAboutLabel</value>
+  </data>
+  <data name="&gt;&gt;openScannerBtn.Parent" xml:space="preserve">
+    <value>homeTab</value>
+  </data>
+  <data name="ttsSpeedBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>205, 113</value>
+  </data>
+  <data name="&gt;&gt;sendKeyboardBox.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;durationSoundBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="processDelay.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;downloadNirBtn.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="&gt;&gt;middleMouseBtn.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;soundDelayBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label28.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="delyLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>541, 123</value>
+  </data>
+  <data name="delayBeforeBox.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="soundRunBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>459, 217</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;frequencySoundBox.Parent" xml:space="preserve">
+    <value>soundTab</value>
+  </data>
+  <data name="label20.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;soundRunBtn.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;downClickBtn.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;filterTextBox.Parent" xml:space="preserve">
+    <value>processControlTab</value>
+  </data>
+  <data name="&gt;&gt;networkOffBox.Parent" xml:space="preserve">
+    <value>networkTab</value>
+  </data>
+  <data name="&gt;&gt;getFileLocationBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;loadSetting.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="unmuteLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomCenter</value>
+  </data>
+  <data name="chooseSaveBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 30</value>
+  </data>
+  <data name="&gt;&gt;label29.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;soundDelayBox.Parent" xml:space="preserve">
+    <value>soundTab</value>
+  </data>
+  <data name="networkOffBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ttsSpeedBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;processControlTab.Parent" xml:space="preserve">
+    <value>main</value>
+  </data>
+  <data name="networkTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 34</value>
+  </data>
+  <data name="processesBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>907, 504</value>
+  </data>
+  <data name="&gt;&gt;soundDelayBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;ttsRunBtn.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="getReloadBtn.Text" xml:space="preserve">
+    <value>Get Processes</value>
+  </data>
+  <data name="firewallRun.Text" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="saveToolStripMenuItem.ToolTipText" xml:space="preserve">
+    <value>Save Your settings to a config file</value>
+  </data>
+  <data name="&gt;&gt;ttsDelayBox.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;networkOffBox.Name" xml:space="preserve">
+    <value>networkOffBox</value>
+  </data>
+  <data name="&gt;&gt;ttsRunBtn.Name" xml:space="preserve">
+    <value>ttsRunBtn</value>
+  </data>
+  <data name="&gt;&gt;incognitoBox.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Delay:</value>
+  </data>
+  <data name="label27.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="delayBetweenBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>627, 576</value>
+  </data>
+  <data name="&gt;&gt;leftMouseBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clearBtn.Name" xml:space="preserve">
+    <value>clearBtn</value>
+  </data>
+  <data name="ttsRunBtn.Text" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moveMouseYBox.Name" xml:space="preserve">
+    <value>moveMouseYBox</value>
+  </data>
+  <data name="&gt;&gt;homeTab.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;moveMouseXBox.Name" xml:space="preserve">
+    <value>moveMouseXBox</value>
+  </data>
+  <data name="autoClearBox.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;invisibleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="delayTerminate.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="moveMouseXBox.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 85</value>
+  </data>
+  <data name="muteLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 129</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="loadSetting.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
-        AAAASUVORK5CYII=
+        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
+        /oT/C372s/8J/Y5bO4SB7ZwAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="muteLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAABOpJREFUeF7t
-        nO2t1DAQRV8HlEAJlEAJlEAJlEAJlEAJlEAJlEAJlAC+0ou0RDd5+Rjb4/U50kj82Hjm5Z7NZlfELwAA
-        AAAAAADPy7tSH0t9KfX59d8wAe9LfS/119SfUl9LwZOid7sLfl0SBJ6MrXf9Vn0rBU/C2fCX4r7gCbga
-        voqPgsHZC183fLr7F/pG8KuUew0Myl74ClvfBh6RDO61kgMG463wXagfSrnXcx8wGFfCX3DHIMBA3Alf
-        uOMQYBDuhi/csQgwABHhC3c8AiQnKnzh1kCAxESGL9w6CJCU6PCFWwsBElIjfOHWQ4Bk1ApfuDURIBE1
-        wxduXQRIQu3whVsbARLQInzh1keAzrQKX7geCNCRluEL1wcBOtE6fOF6IUAHeoQvXD8EaEyv8IXriQAN
-        6Rm+cH0RoAEK9kcpF4CqRfjC9UaAyihYBexOvqpV+ML1R4CKZApfuBkQoBLZwhduDgSoQMbwhZsFAYLJ
-        Gr5w8yBAQQ9N6EREVNbwhZtJM0/JspGCno9zJya6eocv3FxTCqDn5FoFr8oQvnCzTSfA1kOStSpL+MLN
-        N5UAuuzP+M5fcDNOJcDeb/HRlS184eacSoCtd79+p/9USifjTG1typQxfOFm1d8xDe4E/Cx1FW255tZc
-        b86QBTfr9AIs26hcwQmgd39W1rOqzgigq5queqqaVzjNpHMbLufdE7DGCXDnilKb9ayqo3//+gb6dyn9
-        gBbN+j4tdDu7x4WXQoBjuP/PICEiJdi6SQ/7SHWLI8Ax9He546Mk2PuGFoZbHAGOsfcD2l0J9sIPvady
-        DRDgOHtBXZWgxpqbuCYIcI7IwJqGL1wjBDhPRHDNwxeuGQJc406AXcIXriECXOdKkN3CF64pAtzjTKBd
-        wxeuMQLc50iw3cMXrjkCxLAX8F41C1+4ARAgjrMSNA1fuCEQIJajEjQPX7hBECCetyToEr5wwyBAPAiQ
-        lPWsqmgB+AgolZX1rKpIAbgJLDWrAGfDX6qpBG4ABLjPXvhLwEdeUx3XHAHucSbY7hK4xghwnSuBdpXA
-        NUWAa9wJspsEriECnCciwC4SuGYIcI7I4JpL4BohwHFqBNZUAtcEAY7R67+Fh55P1wABjqG/yx0f9S7d
-        kyDsKuAWR4BjuICiL9FbEoThFkeAY6wfDg3/fH5lLUH1h0N5PPw4T/l4+J13rBNAxQYRSXm8hD0WW8RM
-        wt6dZnRllMDNOZUA6xuZ2pVNAjfjVAIINor8v6YTQEiCGa8EbrYpBRD6ONA9QSsRMkjg5ppWgEf0g4ZO
-        RETt3Wj2lsDNpJkhmKwSuHkQoBIZJXCzIEBFskng5kCAymSSwM2AAA3IIoHrjwCNyCCB640ADektgeuL
-        AI3pKYHriQAd6CWB64cAneghgeuFAB1pLYHrgwCdaSmB64EACWglgVsfAZLQQgK3NgIkorYEbl0ESEZN
-        CdyaCJCQWhK49RAgKTUkcGshQGKiJXDrIEByIiVwayDAAERJ4I5HgEGIkMAdiwADcVcCdxwCDMZVCRS0
-        OwYBBuSKBFsCwKC8JcF6+xZtteJeCwOzJ4GeeVy2v5EM7hlIbYwBg7MnwVt1Z38kSMQVCXRFOPr7AQzA
-        WQl49z8hW5tWrUuywJOybHzhgv9dSruhwQTo813f/bWXoS73NXb1BAAAAAAAAMjJy8s/7+VxIkci0XAA
-        AAAASUVORK5CYII=
-</value>
+  <data name="&gt;&gt;label25.Parent" xml:space="preserve">
+    <value>networkTab</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Enhanced-PsExec Control Panel</value>
+  </data>
+  <data name="getFileLocationBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="killBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;percentLabel.Name" xml:space="preserve">
+    <value>percentLabel</value>
+  </data>
+  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;fileSystemTab.Parent" xml:space="preserve">
+    <value>main</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 25</value>
+  </data>
+  <data name="getReloadBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 47</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="fileSystemTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1217, 670</value>
+  </data>
+  <data name="&gt;&gt;excludeBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="filterTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 30</value>
+  </data>
+  <data name="&gt;&gt;getFile.Parent" xml:space="preserve">
+    <value>fileSystemTab</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="menuStrip1.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="networkOnBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="terminateChromeBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>939, 28</value>
+  </data>
+  <data name="&gt;&gt;saveToolStripMenuItem.Name" xml:space="preserve">
+    <value>saveToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>processControlTab</value>
+  </data>
+  <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>244, 125</value>
+  </data>
+  <data name="&gt;&gt;amountLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 25</value>
+  </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>Delay:</value>
+  </data>
+  <data name="processesBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 75</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;killBtn.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="networkTab.Text" xml:space="preserve">
+    <value>Network Control</value>
+  </data>
+  <data name="urlLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="maleVoiceBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 85</value>
+  </data>
+  <data name="getReloadBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;doubleClickBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="doubleClickBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 315</value>
+  </data>
+  <data name="usrnameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 254</value>
+  </data>
+  <data name="ipBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>226, 187</value>
+  </data>
+  <data name="downClickBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;mouseFullClickBtn.Name" xml:space="preserve">
+    <value>mouseFullClickBtn</value>
+  </data>
+  <data name="&gt;&gt;unmuteLabel.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="label28.Text" xml:space="preserve">
+    <value>Screenshot </value>
+  </data>
+  <data name="&gt;&gt;urlTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ipLabel.Parent" xml:space="preserve">
+    <value>homeTab</value>
+  </data>
+  <data name="&gt;&gt;ttsSpeedBox.Name" xml:space="preserve">
+    <value>ttsSpeedBox</value>
+  </data>
+  <data name="&gt;&gt;alwaysOnTopToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="unmuteLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -551,39 +1582,143 @@
         SUVORK5CYII=
 </value>
   </data>
-  <data name="saveToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKQSURBVDhPrY/JTxNRAIdf0kQPJoZ4MOFEUNwoWLbSllUg
-        KAFKy6JSFFDABUwQLxz4B0iaECImGA9owo14aCXFUFot2MJAC5zdN+hCaaEFSUQoP997DFSJRyf5kpnM
-        7/veDPkvl06n22hpaoZlfAoL3hUs+lbhXlqFxx+CdzkMXyAMfyCE5WAI43YBba1teHC/Y0PUCWmob0Aj
-        xTE9hwX/2l8sLq/DHViHJ7gO38oPTLvmwQ67e/sORJ2Qm403wBCc89iO7Bwggq3tCH5tbePn5hY9ZJZv
-        bzW3RAP1166D8UZw4dtSaBdfCF8pX+jvfPau4pNnBR/dQdgcM3zLIqJOSF2tDgzLhAAv/dQ9PIE1+vns
-        N8L47g/z4Khtkm9ZRNQJuVJzGYwRqx1zH7yYp8y9Z3gwS3G9o7x1Y4bywjzBt3VXa6OB6soqMB49eQbD
-        6ASGLQ6YXk1h5LUAE2XYOgmj2Y7nL214+Pgp37KIqBOiVVfgn1Roohx4V62tjAbUpWX4E025GlUaLR/V
-        0NMY7JmJ6rLy/Y2oE1JSfBGM0kslsNlscLlcHKfTyWH3giAgS6GEQi7f34o6IYV5+WAUFxbBarUiPzcP
-        ykwFHA4H7HY7j46NjSE/JxfZqiwU0G3RhYJoIFupAiMvKxsWOkxPSUWyVAqz2QyTyQSDwYChoSGoaFSR
-        IUcOi9BDRJ2QjNS0TXlqGh8YjUacPpmAE/HxXBocHMTAwAD6+/shS0qGTJqEzLR0KGlI1AmJORpzL/lc
-        YiRdlsLHe1JfXx96enqg1+vR3d2NMzR8NuEUzidKWWiHqkd2C4Qck0gkpXFxcVVdXV1NVGjt7e1tp3TQ
-        QDt77uzsbIw9Hqs9JJFoGHRfQAg5/BslsRWFgJrRJAAAAABJRU5ErkJggg==
-</value>
+  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
+    <value>soundTab</value>
   </data>
-  <data name="loadToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAApFJREFUOE+F0l1MUmEcBnBtrbpra13q1kVb66rLtm689bLavKLlnBvZGipuxppg
-        BvODDJkTlcO3TjQQxYoPP8DSNANESScO0OM5iBMZpqWmLuHpbJ7VUqnf5Xue59153/ef9S88Hi9Hr9ff
-        NZlMD4qLi6+wy/8nEAiuxWK00ajXHSlbWiCT18Hn8cS6u7tvs5HMqqqqcgMeD61XyrG5HgYVfIOtZAT1
-        teUYHxuPSySSXDZ6Wl5e3iUyFJkipM9xlFjEYdiFVGIBMyMvsTunx6NCDlZI0sfkzrOVv62ukJqmahEO
-        KDd+eLuwP21CKuLGbnQCrq4KBGwN4POewu/3l7CVPxwOxz2FVJZeC9qx/UGDxEA9dj4asD9rRmrJimhw
-        EFZNKeTVT+CdmibZ2rGCgoIL/onJ1Q6NDOuzBDbne5AcUiA52IRvkwQOlixI0YPwuNQwNj+G02bfY2rZ
-        x20Gc+u3VI0yrIaGEPYpseJVYNtnxEbfC+zMdCI0LsYW6cJh3IuaZyWgKFLGVn87Ry8vq0bt7rjJaE4R
-        rWJ8HVMh3ivB3uIA7IYymBQ8KFvkoOmoJT8//+Jx7QyJjRihIpjfd6uxbm7A/tJ7DChLYTNUQkNoIRQK
-        b7LRswXnA55hmxVr1mpQugp8/9IPJ7NB+JMBMmkTmDm4w0bP5h5xbgU+9yKsLUK4rQjJCQOGdWIkFvpQ
-        K26ESCTKPI3Ma1zu6epMU/NmzKkeYrG9ELH+GnjeyhDx6dDe3J5mjnCDjZ/G4XByOrRaDL2TghqtQ8hS
-        ivhYA2YcYrS9EiNK071sNKPsGE0aiVYizeeVQSgoh1bZDMtr88+1aKwv4wifxOfzr1ssFq7T6axUq9X3
-        uVzuVfbTCVlZvwBP36rago5FPQAAAABJRU5ErkJggg==
-</value>
+  <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="&gt;&gt;sendKeyboardTextBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="runBeepSoundBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 43</value>
+  </data>
+  <data name="newWindowBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label19.Name" xml:space="preserve">
+    <value>label19</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Move Mouse</value>
+  </data>
+  <data name="downClickBtn.Text" xml:space="preserve">
+    <value>Down Only</value>
+  </data>
+  <data name="urlTab.Text" xml:space="preserve">
+    <value>URL Control</value>
+  </data>
+  <data name="&gt;&gt;mouseFullClickBtn.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;frequencySoundBox.Name" xml:space="preserve">
+    <value>frequencySoundBox</value>
+  </data>
+  <data name="openScannerBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;soundTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="processDelay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>598, 36</value>
+  </data>
+  <data name="invisibleBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 30</value>
+  </data>
+  <data name="usrnameLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 17pt</value>
+  </data>
+  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;incognitoBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="usrnameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 33</value>
+  </data>
+  <data name="&gt;&gt;toolStripTextBox1.Name" xml:space="preserve">
+    <value>toolStripTextBox1</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 85</value>
+  </data>
+  <data name="alwaysOnTopToolStripMenuItem.ToolTipText" xml:space="preserve">
+    <value>Make this window to show up on every window</value>
+  </data>
+  <data name="label21.Text" xml:space="preserve">
+    <value>Only works for computers you "talked" before (arp -a). range scanning will be available soon.</value>
+  </data>
+  <data name="&gt;&gt;runBeepSoundBtn.Parent" xml:space="preserve">
+    <value>soundTab</value>
+  </data>
+  <data name="openScannerBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 115</value>
+  </data>
+  <data name="doubleClickBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="downloadNirBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>995, 25</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 356</value>
+  </data>
+  <data name="rightMouseBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="main.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt</value>
+  </data>
+  <data name="&gt;&gt;killBtn.Name" xml:space="preserve">
+    <value>killBtn</value>
+  </data>
+  <data name="&gt;&gt;newWindowBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clearBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;incognitoBox.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;screenWidthBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label26.Parent" xml:space="preserve">
+    <value>fileSystemTab</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="&gt;&gt;leftMouseBtn.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="&gt;&gt;howToUseToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ttsVolumeBox.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="soundTab.Text" xml:space="preserve">
+    <value>Sound Control</value>
+  </data>
+  <data name="usrBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label27.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="creditsToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -596,22 +1731,267 @@
         gg==
 </value>
   </data>
-  <data name="howToUseToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAZxJREFUOE9jwAbydt7RaTj+YmH1waenaw49O9p84lVP/PzzAlBp/KDq7K+0rK33
-        /octv/I/et3d/1Frbv0PW3b5f+n+J/9z975UhirDDuz71wukbbn3P3jJ+f8xGx7UQIUZwlddOxW0+Pz/
-        7N3PD0KFsAOfSTvCg5de+B+6/NInqBAYhK29HRe06PT/8FU33kOFsAOt+nq28A0PloVvfeYJFQID3wWn
-        r/rMOfE/cMX1nVAh4oDxzDOsPvOO3/Sceei/55yjXwMm7xaGShEH3OYcu+88de9/t5kHXtpMOywIFSYO
-        2HVsDHKYtOu//eTdX7TqV7FBhYkHFm1rcqx7t/y3n3ZgBlSIRFBfz2TesznTrH4xH1SENKDftFrbsGXl
-        OZOerdlQIdKAYc+WWbr1S//rt639DBUiDWhUzZBUqV6wSrtptQ9UiDDYsWOH0JYtWww2bNjguGbpUt8V
-        Sxe6r16yxGf9+vW+QDG7zZs36+zcuZMbqhwTACXtgIob1q1bNxWIlwDxKhBeu3btfCA9EYgr9u/frwFV
-        Tg3AwAAAxAO9lOHTxeUAAAAASUVORK5CYII=
-</value>
+  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="label27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 25</value>
+  </data>
+  <data name="&gt;&gt;ttsBox.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="downloadNirBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 43</value>
+  </data>
+  <data name="&gt;&gt;clickDelayBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;delyLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>Duration:</value>
+  </data>
+  <data name="&gt;&gt;sendKeyboardBox.Name" xml:space="preserve">
+    <value>sendKeyboardBox</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="durationSoundBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 30</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="&gt;&gt;label23.Name" xml:space="preserve">
+    <value>label23</value>
+  </data>
+  <data name="label24.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="label27.Text" xml:space="preserve">
+    <value>Save To:</value>
+  </data>
+  <data name="label23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>752, 74</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>622, 483</value>
+  </data>
+  <data name="&gt;&gt;fileToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;doubleClickBtn.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="sendKeyboardDelayBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1020, 250</value>
+  </data>
+  <data name="&gt;&gt;volumeBox.Name" xml:space="preserve">
+    <value>volumeBox</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>593, 7</value>
+  </data>
+  <data name="&gt;&gt;usrBox.Name" xml:space="preserve">
+    <value>usrBox</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>388, 414</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="ttsBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>560, 30</value>
+  </data>
+  <data name="&gt;&gt;killBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="filterTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label28.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;urlBox.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="label21.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;urlLabel.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rightMouseBtn.Text" xml:space="preserve">
+    <value>Right Mouse</value>
+  </data>
+  <data name="ipLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 184</value>
+  </data>
+  <data name="&gt;&gt;loadSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="processControlTab.Text" xml:space="preserve">
+    <value>Process Control</value>
+  </data>
+  <data name="&gt;&gt;ttsSpeedBox.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="delyLabel.Text" xml:space="preserve">
+    <value>Delay:</value>
+  </data>
+  <data name="autoClearBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>962, 80</value>
+  </data>
+  <data name="&gt;&gt;durationSoundBox.Name" xml:space="preserve">
+    <value>durationSoundBox</value>
+  </data>
+  <data name="creditsToolStripMenuItem.ToolTipText" xml:space="preserve">
+    <value>Show Credits On This Program</value>
+  </data>
+  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
+    <value>soundTab</value>
+  </data>
+  <data name="&gt;&gt;caseInsensitiveBox.Name" xml:space="preserve">
+    <value>caseInsensitiveBox</value>
+  </data>
+  <data name="mouseFullClickBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 308</value>
+  </data>
+  <data name="&gt;&gt;autoClearBox.Parent" xml:space="preserve">
+    <value>processControlTab</value>
+  </data>
+  <data name="&gt;&gt;maleVoiceBox.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;networkSmbBox.Name" xml:space="preserve">
+    <value>networkSmbBox</value>
+  </data>
+  <data name="&gt;&gt;deleteAfterBox.Parent" xml:space="preserve">
+    <value>fileSystemTab</value>
+  </data>
+  <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 25</value>
+  </data>
+  <data name="invisibleBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 30px</value>
+  </data>
+  <data name="volumeBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1004, 40</value>
+  </data>
+  <data name="upClickBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 24</value>
+  </data>
+  <data name="caseInsensitiveBox.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;amountLabel.Parent" xml:space="preserve">
+    <value>soundTab</value>
+  </data>
+  <data name="ipLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 17pt</value>
+  </data>
+  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>616, 264</value>
+  </data>
+  <data name="&gt;&gt;label22.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="label26.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label19.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;runBtn.Name" xml:space="preserve">
+    <value>runBtn</value>
+  </data>
+  <data name="&gt;&gt;usrBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ttsDelayBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>755, 102</value>
+  </data>
+  <data name="delayTerminate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1038, 127</value>
+  </data>
+  <data name="&gt;&gt;ttsBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;doubleClickBtn.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="&gt;&gt;downloadNirBtn.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="excludeBox.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="screenshotGoBtn.Text" xml:space="preserve">
+    <value>GO</value>
+  </data>
+  <data name="&gt;&gt;processesBox.Name" xml:space="preserve">
+    <value>processesBox</value>
+  </data>
+  <data name="urlLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 37</value>
+  </data>
+  <data name="caseInsensitiveBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 29</value>
+  </data>
+  <data name="&gt;&gt;label23.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="screenHeightBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>161, 246</value>
+  </data>
+  <data name="&gt;&gt;ipLabel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="volumeBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="terminateChromeBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 53</value>
+  </data>
+  <data name="&gt;&gt;moveBtn.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="&gt;&gt;screenshotGoBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;downClickBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="downloadNirBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 36</value>
+  </data>
+  <data name="tabsBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAUAEBAAAAEAIABoBAAAVgAAABgYAAABACAAiAkAAL4EAAAgIAAAAQAgAKgQAABGDgAAMDAAAAEA
@@ -996,4 +2376,1821 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
   </data>
+  <data name="label18.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="passwdLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 33</value>
+  </data>
+  <data name="processesBox.ItemHeight" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="tabsBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>245, 87</value>
+  </data>
+  <data name="speakNowBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="howToUseToolStripMenuItem.ToolTipText" xml:space="preserve">
+    <value>How To Use this program</value>
+  </data>
+  <data name="&gt;&gt;invisibleLabel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;label28.Parent" xml:space="preserve">
+    <value>fileSystemTab</value>
+  </data>
+  <data name="saveIcon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>363, 390</value>
+  </data>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 25</value>
+  </data>
+  <data name="percentLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="configToolStripMenuItem.ToolTipText" xml:space="preserve">
+    <value>Config settings</value>
+  </data>
+  <data name="&gt;&gt;speakNowBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="screenshotGoBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="miscTab.ToolTipText" xml:space="preserve">
+    <value>Keyboard, Mouse, TTS</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 25</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 25</value>
+  </data>
+  <data name="label4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="&gt;&gt;howToUseToolStripMenuItem.Name" xml:space="preserve">
+    <value>howToUseToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;filterTextBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>807, 25</value>
+  </data>
+  <data name="frequencySoundBox.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;miscTab.Parent" xml:space="preserve">
+    <value>main</value>
+  </data>
+  <data name="&gt;&gt;fileSystemTab.Name" xml:space="preserve">
+    <value>fileSystemTab</value>
+  </data>
+  <data name="delayBeforeBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 30</value>
+  </data>
+  <data name="nircmdAboutLabel.Text" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="fileSystemTab.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label29.Parent" xml:space="preserve">
+    <value>fileSystemTab</value>
+  </data>
+  <data name="alwaysOnTopToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="&gt;&gt;middleMouseBtn.Name" xml:space="preserve">
+    <value>middleMouseBtn</value>
+  </data>
+  <data name="urlTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;moveMouseDelayBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="excludeBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 29</value>
+  </data>
+  <data name="saveToBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 13pt</value>
+  </data>
+  <data name="&gt;&gt;downClickBtn.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="runBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 45</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 25</value>
+  </data>
+  <data name="&gt;&gt;label30.Name" xml:space="preserve">
+    <value>label30</value>
+  </data>
+  <data name="saveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="&gt;&gt;invisibleLabel.Name" xml:space="preserve">
+    <value>invisibleLabel</value>
+  </data>
+  <data name="ipLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="percentLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>544, 89</value>
+  </data>
+  <data name="&gt;&gt;saveToBox.Parent" xml:space="preserve">
+    <value>fileSystemTab</value>
+  </data>
+  <data name="firewallRun.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 47</value>
+  </data>
+  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="label23.Text" xml:space="preserve">
+    <value>Delay:</value>
+  </data>
+  <data name="&gt;&gt;screenHeightBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;saveToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;unmuteLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="amountLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="clickDelayBox.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="urlTab.ToolTipText" xml:space="preserve">
+    <value>Control multiple URL settings</value>
+  </data>
+  <data name="&gt;&gt;moveMouseYBox.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="&gt;&gt;exitToolStripMenuItem.Name" xml:space="preserve">
+    <value>exitToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;configToolStripMenuItem.Name" xml:space="preserve">
+    <value>configToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;muteLabel.Name" xml:space="preserve">
+    <value>muteLabel</value>
+  </data>
+  <data name="&gt;&gt;urlBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="saveToolStripMenuItem.Text" xml:space="preserve">
+    <value>Save as</value>
+  </data>
+  <data name="clearBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 600</value>
+  </data>
+  <data name="&gt;&gt;excludeBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;usrBox.Parent" xml:space="preserve">
+    <value>homeTab</value>
+  </data>
+  <data name="&gt;&gt;moveMouseXBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;percentLabel.Parent" xml:space="preserve">
+    <value>soundTab</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;volumeBox.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;creditsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;passwdLabel.Parent" xml:space="preserve">
+    <value>homeTab</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;usrnameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="percentLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="processDelay.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;rightMouseBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="delyLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 25</value>
+  </data>
+  <data name="maleVoiceBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;clickDelayBox.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="getFileLocationBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>428, 27</value>
+  </data>
+  <data name="&gt;&gt;terminateChromeBtn.Name" xml:space="preserve">
+    <value>terminateChromeBtn</value>
+  </data>
+  <data name="ipBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 30</value>
+  </data>
+  <data name="networkTab.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;frequencySoundBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="volumeBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 25</value>
+  </data>
+  <data name="leftMouseBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 29</value>
+  </data>
+  <data name="processControlTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 34</value>
+  </data>
+  <data name="upClickBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>362, 320</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;delayBeforeBox.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="&gt;&gt;unmuteLabel.Parent" xml:space="preserve">
+    <value>soundTab</value>
+  </data>
+  <data name="&gt;&gt;fileSystemTab.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="deleteAfterBox.Text" xml:space="preserve">
+    <value>Delete From remote PC</value>
+  </data>
+  <data name="doubleClickBtn.Text" xml:space="preserve">
+    <value>Double Click</value>
+  </data>
+  <data name="&gt;&gt;loadToolStripMenuItem.Name" xml:space="preserve">
+    <value>loadToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;speakNowBtn.Name" xml:space="preserve">
+    <value>speakNowBtn</value>
+  </data>
+  <data name="&gt;&gt;mouseFullClickBtn.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="mouseFullClickBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;killBtn.Parent" xml:space="preserve">
+    <value>processControlTab</value>
+  </data>
+  <data name="&gt;&gt;aboutToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;processDelay.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="invisibleBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>232, 430</value>
+  </data>
+  <data name="&gt;&gt;chooseSaveBtn.Name" xml:space="preserve">
+    <value>chooseSaveBtn</value>
+  </data>
+  <data name="&gt;&gt;rightMouseBtn.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="soundTab.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;runBeepSoundBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label27.Parent" xml:space="preserve">
+    <value>fileSystemTab</value>
+  </data>
+  <data name="&gt;&gt;delyLabel.Parent" xml:space="preserve">
+    <value>soundTab</value>
+  </data>
+  <data name="&gt;&gt;urlLabel.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ttsSpeedBox.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="maleVoiceBox.Text" xml:space="preserve">
+    <value>Male Voice</value>
+  </data>
+  <data name="invisibleBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1225, 24</value>
+  </data>
+  <data name="&gt;&gt;muteLabel.Parent" xml:space="preserve">
+    <value>soundTab</value>
+  </data>
+  <data name="&gt;&gt;screenshotGoBtn.Name" xml:space="preserve">
+    <value>screenshotGoBtn</value>
+  </data>
+  <data name="&gt;&gt;sendKeyboardTextBtn.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="&gt;&gt;label21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;maleVoiceBox.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="&gt;&gt;autoClearBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="soundDelayBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 30</value>
+  </data>
+  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 20pt</value>
+  </data>
+  <data name="runBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="screenshotGoBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 30</value>
+  </data>
+  <data name="moveMouseXBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 396</value>
+  </data>
+  <data name="unmuteLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 25</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="rightMouseBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="middleMouseBtn.Text" xml:space="preserve">
+    <value>Middle Mouse</value>
+  </data>
+  <data name="runBeepSoundBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>496, 478</value>
+  </data>
+  <data name="&gt;&gt;ipLabel.Name" xml:space="preserve">
+    <value>ipLabel</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 25</value>
+  </data>
+  <data name="&gt;&gt;urlBox.Name" xml:space="preserve">
+    <value>urlBox</value>
+  </data>
+  <data name="&gt;&gt;getReloadBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chooseSaveBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;upClickBtn.Name" xml:space="preserve">
+    <value>upClickBtn</value>
+  </data>
+  <data name="label29.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;passwordBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Delay:</value>
+  </data>
+  <data name="miscTab.Text" xml:space="preserve">
+    <value>Misc</value>
+  </data>
+  <data name="&gt;&gt;speakNowBtn.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="muteLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 123</value>
+  </data>
+  <data name="label30.Text" xml:space="preserve">
+    <value>height</value>
+  </data>
+  <data name="soundRunBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 45</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="autoClearBox.Text" xml:space="preserve">
+    <value>Auto Clear</value>
+  </data>
+  <data name="processesLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="invisibleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 430</value>
+  </data>
+  <data name="usrBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>226, 257</value>
+  </data>
+  <data name="sendKeyboardDelayBox.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;soundDelayBox.Name" xml:space="preserve">
+    <value>soundDelayBox</value>
+  </data>
+  <data name="&gt;&gt;aboutToolStripMenuItem.Name" xml:space="preserve">
+    <value>aboutToolStripMenuItem</value>
+  </data>
+  <data name="nircmdAboutLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="&gt;&gt;networkOffBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="downClickBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 24</value>
+  </data>
+  <data name="&gt;&gt;delayBeforeBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="processControlTab.ToolTipText" xml:space="preserve">
+    <value>Control Processes</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 374</value>
+  </data>
+  <data name="&gt;&gt;caseInsensitiveBox.Parent" xml:space="preserve">
+    <value>processControlTab</value>
+  </data>
+  <data name="&gt;&gt;saveIcon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;downloadNirBtn.Name" xml:space="preserve">
+    <value>downloadNirBtn</value>
+  </data>
+  <data name="downloadNirBtn.Text" xml:space="preserve">
+    <value>Download NirCmd</value>
+  </data>
+  <data name="filterTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>962, 248</value>
+  </data>
+  <data name="muteLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;terminateChromeBtn.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="&gt;&gt;label30.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;delayTerminate.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;incognitoBox.Name" xml:space="preserve">
+    <value>incognitoBox</value>
+  </data>
+  <data name="networkOffBox.Text" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="middleMouseBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 262</value>
+  </data>
+  <data name="&gt;&gt;ttsDelayBox.Name" xml:space="preserve">
+    <value>ttsDelayBox</value>
+  </data>
+  <data name="&gt;&gt;delayTerminate.Name" xml:space="preserve">
+    <value>delayTerminate</value>
+  </data>
+  <data name="&gt;&gt;getFileLocationBox.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;delayBetweenBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="caseInsensitiveBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label25.Text" xml:space="preserve">
+    <value>Firewall Settings:</value>
+  </data>
+  <data name="getFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>908, 58</value>
+  </data>
+  <data name="homeTab.ToolTipText" xml:space="preserve">
+    <value>Set Connections Settings</value>
+  </data>
+  <data name="invisibleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label25.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;main.Name" xml:space="preserve">
+    <value>main</value>
+  </data>
+  <data name="rightMouseBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 29</value>
+  </data>
+  <data name="fileSystemTab.Text" xml:space="preserve">
+    <value>File System</value>
+  </data>
+  <data name="ttsBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="fileSystemTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;moveMouseDelayBox.Name" xml:space="preserve">
+    <value>moveMouseDelayBox</value>
+  </data>
+  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="upClickBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="&gt;&gt;processesLabel.Parent" xml:space="preserve">
+    <value>processControlTab</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;networkOnBox.Name" xml:space="preserve">
+    <value>networkOnBox</value>
+  </data>
+  <data name="label23.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="downClickBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>267, 320</value>
+  </data>
+  <data name="networkOffBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="amountLabel.Text" xml:space="preserve">
+    <value>Select Volume Amount</value>
+  </data>
+  <data name="main.ShowToolTips" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="delayTerminate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 30</value>
+  </data>
+  <data name="label27.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="moveBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 37</value>
+  </data>
+  <data name="&gt;&gt;moveBtn.Name" xml:space="preserve">
+    <value>moveBtn</value>
+  </data>
+  <data name="screenHeightBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 30</value>
+  </data>
+  <data name="&gt;&gt;usrnameLabel.Name" xml:space="preserve">
+    <value>usrnameLabel</value>
+  </data>
+  <data name="homeTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 34</value>
+  </data>
+  <data name="&gt;&gt;clearBtn.Parent" xml:space="preserve">
+    <value>processControlTab</value>
+  </data>
+  <data name="&gt;&gt;networkTab.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="chooseSaveBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>908, 602</value>
+  </data>
+  <data name="&gt;&gt;volumeBox.Parent" xml:space="preserve">
+    <value>soundTab</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>epsexecForm</value>
+  </data>
+  <data name="&gt;&gt;processesLabel.Name" xml:space="preserve">
+    <value>processesLabel</value>
+  </data>
+  <data name="&gt;&gt;screenHeightBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;usrnameLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;chooseSaveBtn.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 25</value>
+  </data>
+  <data name="screenHeightBox.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="muteLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAABOpJREFUeF7t
+        nO2t1DAQRV8HlEAJlEAJlEAJlEAJlEAJlEAJlEAJlAC+0ou0RDd5+Rjb4/U50kj82Hjm5Z7NZlfELwAA
+        AAAAAADPy7tSH0t9KfX59d8wAe9LfS/119SfUl9LwZOid7sLfl0SBJ6MrXf9Vn0rBU/C2fCX4r7gCbga
+        voqPgsHZC183fLr7F/pG8KuUew0Myl74ClvfBh6RDO61kgMG463wXagfSrnXcx8wGFfCX3DHIMBA3Alf
+        uOMQYBDuhi/csQgwABHhC3c8AiQnKnzh1kCAxESGL9w6CJCU6PCFWwsBElIjfOHWQ4Bk1ApfuDURIBE1
+        wxduXQRIQu3whVsbARLQInzh1keAzrQKX7geCNCRluEL1wcBOtE6fOF6IUAHeoQvXD8EaEyv8IXriQAN
+        6Rm+cH0RoAEK9kcpF4CqRfjC9UaAyihYBexOvqpV+ML1R4CKZApfuBkQoBLZwhduDgSoQMbwhZsFAYLJ
+        Gr5w8yBAQQ9N6EREVNbwhZtJM0/JspGCno9zJya6eocv3FxTCqDn5FoFr8oQvnCzTSfA1kOStSpL+MLN
+        N5UAuuzP+M5fcDNOJcDeb/HRlS184eacSoCtd79+p/9USifjTG1typQxfOFm1d8xDe4E/Cx1FW255tZc
+        b86QBTfr9AIs26hcwQmgd39W1rOqzgigq5queqqaVzjNpHMbLufdE7DGCXDnilKb9ayqo3//+gb6dyn9
+        gBbN+j4tdDu7x4WXQoBjuP/PICEiJdi6SQ/7SHWLI8Ax9He546Mk2PuGFoZbHAGOsfcD2l0J9sIPvady
+        DRDgOHtBXZWgxpqbuCYIcI7IwJqGL1wjBDhPRHDNwxeuGQJc406AXcIXriECXOdKkN3CF64pAtzjTKBd
+        wxeuMQLc50iw3cMXrjkCxLAX8F41C1+4ARAgjrMSNA1fuCEQIJajEjQPX7hBECCetyToEr5wwyBAPAiQ
+        lPWsqmgB+AgolZX1rKpIAbgJLDWrAGfDX6qpBG4ABLjPXvhLwEdeUx3XHAHucSbY7hK4xghwnSuBdpXA
+        NUWAa9wJspsEriECnCciwC4SuGYIcI7I4JpL4BohwHFqBNZUAtcEAY7R67+Fh55P1wABjqG/yx0f9S7d
+        kyDsKuAWR4BjuICiL9FbEoThFkeAY6wfDg3/fH5lLUH1h0N5PPw4T/l4+J13rBNAxQYRSXm8hD0WW8RM
+        wt6dZnRllMDNOZUA6xuZ2pVNAjfjVAIINor8v6YTQEiCGa8EbrYpBRD6ONA9QSsRMkjg5ppWgEf0g4ZO
+        RETt3Wj2lsDNpJkhmKwSuHkQoBIZJXCzIEBFskng5kCAymSSwM2AAA3IIoHrjwCNyCCB640ADektgeuL
+        AI3pKYHriQAd6CWB64cAneghgeuFAB1pLYHrgwCdaSmB64EACWglgVsfAZLQQgK3NgIkorYEbl0ESEZN
+        CdyaCJCQWhK49RAgKTUkcGshQGKiJXDrIEByIiVwayDAAERJ4I5HgEGIkMAdiwADcVcCdxwCDMZVCRS0
+        OwYBBuSKBFsCwKC8JcF6+xZtteJeCwOzJ4GeeVy2v5EM7hlIbYwBg7MnwVt1Z38kSMQVCXRFOPr7AQzA
+        WQl49z8hW5tWrUuywJOybHzhgv9dSruhwQTo813f/bWXoS73NXb1BAAAAAAAAMjJy8s/7+VxIkci0XAA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="killBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="sendKeyboardTextBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="loadToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAApFJREFUOE+F0l1MUmEcBnBtrbpra13q1kVb66rLtm689bLavKLlnBvZGipuxppg
+        BvODDJkTlcO3TjQQxYoPP8DSNANESScO0OM5iBMZpqWmLuHpbJ7VUqnf5Xue59153/ef9S88Hi9Hr9ff
+        NZlMD4qLi6+wy/8nEAiuxWK00ajXHSlbWiCT18Hn8cS6u7tvs5HMqqqqcgMeD61XyrG5HgYVfIOtZAT1
+        teUYHxuPSySSXDZ6Wl5e3iUyFJkipM9xlFjEYdiFVGIBMyMvsTunx6NCDlZI0sfkzrOVv62ukJqmahEO
+        KDd+eLuwP21CKuLGbnQCrq4KBGwN4POewu/3l7CVPxwOxz2FVJZeC9qx/UGDxEA9dj4asD9rRmrJimhw
+        EFZNKeTVT+CdmibZ2rGCgoIL/onJ1Q6NDOuzBDbne5AcUiA52IRvkwQOlixI0YPwuNQwNj+G02bfY2rZ
+        x20Gc+u3VI0yrIaGEPYpseJVYNtnxEbfC+zMdCI0LsYW6cJh3IuaZyWgKFLGVn87Ry8vq0bt7rjJaE4R
+        rWJ8HVMh3ivB3uIA7IYymBQ8KFvkoOmoJT8//+Jx7QyJjRihIpjfd6uxbm7A/tJ7DChLYTNUQkNoIRQK
+        b7LRswXnA55hmxVr1mpQugp8/9IPJ7NB+JMBMmkTmDm4w0bP5h5xbgU+9yKsLUK4rQjJCQOGdWIkFvpQ
+        K26ESCTKPI3Ma1zu6epMU/NmzKkeYrG9ELH+GnjeyhDx6dDe3J5mjnCDjZ/G4XByOrRaDL2TghqtQ8hS
+        ivhYA2YcYrS9EiNK071sNKPsGE0aiVYizeeVQSgoh1bZDMtr88+1aKwv4wifxOfzr1ssFq7T6axUq9X3
+        uVzuVfbTCVlZvwBP36rago5FPQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="loadToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+O</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="screenshotGoBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 295</value>
+  </data>
+  <data name="tabsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 89</value>
+  </data>
+  <data name="&gt;&gt;amountLabel.Name" xml:space="preserve">
+    <value>amountLabel</value>
+  </data>
+  <data name="sendKeyboardBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>622, 293</value>
+  </data>
+  <data name="&gt;&gt;saveToBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="processesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 25</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 37</value>
+  </data>
+  <data name="miscTab.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label24.Text" xml:space="preserve">
+    <value>Delay:</value>
+  </data>
+  <data name="saveToBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>428, 27</value>
+  </data>
+  <data name="percentLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 25</value>
+  </data>
+  <data name="&gt;&gt;urlTab.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabsBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
+    <value>homeTab</value>
+  </data>
+  <data name="frequencySoundBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 30</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 25</value>
+  </data>
+  <data name="&gt;&gt;soundTab.Name" xml:space="preserve">
+    <value>soundTab</value>
+  </data>
+  <data name="getReloadBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>947, 27</value>
+  </data>
+  <data name="runBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>482, 612</value>
+  </data>
+  <data name="doubleClickBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="label17.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label13.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="label21.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;screenWidthBox.Parent" xml:space="preserve">
+    <value>fileSystemTab</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="killBtn.Text" xml:space="preserve">
+    <value>Kill</value>
+  </data>
+  <data name="creditsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 22</value>
+  </data>
+  <data name="exitToolStripMenuItem.ToolTipText" xml:space="preserve">
+    <value>:(</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 31</value>
+  </data>
+  <data name="&gt;&gt;mouseFullClickBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="unmuteLabel.Text" xml:space="preserve">
+    <value>Unmute</value>
+  </data>
+  <data name="&gt;&gt;invisibleBox.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="speakNowBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>896, 483</value>
+  </data>
+  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>294, 85</value>
+  </data>
+  <data name="&gt;&gt;moveMouseYBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label20.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1225, 708</value>
+  </data>
+  <data name="main.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="deleteAfterBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>58, 159</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1225, 730</value>
+  </data>
+  <data name="&gt;&gt;screenHeightBox.Name" xml:space="preserve">
+    <value>screenHeightBox</value>
+  </data>
+  <data name="clickDelayBox.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="autoClearBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 20</value>
+  </data>
+  <data name="networkSmbBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 73</value>
+  </data>
+  <data name="mouseFullClickBtn.Text" xml:space="preserve">
+    <value>Full Click</value>
+  </data>
+  <data name="&gt;&gt;getFile.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;processControlTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 115</value>
+  </data>
+  <data name="&gt;&gt;ipLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;networkSmbBox.Parent" xml:space="preserve">
+    <value>networkTab</value>
+  </data>
+  <data name="&gt;&gt;sendKeyboardTextBtn.Name" xml:space="preserve">
+    <value>sendKeyboardTextBtn</value>
+  </data>
+  <data name="&gt;&gt;delayBeforeBox.Name" xml:space="preserve">
+    <value>delayBeforeBox</value>
+  </data>
+  <data name="networkOnBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 29</value>
+  </data>
+  <data name="soundDelayBox.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
+    <value>width</value>
+  </data>
+  <data name="leftMouseBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 262</value>
+  </data>
+  <data name="&gt;&gt;getReloadBtn.Name" xml:space="preserve">
+    <value>getReloadBtn</value>
+  </data>
+  <data name="clearBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="clickDelayBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>445, 315</value>
+  </data>
+  <data name="ttsRunBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>757, 31</value>
+  </data>
+  <data name="&gt;&gt;label18.Name" xml:space="preserve">
+    <value>label18</value>
+  </data>
+  <data name="upClickBtn.Text" xml:space="preserve">
+    <value>Up Only</value>
+  </data>
+  <data name="delayTerminate.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="passwordBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;nircmdAboutLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;ttsDelayBox.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="&gt;&gt;urlTab.Name" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="&gt;&gt;tabsLabel.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="speakNowBtn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;openScannerBtn.Name" xml:space="preserve">
+    <value>openScannerBtn</value>
+  </data>
+  <data name="&gt;&gt;sendKeyboardDelayBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="getFileLocationBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>415, 58</value>
+  </data>
+  <data name="howToUseToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAZxJREFUOE9jwAbydt7RaTj+YmH1waenaw49O9p84lVP/PzzAlBp/KDq7K+0rK33
+        /octv/I/et3d/1Frbv0PW3b5f+n+J/9z975UhirDDuz71wukbbn3P3jJ+f8xGx7UQIUZwlddOxW0+Pz/
+        7N3PD0KFsAOfSTvCg5de+B+6/NInqBAYhK29HRe06PT/8FU33kOFsAOt+nq28A0PloVvfeYJFQID3wWn
+        r/rMOfE/cMX1nVAh4oDxzDOsPvOO3/Sceei/55yjXwMm7xaGShEH3OYcu+88de9/t5kHXtpMOywIFSYO
+        2HVsDHKYtOu//eTdX7TqV7FBhYkHFm1rcqx7t/y3n3ZgBlSIRFBfz2TesznTrH4xH1SENKDftFrbsGXl
+        OZOerdlQIdKAYc+WWbr1S//rt639DBUiDWhUzZBUqV6wSrtptQ9UiDDYsWOH0JYtWww2bNjguGbpUt8V
+        Sxe6r16yxGf9+vW+QDG7zZs36+zcuZMbqhwTACXtgIob1q1bNxWIlwDxKhBeu3btfCA9EYgr9u/frwFV
+        Tg3AwAAAxAO9lOHTxeUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="&gt;&gt;tabsBox.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="label15.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="excludeBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="urlBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="processControlTab.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="toolStripComboBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
+  <data name="&gt;&gt;amountLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ttsVolumeBox.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="sendKeyboardBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>463, 184</value>
+  </data>
+  <data name="&gt;&gt;saveToBox.Name" xml:space="preserve">
+    <value>saveToBox</value>
+  </data>
+  <data name="urlTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1217, 670</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="amountLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 25</value>
+  </data>
+  <data name="label22.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;processesLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;upClickBtn.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="moveBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;processesLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;passwordBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ttsRunBtn.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="label16.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="&gt;&gt;urlTab.Parent" xml:space="preserve">
+    <value>main</value>
+  </data>
+  <data name="maleVoiceBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 29</value>
+  </data>
+  <data name="newWindowBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>232, 320</value>
+  </data>
+  <data name="frequencySoundBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>527, 359</value>
+  </data>
+  <data name="&gt;&gt;getFileLocationBox.Name" xml:space="preserve">
+    <value>getFileLocationBox</value>
+  </data>
+  <data name="sendKeyboardBox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ttsVolumeBox.Name" xml:space="preserve">
+    <value>ttsVolumeBox</value>
+  </data>
+  <data name="&gt;&gt;miscTab.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="networkOffBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 29</value>
+  </data>
+  <data name="runBtn.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="leftMouseBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 320</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Keyboard Events:</value>
+  </data>
+  <data name="muteLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 20pt</value>
+  </data>
+  <data name="&gt;&gt;sendKeyboardBox.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>278, 25</value>
+  </data>
+  <data name="invisibleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 37</value>
+  </data>
+  <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1033, 87</value>
+  </data>
+  <data name="screenWidthBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="leftMouseBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;invisibleBox.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="aboutToolStripMenuItem.ToolTipText" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="label16.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;alwaysOnTopToolStripMenuItem.Name" xml:space="preserve">
+    <value>alwaysOnTopToolStripMenuItem</value>
+  </data>
+  <data name="networkTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 222</value>
+  </data>
+  <data name="&gt;&gt;passwdLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="incognitoBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 30</value>
+  </data>
+  <data name="&gt;&gt;getFileLocationBox.Parent" xml:space="preserve">
+    <value>fileSystemTab</value>
+  </data>
+  <data name="networkTab.ToolTipText" xml:space="preserve">
+    <value>Network Stuff</value>
+  </data>
+  <data name="newWindowBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 30px</value>
+  </data>
+  <data name="&gt;&gt;rightMouseBtn.Name" xml:space="preserve">
+    <value>rightMouseBtn</value>
+  </data>
+  <data name="tabsBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 30</value>
+  </data>
+  <data name="&gt;&gt;soundRunBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="howToUseToolStripMenuItem.Text" xml:space="preserve">
+    <value>How To Use</value>
+  </data>
+  <data name="runBeepSoundBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="usrBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 30</value>
+  </data>
+  <data name="sendKeyboardTextBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>801, 483</value>
+  </data>
+  <data name="moveMouseYBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 30</value>
+  </data>
+  <data name="&gt;&gt;runBtn.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>368, 359</value>
+  </data>
+  <data name="saveToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+S</value>
+  </data>
+  <data name="newWindowBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 30</value>
+  </data>
+  <data name="terminateChromeBtn.Text" xml:space="preserve">
+    <value>Close All chrome Tabs</value>
+  </data>
+  <data name="&gt;&gt;rightMouseBtn.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="muteLabel.Text" xml:space="preserve">
+    <value>Mute</value>
+  </data>
+  <data name="firewallRun.Location" type="System.Drawing.Point, System.Drawing">
+    <value>499, 598</value>
+  </data>
+  <data name="processesLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 25</value>
+  </data>
+  <data name="passwordBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 30</value>
+  </data>
+  <data name="&gt;&gt;middleMouseBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabsLabel.Text" xml:space="preserve">
+    <value>How many tabs?</value>
+  </data>
+  <data name="sendKeyboardDelayBox.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="ipLabel.Text" xml:space="preserve">
+    <value>IP: </value>
+  </data>
+  <data name="&gt;&gt;delayBeforeBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="deleteAfterBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>511, 322</value>
+  </data>
+  <data name="moveMouseXBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 30</value>
+  </data>
+  <data name="&gt;&gt;moveBtn.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="label18.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 37</value>
+  </data>
+  <data name="durationSoundBox.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="processesLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="&gt;&gt;processesBox.Parent" xml:space="preserve">
+    <value>processControlTab</value>
+  </data>
+  <data name="label3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADsAAAAwCAYAAACv4gJwAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAASISURBVGhD7ZpL
+        KHVRFMdveT9KnmPJhBLlERGRKCMmTJBHeUxMPCYyMVLEiDJkrEQxN0B5lJiQGJDHgGSADNhf//Otyzl7
+        r3PuPvcxOPf7frXiWuuss/73buesvc71iX+I/2KjlagSe3l5KcbHx8X6+jr9xUrUiJ2ZmRE+n+/HJiYm
+        yPNLVIhtbGy0CIXV1taS9xfPi01LS1OEpqSkkNeKZ8VeXV0pImF1dXUUoeJJsSsrK6zQ6elpiuDxnNjO
+        zk5W6O7uLkXY4ymxubm5rND393eKcCZiYs/Pz43lNjY2Jtra2kR5ebnIy8sTOTk5IiMjw/iJ1/h7a2ur
+        EYd4HCfz8vLCiiwsLKQIPcImdmNjQ/T19YnMzEy2MLeGPAMDA2J5eZn1Dw0N0Zn1CUns6uqqKCsrY4uJ
+        pO3s7FAF7nAt9vn5WXR0dLBFOFlSUpJoamoyPpHR0VExPDwsmpubRXJyMhvvZP39/eLx8ZEq0kdbLPrO
+        iooK9uRONjs7K76+viiLPXNzcyIhIYHNYWfFxcVGXboEFPvx8SFqamrYkznZwsICZdDn9vaWzRXISktL
+        xdvbG2Wxx1HsyMgImxxWUFAgtre3Wd/r6ytl0AdvDpfLbFtbW8YVmPPBUK8TrFgsDS4ZrKioSFxfXxtx
+        JSUlij8YWlpalDyw2NhYy2ssW4Dzow6zz2x2S1upDlsjLgGa65OTE4oS4ujoSIk5Pj4mrzN3d3f0m2Bv
+        VfjfBWdnZ4rv8PDQ8AHUg7rkGBj2tTIWsfn5+eyB2CvKNDQ0WGIqKyvJw7O2tiZSU1Mtx3BWVVVFR/wF
+        r83++vp68vwi72X9Bj1mfsRywenp6eLz85MirMixe3t75FHp7e1V4jmbnJykI37Z399X4jhQJ+qVY83x
+        PvSVXEB3dzeFqDw8PCjxdmDZybGcLS4u0hEqcuz9/T15VFC3HA8zdGZnZysOtH5OyO92TEwMeVS6uros
+        sXaGRsGOuLg4S6zTKgKo3xwPM3SGQyyKsQMizLF2hjfFDryZ5tigxUZ6GS8tLSmxnB0cHNARKnJsMMsY
+        zVHYLlD4tGWmpqaUOM56enroCBV8inI8h9YFin4ahHLrCXTL4Ay3ItySnMAtzXxMWG49fkJpKk5PTw1f
+        YmKi4kPz4MfcVDiBJkXOo9tUaM+Ng20X5fbOb2gHg0HOE/Z20UywGwGzzc/PUzZ9sJHgckVkI2AGW6dg
+        pxE3NzeURR+d3Y9s1dXVxtU2EAHF+sHSwDLiTmZn8fHxxqb8+/ubsvBgc49NPpfDyTCss1uyHNpi/WAc
+        otsomA3jF4xhMI7BWAbjGYxpMK7h4p2svb1dPD09UUX6uBYLMPDiioik4V8JA75QcC0WnwhXDEaeg4OD
+        Iisri/W7NeTBCtrc3KQzh44rsXZXQgyxZS4uLn6G5BiC6w7JcVyk0BJr1z/jcYSXCCgWD4w4oXjA5DUc
+        xeIRICcUy82L2IrFQ11OKB4CexVWLNdc43G+11HE4osXslB8QSMaUMTKWzxuL+tV2GWML01hyOym7/QC
+        theoaOS/2OhEiD+BHa87AR1HxAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="&gt;&gt;ipBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;clickDelayBox.Name" xml:space="preserve">
+    <value>clickDelayBox</value>
+  </data>
+  <data name="passwdLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 330</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="&gt;&gt;moveMouseDelayBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="rightMouseBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 262</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Beep Sound:</value>
+  </data>
+  <data name="&gt;&gt;frequencySoundBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="homeTab.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>238, 607</value>
+  </data>
+  <data name="label30.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 205</value>
+  </data>
+  <data name="amountLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="moveMouseDelayBox.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 25</value>
+  </data>
+  <data name="getFile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label25.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="sendKeyboardTextBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 36</value>
+  </data>
+  <data name="label22.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;invisibleLabel.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="unmuteLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 20pt</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;delayBetweenBox.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="&gt;&gt;downClickBtn.Name" xml:space="preserve">
+    <value>downClickBtn</value>
+  </data>
+  <data name="passwdLabel.Text" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="usrnameLabel.Text" xml:space="preserve">
+    <value>Username:</value>
+  </data>
+  <data name="&gt;&gt;main.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label17.Name" xml:space="preserve">
+    <value>label17</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="saveToolStripMenuItem.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>White</value>
+  </data>
+  <data name="&gt;&gt;screenshotGoBtn.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;soundTab.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>616, 222</value>
+  </data>
+  <data name="&gt;&gt;invisibleBox.Name" xml:space="preserve">
+    <value>invisibleBox</value>
+  </data>
+  <data name="doubleClickBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 29</value>
+  </data>
+  <data name="firewallRun.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="howToUseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 22</value>
+  </data>
+  <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1017, 222</value>
+  </data>
+  <data name="&gt;&gt;terminateChromeBtn.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;networkSmbBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ttsSpeedBox.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;delyLabel.Name" xml:space="preserve">
+    <value>delyLabel</value>
+  </data>
+  <data name="&gt;&gt;delyLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;sendKeyboardDelayBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="downClickBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="middleMouseBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="speakNowBtn.Text" xml:space="preserve">
+    <value>Enter By saying</value>
+  </data>
+  <data name="processesBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="networkSmbBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 29</value>
+  </data>
+  <data name="&gt;&gt;leftMouseBtn.Name" xml:space="preserve">
+    <value>leftMouseBtn</value>
+  </data>
+  <data name="&gt;&gt;moveMouseDelayBox.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="mouseFullClickBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 36</value>
+  </data>
+  <data name="&gt;&gt;ttsBox.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="nircmdAboutLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1186, 3</value>
+  </data>
+  <data name="networkTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1217, 670</value>
+  </data>
+  <data name="&gt;&gt;networkTab.Name" xml:space="preserve">
+    <value>networkTab</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="nircmdAboutLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="&gt;&gt;delayTerminate.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="&gt;&gt;runBtn.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="delayBeforeBox.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;firewallRun.Parent" xml:space="preserve">
+    <value>networkTab</value>
+  </data>
+  <data name="deleteAfterBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 29</value>
+  </data>
+  <data name="&gt;&gt;soundRunBtn.Name" xml:space="preserve">
+    <value>soundRunBtn</value>
+  </data>
+  <data name="delayBetweenBox.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;label24.Name" xml:space="preserve">
+    <value>label24</value>
+  </data>
+  <data name="&gt;&gt;label24.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 69</value>
+  </data>
+  <data name="moveMouseYBox.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="networkOnBox.Text" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="creditsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Credits</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 363</value>
+  </data>
+  <data name="autoClearBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt</value>
+  </data>
+  <data name="&gt;&gt;downloadNirBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;caseInsensitiveBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;newWindowBox.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="&gt;&gt;nircmdAboutLabel.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="&gt;&gt;ttsBox.Name" xml:space="preserve">
+    <value>ttsBox</value>
+  </data>
+  <data name="saveToBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;unmuteLabel.Name" xml:space="preserve">
+    <value>unmuteLabel</value>
+  </data>
+  <data name="moveMouseDelayBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 30</value>
+  </data>
+  <data name="&gt;&gt;label25.Name" xml:space="preserve">
+    <value>label25</value>
+  </data>
+  <data name="middleMouseBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 29</value>
+  </data>
+  <data name="sendKeyboardDelayBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 30</value>
+  </data>
+  <data name="upClickBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="middleMouseBtn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;moveMouseXBox.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="label25.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;urlLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 25</value>
+  </data>
+  <data name="&gt;&gt;speakNowBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;networkOffBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="urlTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 34</value>
+  </data>
+  <data name="amountLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>475, 18</value>
+  </data>
+  <data name="&gt;&gt;volumeBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>miscTab</value>
+  </data>
+  <data name="chooseSaveBtn.Text" xml:space="preserve">
+    <value>browse</value>
+  </data>
+  <data name="homeTab.Text" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="label29.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;ipBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripTextBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="ttsRunBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 30</value>
+  </data>
+  <data name="&gt;&gt;ttsVolumeBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 25</value>
+  </data>
+  <data name="incognitoBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 30px</value>
+  </data>
+  <data name="&gt;&gt;toolStripComboBox1.Name" xml:space="preserve">
+    <value>toolStripComboBox1</value>
+  </data>
+  <data name="&gt;&gt;ttsRunBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+    <value>soundTab</value>
+  </data>
+  <data name="&gt;&gt;newWindowBox.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="tabsBox.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="networkOffBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>371, 73</value>
+  </data>
+  <data name="label26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 57</value>
+  </data>
+  <data name="loadSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;homeTab.Parent" xml:space="preserve">
+    <value>main</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="passwordBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>226, 330</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>Delay:</value>
+  </data>
+  <data name="main.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="delayBetweenBox.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="processDelay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 30</value>
+  </data>
+  <data name="networkOnBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="urlLabel.Text" xml:space="preserve">
+    <value>URL:</value>
+  </data>
+  <data name="&gt;&gt;firewallRun.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label28.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="clearBtn.Text" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="&gt;&gt;processesBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="killBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 47</value>
+  </data>
+  <data name="label23.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="soundDelayBox.ThousandsSeparator" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="networkSmbBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="sendKeyboardTextBtn.Text" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="&gt;&gt;ipBox.Name" xml:space="preserve">
+    <value>ipBox</value>
+  </data>
+  <data name="&gt;&gt;networkTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 31</value>
+  </data>
+  <data name="volumeBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>98, 46</value>
+  </data>
+  <data name="&gt;&gt;label20.Name" xml:space="preserve">
+    <value>label20</value>
+  </data>
+  <data name="&gt;&gt;saveToBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;tabsLabel.Parent" xml:space="preserve">
+    <value>urlTab</value>
+  </data>
+  <data name="label30.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 25</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Text To Speech:</value>
+  </data>
+  <data name="incognitoBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>232, 374</value>
+  </data>
+  <data name="&gt;&gt;sendKeyboardTextBtn.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chooseSaveBtn.Parent" xml:space="preserve">
+    <value>fileSystemTab</value>
+  </data>
+  <data name="&gt;&gt;saveIcon.Name" xml:space="preserve">
+    <value>saveIcon</value>
+  </data>
+  <data name="label23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 25</value>
+  </data>
+  <data name="ipLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 33</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Frequency:</value>
+  </data>
+  <data name="&gt;&gt;durationSoundBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;newWindowBox.Name" xml:space="preserve">
+    <value>newWindowBox</value>
+  </data>
+  <data name="killBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>561, 600</value>
+  </data>
+  <data name="ttsDelayBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 30</value>
+  </data>
+  <data name="&gt;&gt;label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label21.Name" xml:space="preserve">
+    <value>label21</value>
+  </data>
+  <data name="networkSmbBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label24.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="processControlTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;runBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="urlLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 28</value>
+  </data>
+  <data name="&gt;&gt;deleteAfterBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;tabsBox.Name" xml:space="preserve">
+    <value>tabsBox</value>
+  </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en-US</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>

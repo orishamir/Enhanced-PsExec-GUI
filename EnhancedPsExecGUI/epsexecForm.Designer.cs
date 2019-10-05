@@ -90,6 +90,20 @@
             this.volumeBox = new System.Windows.Forms.TrackBar();
             this.muteLabel = new System.Windows.Forms.Label();
             this.unmuteLabel = new System.Windows.Forms.Label();
+            this.fileSystemTab = new System.Windows.Forms.TabPage();
+            this.label30 = new System.Windows.Forms.Label();
+            this.screenHeightBox = new System.Windows.Forms.NumericUpDown();
+            this.label29 = new System.Windows.Forms.Label();
+            this.screenWidthBox = new System.Windows.Forms.NumericUpDown();
+            this.deleteAfterBox = new System.Windows.Forms.CheckBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.screenshotGoBtn = new System.Windows.Forms.Button();
+            this.chooseSaveBtn = new System.Windows.Forms.Button();
+            this.saveToBox = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.getFileLocationBox = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.getFile = new System.Windows.Forms.Button();
             this.networkTab = new System.Windows.Forms.TabPage();
             this.networkSmbBox = new System.Windows.Forms.RadioButton();
             this.networkOnBox = new System.Windows.Forms.RadioButton();
@@ -97,6 +111,7 @@
             this.label25 = new System.Windows.Forms.Label();
             this.firewallRun = new System.Windows.Forms.Button();
             this.miscTab = new System.Windows.Forms.TabPage();
+            this.speakNowBtn = new System.Windows.Forms.Button();
             this.nircmdAboutLabel = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.sendKeyboardDelayBox = new System.Windows.Forms.NumericUpDown();
@@ -155,6 +170,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.frequencySoundBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soundDelayBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBox)).BeginInit();
+            this.fileSystemTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.screenHeightBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.screenWidthBox)).BeginInit();
             this.networkTab.SuspendLayout();
             this.miscTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sendKeyboardDelayBox)).BeginInit();
@@ -168,25 +186,24 @@
             // 
             // main
             // 
+            resources.ApplyResources(this.main, "main");
             this.main.AllowDrop = true;
             this.main.Controls.Add(this.homeTab);
             this.main.Controls.Add(this.urlTab);
             this.main.Controls.Add(this.processControlTab);
             this.main.Controls.Add(this.soundTab);
+            this.main.Controls.Add(this.fileSystemTab);
             this.main.Controls.Add(this.networkTab);
             this.main.Controls.Add(this.miscTab);
-            this.main.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.main.Location = new System.Drawing.Point(0, 27);
+            this.main.Cursor = System.Windows.Forms.Cursors.Default;
             this.main.Name = "main";
             this.main.SelectedIndex = 0;
-            this.main.ShowToolTips = true;
-            this.main.Size = new System.Drawing.Size(1225, 708);
-            this.main.TabIndex = 0;
             this.main.DragDrop += new System.Windows.Forms.DragEventHandler(this.any_DragDrop);
             this.main.DragEnter += new System.Windows.Forms.DragEventHandler(this.any_DragEnter);
             // 
             // homeTab
             // 
+            resources.ApplyResources(this.homeTab, "homeTab");
             this.homeTab.AllowDrop = true;
             this.homeTab.Controls.Add(this.label21);
             this.homeTab.Controls.Add(this.openScannerBtn);
@@ -198,115 +215,81 @@
             this.homeTab.Controls.Add(this.usrBox);
             this.homeTab.Controls.Add(this.ipBox);
             this.homeTab.Controls.Add(this.ipLabel);
-            this.homeTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.homeTab.Location = new System.Drawing.Point(4, 34);
             this.homeTab.Name = "homeTab";
-            this.homeTab.Padding = new System.Windows.Forms.Padding(3);
-            this.homeTab.Size = new System.Drawing.Size(1217, 670);
-            this.homeTab.TabIndex = 1;
-            this.homeTab.Text = "Home";
-            this.homeTab.ToolTipText = "Set Connections Settings";
             this.homeTab.UseVisualStyleBackColor = true;
             this.homeTab.DragDrop += new System.Windows.Forms.DragEventHandler(this.any_DragDrop);
             this.homeTab.DragEnter += new System.Windows.Forms.DragEventHandler(this.any_DragEnter);
             // 
             // label21
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(244, 125);
+            resources.ApplyResources(this.label21, "label21");
+            this.label21.Cursor = System.Windows.Forms.Cursors.No;
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(807, 25);
-            this.label21.TabIndex = 11;
-            this.label21.Text = "Only works for computers you \"talked\" before (arp -a). range scanning will be ava" +
-    "ilable soon.";
             // 
             // openScannerBtn
             // 
-            this.openScannerBtn.Location = new System.Drawing.Point(66, 115);
+            resources.ApplyResources(this.openScannerBtn, "openScannerBtn");
+            this.openScannerBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.openScannerBtn.Name = "openScannerBtn";
-            this.openScannerBtn.Size = new System.Drawing.Size(159, 41);
-            this.openScannerBtn.TabIndex = 10;
-            this.openScannerBtn.Text = "Open Scanner";
             this.openScannerBtn.UseVisualStyleBackColor = true;
             this.openScannerBtn.Click += new System.EventHandler(this.OpenScannerBtn_Click);
             // 
             // loadSetting
             // 
-            this.loadSetting.Image = ((System.Drawing.Image)(resources.GetObject("loadSetting.Image")));
-            this.loadSetting.Location = new System.Drawing.Point(61, 405);
+            resources.ApplyResources(this.loadSetting, "loadSetting");
+            this.loadSetting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loadSetting.Name = "loadSetting";
-            this.loadSetting.Size = new System.Drawing.Size(57, 72);
-            this.loadSetting.TabIndex = 9;
             this.loadSetting.Click += new System.EventHandler(this.LoadSetting_Click);
             // 
             // saveIcon
             // 
-            this.saveIcon.Image = ((System.Drawing.Image)(resources.GetObject("saveIcon.Image")));
-            this.saveIcon.Location = new System.Drawing.Point(363, 390);
+            resources.ApplyResources(this.saveIcon, "saveIcon");
+            this.saveIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveIcon.Name = "saveIcon";
-            this.saveIcon.Size = new System.Drawing.Size(62, 87);
-            this.saveIcon.TabIndex = 8;
             this.saveIcon.Click += new System.EventHandler(this.SaveIcon_Click);
             // 
             // passwdLabel
             // 
-            this.passwdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.passwdLabel.Location = new System.Drawing.Point(61, 330);
+            resources.ApplyResources(this.passwdLabel, "passwdLabel");
             this.passwdLabel.Name = "passwdLabel";
-            this.passwdLabel.Size = new System.Drawing.Size(130, 33);
-            this.passwdLabel.TabIndex = 7;
-            this.passwdLabel.Text = "Password:";
             // 
             // usrnameLabel
             // 
-            this.usrnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.usrnameLabel.Location = new System.Drawing.Point(61, 254);
+            resources.ApplyResources(this.usrnameLabel, "usrnameLabel");
             this.usrnameLabel.Name = "usrnameLabel";
-            this.usrnameLabel.Size = new System.Drawing.Size(130, 33);
-            this.usrnameLabel.TabIndex = 6;
-            this.usrnameLabel.Text = "Username:";
             // 
             // passwordBox
             // 
-            this.passwordBox.Location = new System.Drawing.Point(226, 330);
+            resources.ApplyResources(this.passwordBox, "passwordBox");
             this.passwordBox.Name = "passwordBox";
-            this.passwordBox.Size = new System.Drawing.Size(199, 30);
-            this.passwordBox.TabIndex = 5;
             this.passwordBox.TextChanged += new System.EventHandler(this.on_Edit);
             this.passwordBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.any_DragDrop);
             this.passwordBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.any_DragEnter);
             // 
             // usrBox
             // 
-            this.usrBox.Location = new System.Drawing.Point(226, 257);
+            resources.ApplyResources(this.usrBox, "usrBox");
             this.usrBox.Name = "usrBox";
-            this.usrBox.Size = new System.Drawing.Size(199, 30);
-            this.usrBox.TabIndex = 3;
             this.usrBox.TextChanged += new System.EventHandler(this.on_Edit);
             this.usrBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.any_DragDrop);
             this.usrBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.any_DragEnter);
             // 
             // ipBox
             // 
-            this.ipBox.Location = new System.Drawing.Point(226, 187);
+            resources.ApplyResources(this.ipBox, "ipBox");
             this.ipBox.Name = "ipBox";
-            this.ipBox.Size = new System.Drawing.Size(199, 30);
-            this.ipBox.TabIndex = 1;
             this.ipBox.TextChanged += new System.EventHandler(this.on_Edit);
             this.ipBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.any_DragDrop);
             this.ipBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.any_DragEnter);
             // 
             // ipLabel
             // 
-            this.ipLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ipLabel.Location = new System.Drawing.Point(61, 184);
+            resources.ApplyResources(this.ipLabel, "ipLabel");
             this.ipLabel.Name = "ipLabel";
-            this.ipLabel.Size = new System.Drawing.Size(42, 33);
-            this.ipLabel.TabIndex = 0;
-            this.ipLabel.Text = "IP: ";
             // 
             // urlTab
             // 
+            resources.ApplyResources(this.urlTab, "urlTab");
             this.urlTab.AllowDrop = true;
             this.urlTab.Controls.Add(this.label20);
             this.urlTab.Controls.Add(this.label6);
@@ -328,40 +311,28 @@
             this.urlTab.Controls.Add(this.urlBox);
             this.urlTab.Controls.Add(this.urlLabel);
             this.urlTab.Controls.Add(this.runBtn);
-            this.urlTab.Location = new System.Drawing.Point(4, 34);
             this.urlTab.Name = "urlTab";
-            this.urlTab.Padding = new System.Windows.Forms.Padding(3);
-            this.urlTab.Size = new System.Drawing.Size(1217, 670);
-            this.urlTab.TabIndex = 2;
-            this.urlTab.Text = "URL Control";
-            this.urlTab.ToolTipText = "Control multiple URL settings";
             this.urlTab.UseVisualStyleBackColor = true;
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(1033, 87);
+            resources.ApplyResources(this.label20, "label20");
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(68, 25);
-            this.label20.TabIndex = 20;
-            this.label20.Text = "Delay:";
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(622, 483);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 85);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Delay Between Tabs";
             // 
             // delayBetweenBox
             // 
+            resources.ApplyResources(this.delayBetweenBox, "delayBetweenBox");
+            this.delayBetweenBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.delayBetweenBox.Increment = new decimal(new int[] {
             200,
             0,
             0,
             0});
-            this.delayBetweenBox.Location = new System.Drawing.Point(627, 576);
             this.delayBetweenBox.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -373,9 +344,6 @@
             0,
             0});
             this.delayBetweenBox.Name = "delayBetweenBox";
-            this.delayBetweenBox.Size = new System.Drawing.Size(83, 30);
-            this.delayBetweenBox.TabIndex = 18;
-            this.delayBetweenBox.ThousandsSeparator = true;
             this.delayBetweenBox.Value = new decimal(new int[] {
             200,
             0,
@@ -385,20 +353,18 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(477, 483);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 85);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Delay Before Opening";
             // 
             // delayBeforeBox
             // 
+            resources.ApplyResources(this.delayBeforeBox, "delayBeforeBox");
+            this.delayBeforeBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.delayBeforeBox.Increment = new decimal(new int[] {
             200,
             0,
             0,
             0});
-            this.delayBeforeBox.Location = new System.Drawing.Point(482, 576);
             this.delayBeforeBox.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -410,9 +376,6 @@
             0,
             0});
             this.delayBeforeBox.Name = "delayBeforeBox";
-            this.delayBeforeBox.Size = new System.Drawing.Size(83, 30);
-            this.delayBeforeBox.TabIndex = 16;
-            this.delayBeforeBox.ThousandsSeparator = true;
             this.delayBeforeBox.Value = new decimal(new int[] {
             200,
             0,
@@ -422,21 +385,19 @@
             // 
             // delayTerminate
             // 
+            resources.ApplyResources(this.delayTerminate, "delayTerminate");
+            this.delayTerminate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.delayTerminate.Increment = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.delayTerminate.Location = new System.Drawing.Point(1038, 127);
             this.delayTerminate.Maximum = new decimal(new int[] {
             65536,
             0,
             0,
             0});
             this.delayTerminate.Name = "delayTerminate";
-            this.delayTerminate.Size = new System.Drawing.Size(96, 30);
-            this.delayTerminate.TabIndex = 15;
-            this.delayTerminate.ThousandsSeparator = true;
             this.delayTerminate.Value = new decimal(new int[] {
             200,
             0,
@@ -445,96 +406,71 @@
             // 
             // terminateChromeBtn
             // 
+            resources.ApplyResources(this.terminateChromeBtn, "terminateChromeBtn");
             this.terminateChromeBtn.BackColor = System.Drawing.Color.DarkRed;
-            this.terminateChromeBtn.Location = new System.Drawing.Point(939, 28);
+            this.terminateChromeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.terminateChromeBtn.Name = "terminateChromeBtn";
-            this.terminateChromeBtn.Size = new System.Drawing.Size(254, 53);
-            this.terminateChromeBtn.TabIndex = 14;
-            this.terminateChromeBtn.Text = "Close All chrome Tabs";
             this.terminateChromeBtn.UseVisualStyleBackColor = false;
             this.terminateChromeBtn.Click += new System.EventHandler(this.TerminateChromeBtn_Click);
             // 
             // label3
             // 
-            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
-            this.label3.Location = new System.Drawing.Point(34, 411);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 69);
-            this.label3.TabIndex = 13;
             // 
             // label4
             // 
-            this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
-            this.label4.Location = new System.Drawing.Point(44, 363);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 48);
-            this.label4.TabIndex = 12;
             // 
             // invisibleLabel
             // 
-            this.invisibleLabel.Location = new System.Drawing.Point(115, 430);
+            resources.ApplyResources(this.invisibleLabel, "invisibleLabel");
             this.invisibleLabel.Name = "invisibleLabel";
-            this.invisibleLabel.Size = new System.Drawing.Size(104, 37);
-            this.invisibleLabel.TabIndex = 10;
-            this.invisibleLabel.Text = "Invisible";
             // 
             // invisibleBox
             // 
-            this.invisibleBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(177)));
-            this.invisibleBox.Location = new System.Drawing.Point(232, 430);
+            resources.ApplyResources(this.invisibleBox, "invisibleBox");
+            this.invisibleBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.invisibleBox.Name = "invisibleBox";
-            this.invisibleBox.Size = new System.Drawing.Size(16, 30);
-            this.invisibleBox.TabIndex = 9;
             this.invisibleBox.UseVisualStyleBackColor = true;
             this.invisibleBox.CheckedChanged += new System.EventHandler(this.on_Edit);
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(110, 374);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 37);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Incognito";
             // 
             // incognitoBox
             // 
-            this.incognitoBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(177)));
-            this.incognitoBox.Location = new System.Drawing.Point(232, 374);
+            resources.ApplyResources(this.incognitoBox, "incognitoBox");
+            this.incognitoBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.incognitoBox.Name = "incognitoBox";
-            this.incognitoBox.Size = new System.Drawing.Size(16, 30);
-            this.incognitoBox.TabIndex = 7;
             this.incognitoBox.UseVisualStyleBackColor = true;
             this.incognitoBox.CheckedChanged += new System.EventHandler(this.on_Edit);
             // 
             // newWindowBox
             // 
-            this.newWindowBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(177)));
-            this.newWindowBox.Location = new System.Drawing.Point(232, 320);
+            resources.ApplyResources(this.newWindowBox, "newWindowBox");
+            this.newWindowBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.newWindowBox.Name = "newWindowBox";
-            this.newWindowBox.Size = new System.Drawing.Size(16, 30);
-            this.newWindowBox.TabIndex = 6;
             this.newWindowBox.UseVisualStyleBackColor = true;
             this.newWindowBox.CheckedChanged += new System.EventHandler(this.on_Edit);
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(93, 320);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 37);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "New Window";
             // 
             // tabsLabel
             // 
-            this.tabsLabel.Location = new System.Drawing.Point(73, 89);
+            resources.ApplyResources(this.tabsLabel, "tabsLabel");
             this.tabsLabel.Name = "tabsLabel";
-            this.tabsLabel.Size = new System.Drawing.Size(166, 37);
-            this.tabsLabel.TabIndex = 4;
-            this.tabsLabel.Text = "How many tabs?";
             // 
             // tabsBox
             // 
-            this.tabsBox.Location = new System.Drawing.Point(245, 87);
+            resources.ApplyResources(this.tabsBox, "tabsBox");
+            this.tabsBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabsBox.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -546,9 +482,6 @@
             0,
             0});
             this.tabsBox.Name = "tabsBox";
-            this.tabsBox.Size = new System.Drawing.Size(53, 30);
-            this.tabsBox.TabIndex = 3;
-            this.tabsBox.ThousandsSeparator = true;
             this.tabsBox.Value = new decimal(new int[] {
             1,
             0,
@@ -558,32 +491,26 @@
             // 
             // urlBox
             // 
-            this.urlBox.Location = new System.Drawing.Point(193, 28);
+            resources.ApplyResources(this.urlBox, "urlBox");
             this.urlBox.Name = "urlBox";
-            this.urlBox.Size = new System.Drawing.Size(449, 30);
-            this.urlBox.TabIndex = 2;
             this.urlBox.TextChanged += new System.EventHandler(this.on_Edit);
             // 
             // urlLabel
             // 
-            this.urlLabel.Location = new System.Drawing.Point(73, 28);
+            resources.ApplyResources(this.urlLabel, "urlLabel");
             this.urlLabel.Name = "urlLabel";
-            this.urlLabel.Size = new System.Drawing.Size(69, 37);
-            this.urlLabel.TabIndex = 1;
-            this.urlLabel.Text = "URL:";
             // 
             // runBtn
             // 
-            this.runBtn.Location = new System.Drawing.Point(482, 612);
+            resources.ApplyResources(this.runBtn, "runBtn");
+            this.runBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.runBtn.Name = "runBtn";
-            this.runBtn.Size = new System.Drawing.Size(228, 45);
-            this.runBtn.TabIndex = 0;
-            this.runBtn.Text = "Start";
             this.runBtn.UseVisualStyleBackColor = true;
             this.runBtn.Click += new System.EventHandler(this.RunBtn_Click);
             // 
             // processControlTab
             // 
+            resources.ApplyResources(this.processControlTab, "processControlTab");
             this.processControlTab.Controls.Add(this.processDelay);
             this.processControlTab.Controls.Add(this.label7);
             this.processControlTab.Controls.Add(this.excludeBox);
@@ -596,23 +523,18 @@
             this.processControlTab.Controls.Add(this.killBtn);
             this.processControlTab.Controls.Add(this.processesLabel);
             this.processControlTab.Controls.Add(this.getReloadBtn);
-            this.processControlTab.Location = new System.Drawing.Point(4, 34);
             this.processControlTab.Name = "processControlTab";
-            this.processControlTab.Padding = new System.Windows.Forms.Padding(3);
-            this.processControlTab.Size = new System.Drawing.Size(1217, 670);
-            this.processControlTab.TabIndex = 3;
-            this.processControlTab.Text = "Process Control";
-            this.processControlTab.ToolTipText = "Control Processes";
             this.processControlTab.UseVisualStyleBackColor = true;
             // 
             // processDelay
             // 
+            resources.ApplyResources(this.processDelay, "processDelay");
+            this.processDelay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.processDelay.Increment = new decimal(new int[] {
             200,
             0,
             0,
             0});
-            this.processDelay.Location = new System.Drawing.Point(598, 36);
             this.processDelay.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -624,9 +546,6 @@
             0,
             0});
             this.processDelay.Name = "processDelay";
-            this.processDelay.Size = new System.Drawing.Size(80, 30);
-            this.processDelay.TabIndex = 20;
-            this.processDelay.ThousandsSeparator = true;
             this.processDelay.Value = new decimal(new int[] {
             200,
             0,
@@ -635,118 +554,83 @@
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(593, 7);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 25);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Delay:";
             // 
             // excludeBox
             // 
-            this.excludeBox.AutoSize = true;
-            this.excludeBox.Location = new System.Drawing.Point(962, 151);
+            resources.ApplyResources(this.excludeBox, "excludeBox");
+            this.excludeBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.excludeBox.Name = "excludeBox";
-            this.excludeBox.Size = new System.Drawing.Size(203, 29);
-            this.excludeBox.TabIndex = 12;
-            this.excludeBox.Text = "Everything Except...";
             this.excludeBox.UseVisualStyleBackColor = true;
             // 
             // caseInsensitiveBox
             // 
-            this.caseInsensitiveBox.AutoSize = true;
+            resources.ApplyResources(this.caseInsensitiveBox, "caseInsensitiveBox");
             this.caseInsensitiveBox.Checked = true;
             this.caseInsensitiveBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.caseInsensitiveBox.Location = new System.Drawing.Point(962, 115);
+            this.caseInsensitiveBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.caseInsensitiveBox.Name = "caseInsensitiveBox";
-            this.caseInsensitiveBox.Size = new System.Drawing.Size(174, 29);
-            this.caseInsensitiveBox.TabIndex = 11;
-            this.caseInsensitiveBox.Text = "Case insensitive";
             this.caseInsensitiveBox.UseVisualStyleBackColor = true;
             // 
             // autoClearBox
             // 
-            this.autoClearBox.AutoSize = true;
+            resources.ApplyResources(this.autoClearBox, "autoClearBox");
             this.autoClearBox.Checked = true;
             this.autoClearBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.autoClearBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.autoClearBox.Location = new System.Drawing.Point(962, 80);
+            this.autoClearBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.autoClearBox.Name = "autoClearBox";
-            this.autoClearBox.Size = new System.Drawing.Size(124, 29);
-            this.autoClearBox.TabIndex = 10;
-            this.autoClearBox.Text = "Auto Clear";
             this.autoClearBox.UseVisualStyleBackColor = true;
             // 
             // clearBtn
             // 
-            this.clearBtn.Location = new System.Drawing.Point(25, 600);
+            resources.ApplyResources(this.clearBtn, "clearBtn");
+            this.clearBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Size = new System.Drawing.Size(140, 47);
-            this.clearBtn.TabIndex = 9;
-            this.clearBtn.Text = "Clear";
             this.clearBtn.UseVisualStyleBackColor = true;
             this.clearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
             // processesBox
             // 
+            resources.ApplyResources(this.processesBox, "processesBox");
             this.processesBox.FormattingEnabled = true;
-            this.processesBox.ItemHeight = 25;
-            this.processesBox.Location = new System.Drawing.Point(25, 75);
             this.processesBox.Name = "processesBox";
             this.processesBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.processesBox.Size = new System.Drawing.Size(907, 504);
-            this.processesBox.TabIndex = 7;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label8.Location = new System.Drawing.Point(956, 201);
+            resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(189, 31);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Filter By Text: ";
             // 
             // filterTextBox
             // 
-            this.filterTextBox.Location = new System.Drawing.Point(962, 248);
+            resources.ApplyResources(this.filterTextBox, "filterTextBox");
             this.filterTextBox.Name = "filterTextBox";
-            this.filterTextBox.Size = new System.Drawing.Size(203, 30);
-            this.filterTextBox.TabIndex = 5;
             // 
             // killBtn
             // 
-            this.killBtn.Enabled = false;
-            this.killBtn.Location = new System.Drawing.Point(561, 600);
+            resources.ApplyResources(this.killBtn, "killBtn");
+            this.killBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.killBtn.Name = "killBtn";
-            this.killBtn.Size = new System.Drawing.Size(170, 47);
-            this.killBtn.TabIndex = 3;
-            this.killBtn.Text = "Kill";
             this.killBtn.UseVisualStyleBackColor = true;
             this.killBtn.Click += new System.EventHandler(this.KillBtn_Click);
             // 
             // processesLabel
             // 
-            this.processesLabel.AutoSize = true;
-            this.processesLabel.Location = new System.Drawing.Point(56, 25);
+            resources.ApplyResources(this.processesLabel, "processesLabel");
             this.processesLabel.Name = "processesLabel";
-            this.processesLabel.Size = new System.Drawing.Size(220, 25);
-            this.processesLabel.TabIndex = 2;
-            this.processesLabel.Text = "Click on your processes";
-            this.processesLabel.Visible = false;
             // 
             // getReloadBtn
             // 
-            this.getReloadBtn.Location = new System.Drawing.Point(947, 27);
+            resources.ApplyResources(this.getReloadBtn, "getReloadBtn");
+            this.getReloadBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.getReloadBtn.Name = "getReloadBtn";
-            this.getReloadBtn.Size = new System.Drawing.Size(170, 47);
-            this.getReloadBtn.TabIndex = 0;
-            this.getReloadBtn.Text = "Get Processes";
             this.getReloadBtn.UseVisualStyleBackColor = true;
             this.getReloadBtn.Click += new System.EventHandler(this.GetReloadBtn_Click);
             // 
             // soundTab
             // 
+            resources.ApplyResources(this.soundTab, "soundTab");
             this.soundTab.AllowDrop = true;
             this.soundTab.Controls.Add(this.durationSoundBox);
             this.soundTab.Controls.Add(this.label19);
@@ -762,34 +646,26 @@
             this.soundTab.Controls.Add(this.volumeBox);
             this.soundTab.Controls.Add(this.muteLabel);
             this.soundTab.Controls.Add(this.unmuteLabel);
-            this.soundTab.Location = new System.Drawing.Point(4, 34);
             this.soundTab.Name = "soundTab";
-            this.soundTab.Padding = new System.Windows.Forms.Padding(3);
-            this.soundTab.Size = new System.Drawing.Size(1217, 670);
-            this.soundTab.TabIndex = 4;
-            this.soundTab.Text = "Sound Control";
-            this.soundTab.ToolTipText = "Sound Settings";
             this.soundTab.UseVisualStyleBackColor = true;
             this.soundTab.DragDrop += new System.Windows.Forms.DragEventHandler(this.any_DragDrop);
             this.soundTab.DragEnter += new System.Windows.Forms.DragEventHandler(this.any_DragEnter);
             // 
             // durationSoundBox
             // 
+            resources.ApplyResources(this.durationSoundBox, "durationSoundBox");
+            this.durationSoundBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.durationSoundBox.Increment = new decimal(new int[] {
             200,
             0,
             0,
             0});
-            this.durationSoundBox.Location = new System.Drawing.Point(527, 414);
             this.durationSoundBox.Maximum = new decimal(new int[] {
             60000,
             0,
             0,
             0});
             this.durationSoundBox.Name = "durationSoundBox";
-            this.durationSoundBox.Size = new System.Drawing.Size(96, 30);
-            this.durationSoundBox.TabIndex = 24;
-            this.durationSoundBox.ThousandsSeparator = true;
             this.durationSoundBox.Value = new decimal(new int[] {
             1000,
             0,
@@ -798,30 +674,24 @@
             // 
             // label19
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(388, 414);
+            resources.ApplyResources(this.label19, "label19");
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(91, 25);
-            this.label19.TabIndex = 23;
-            this.label19.Text = "Duration:";
             // 
             // frequencySoundBox
             // 
+            resources.ApplyResources(this.frequencySoundBox, "frequencySoundBox");
+            this.frequencySoundBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.frequencySoundBox.Increment = new decimal(new int[] {
             500,
             0,
             0,
             0});
-            this.frequencySoundBox.Location = new System.Drawing.Point(527, 359);
             this.frequencySoundBox.Maximum = new decimal(new int[] {
             60000,
             0,
             0,
             0});
             this.frequencySoundBox.Name = "frequencySoundBox";
-            this.frequencySoundBox.Size = new System.Drawing.Size(96, 30);
-            this.frequencySoundBox.TabIndex = 22;
-            this.frequencySoundBox.ThousandsSeparator = true;
             this.frequencySoundBox.Value = new decimal(new int[] {
             500,
             0,
@@ -830,68 +700,50 @@
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(368, 359);
+            resources.ApplyResources(this.label18, "label18");
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(111, 25);
-            this.label18.TabIndex = 21;
-            this.label18.Text = "Frequency:";
             // 
             // runBeepSoundBtn
             // 
-            this.runBeepSoundBtn.Location = new System.Drawing.Point(496, 478);
+            resources.ApplyResources(this.runBeepSoundBtn, "runBeepSoundBtn");
+            this.runBeepSoundBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.runBeepSoundBtn.Name = "runBeepSoundBtn";
-            this.runBeepSoundBtn.Size = new System.Drawing.Size(164, 43);
-            this.runBeepSoundBtn.TabIndex = 20;
-            this.runBeepSoundBtn.Text = "Run";
             this.runBeepSoundBtn.UseVisualStyleBackColor = true;
             this.runBeepSoundBtn.Click += new System.EventHandler(this.RunBeepSoundBtn_Click);
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(511, 322);
+            resources.ApplyResources(this.label17, "label17");
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(127, 25);
-            this.label17.TabIndex = 19;
-            this.label17.Text = "Beep Sound:";
             // 
             // soundRunBtn
             // 
-            this.soundRunBtn.Location = new System.Drawing.Point(459, 217);
+            resources.ApplyResources(this.soundRunBtn, "soundRunBtn");
+            this.soundRunBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.soundRunBtn.Name = "soundRunBtn";
-            this.soundRunBtn.Size = new System.Drawing.Size(228, 45);
-            this.soundRunBtn.TabIndex = 18;
-            this.soundRunBtn.Text = "Run";
             this.soundRunBtn.UseVisualStyleBackColor = true;
             this.soundRunBtn.Click += new System.EventHandler(this.SoundRunBtn_Click);
             // 
             // delyLabel
             // 
-            this.delyLabel.AutoSize = true;
-            this.delyLabel.Location = new System.Drawing.Point(541, 123);
+            resources.ApplyResources(this.delyLabel, "delyLabel");
             this.delyLabel.Name = "delyLabel";
-            this.delyLabel.Size = new System.Drawing.Size(68, 25);
-            this.delyLabel.TabIndex = 17;
-            this.delyLabel.Text = "Delay:";
             // 
             // soundDelayBox
             // 
+            resources.ApplyResources(this.soundDelayBox, "soundDelayBox");
+            this.soundDelayBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.soundDelayBox.Increment = new decimal(new int[] {
             200,
             0,
             0,
             0});
-            this.soundDelayBox.Location = new System.Drawing.Point(531, 151);
             this.soundDelayBox.Maximum = new decimal(new int[] {
             65536,
             0,
             0,
             0});
             this.soundDelayBox.Name = "soundDelayBox";
-            this.soundDelayBox.Size = new System.Drawing.Size(78, 30);
-            this.soundDelayBox.TabIndex = 16;
-            this.soundDelayBox.ThousandsSeparator = true;
             this.soundDelayBox.Value = new decimal(new int[] {
             200,
             0,
@@ -900,129 +752,208 @@
             // 
             // percentLabel
             // 
-            this.percentLabel.AutoSize = true;
-            this.percentLabel.Location = new System.Drawing.Point(544, 89);
+            resources.ApplyResources(this.percentLabel, "percentLabel");
             this.percentLabel.Name = "percentLabel";
-            this.percentLabel.Size = new System.Drawing.Size(52, 25);
-            this.percentLabel.TabIndex = 2;
-            this.percentLabel.Text = "70%";
             // 
             // amountLabel
             // 
-            this.amountLabel.AutoSize = true;
-            this.amountLabel.Location = new System.Drawing.Point(475, 18);
+            resources.ApplyResources(this.amountLabel, "amountLabel");
             this.amountLabel.Name = "amountLabel";
-            this.amountLabel.Size = new System.Drawing.Size(212, 25);
-            this.amountLabel.TabIndex = 1;
-            this.amountLabel.Text = "Select Volume Amount";
             // 
             // volumeBox
             // 
-            this.volumeBox.AutoSize = false;
-            this.volumeBox.Location = new System.Drawing.Point(98, 46);
+            resources.ApplyResources(this.volumeBox, "volumeBox");
+            this.volumeBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.volumeBox.Maximum = 101;
             this.volumeBox.Name = "volumeBox";
-            this.volumeBox.Size = new System.Drawing.Size(1004, 40);
-            this.volumeBox.TabIndex = 0;
             this.volumeBox.Value = 70;
             this.volumeBox.Scroll += new System.EventHandler(this.VolumeBox_Scroll);
             // 
             // muteLabel
             // 
-            this.muteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            resources.ApplyResources(this.muteLabel, "muteLabel");
+            this.muteLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.muteLabel.ForeColor = System.Drawing.Color.Red;
-            this.muteLabel.Image = ((System.Drawing.Image)(resources.GetObject("muteLabel.Image")));
-            this.muteLabel.Location = new System.Drawing.Point(27, 123);
             this.muteLabel.Name = "muteLabel";
-            this.muteLabel.Size = new System.Drawing.Size(122, 129);
-            this.muteLabel.TabIndex = 3;
-            this.muteLabel.Text = "Mute";
-            this.muteLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.muteLabel.Click += new System.EventHandler(this.MuteLabel_Click);
             // 
             // unmuteLabel
             // 
-            this.unmuteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            resources.ApplyResources(this.unmuteLabel, "unmuteLabel");
+            this.unmuteLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.unmuteLabel.ForeColor = System.Drawing.Color.Blue;
-            this.unmuteLabel.Image = ((System.Drawing.Image)(resources.GetObject("unmuteLabel.Image")));
-            this.unmuteLabel.Location = new System.Drawing.Point(1048, 123);
             this.unmuteLabel.Name = "unmuteLabel";
-            this.unmuteLabel.Size = new System.Drawing.Size(140, 129);
-            this.unmuteLabel.TabIndex = 4;
-            this.unmuteLabel.Text = "Unmute";
-            this.unmuteLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.unmuteLabel.Click += new System.EventHandler(this.UnmuteLabel_Click);
+            // 
+            // fileSystemTab
+            // 
+            resources.ApplyResources(this.fileSystemTab, "fileSystemTab");
+            this.fileSystemTab.Controls.Add(this.label30);
+            this.fileSystemTab.Controls.Add(this.screenHeightBox);
+            this.fileSystemTab.Controls.Add(this.label29);
+            this.fileSystemTab.Controls.Add(this.screenWidthBox);
+            this.fileSystemTab.Controls.Add(this.deleteAfterBox);
+            this.fileSystemTab.Controls.Add(this.label28);
+            this.fileSystemTab.Controls.Add(this.screenshotGoBtn);
+            this.fileSystemTab.Controls.Add(this.chooseSaveBtn);
+            this.fileSystemTab.Controls.Add(this.saveToBox);
+            this.fileSystemTab.Controls.Add(this.label27);
+            this.fileSystemTab.Controls.Add(this.getFileLocationBox);
+            this.fileSystemTab.Controls.Add(this.label26);
+            this.fileSystemTab.Controls.Add(this.getFile);
+            this.fileSystemTab.Name = "fileSystemTab";
+            this.fileSystemTab.UseVisualStyleBackColor = true;
+            // 
+            // label30
+            // 
+            resources.ApplyResources(this.label30, "label30");
+            this.label30.Name = "label30";
+            // 
+            // screenHeightBox
+            // 
+            resources.ApplyResources(this.screenHeightBox, "screenHeightBox");
+            this.screenHeightBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.screenHeightBox.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.screenHeightBox.Maximum = new decimal(new int[] {
+            2160,
+            0,
+            0,
+            0});
+            this.screenHeightBox.Name = "screenHeightBox";
+            this.screenHeightBox.Value = new decimal(new int[] {
+            1080,
+            0,
+            0,
+            0});
+            // 
+            // label29
+            // 
+            resources.ApplyResources(this.label29, "label29");
+            this.label29.Name = "label29";
+            // 
+            // screenWidthBox
+            // 
+            resources.ApplyResources(this.screenWidthBox, "screenWidthBox");
+            this.screenWidthBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.screenWidthBox.Maximum = new decimal(new int[] {
+            4096,
+            0,
+            0,
+            0});
+            this.screenWidthBox.Name = "screenWidthBox";
+            this.screenWidthBox.Value = new decimal(new int[] {
+            1920,
+            0,
+            0,
+            0});
+            // 
+            // deleteAfterBox
+            // 
+            resources.ApplyResources(this.deleteAfterBox, "deleteAfterBox");
+            this.deleteAfterBox.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.deleteAfterBox.Name = "deleteAfterBox";
+            this.deleteAfterBox.UseVisualStyleBackColor = true;
+            // 
+            // label28
+            // 
+            resources.ApplyResources(this.label28, "label28");
+            this.label28.Name = "label28";
+            // 
+            // screenshotGoBtn
+            // 
+            resources.ApplyResources(this.screenshotGoBtn, "screenshotGoBtn");
+            this.screenshotGoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.screenshotGoBtn.Name = "screenshotGoBtn";
+            this.screenshotGoBtn.UseVisualStyleBackColor = true;
+            this.screenshotGoBtn.Click += new System.EventHandler(this.screenshotGoBtn_Click);
+            // 
+            // chooseSaveBtn
+            // 
+            resources.ApplyResources(this.chooseSaveBtn, "chooseSaveBtn");
+            this.chooseSaveBtn.Name = "chooseSaveBtn";
+            this.chooseSaveBtn.UseVisualStyleBackColor = true;
+            this.chooseSaveBtn.Click += new System.EventHandler(this.chooseSaveBtn_Click);
+            // 
+            // saveToBox
+            // 
+            resources.ApplyResources(this.saveToBox, "saveToBox");
+            this.saveToBox.Name = "saveToBox";
+            // 
+            // label27
+            // 
+            resources.ApplyResources(this.label27, "label27");
+            this.label27.Name = "label27";
+            // 
+            // getFileLocationBox
+            // 
+            resources.ApplyResources(this.getFileLocationBox, "getFileLocationBox");
+            this.getFileLocationBox.Name = "getFileLocationBox";
+            // 
+            // label26
+            // 
+            resources.ApplyResources(this.label26, "label26");
+            this.label26.Name = "label26";
+            // 
+            // getFile
+            // 
+            resources.ApplyResources(this.getFile, "getFile");
+            this.getFile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.getFile.Name = "getFile";
+            this.getFile.UseVisualStyleBackColor = true;
+            this.getFile.Click += new System.EventHandler(this.getFile_Click);
             // 
             // networkTab
             // 
+            resources.ApplyResources(this.networkTab, "networkTab");
             this.networkTab.Controls.Add(this.networkSmbBox);
             this.networkTab.Controls.Add(this.networkOnBox);
             this.networkTab.Controls.Add(this.networkOffBox);
             this.networkTab.Controls.Add(this.label25);
             this.networkTab.Controls.Add(this.firewallRun);
-            this.networkTab.Location = new System.Drawing.Point(4, 34);
             this.networkTab.Name = "networkTab";
-            this.networkTab.Padding = new System.Windows.Forms.Padding(3);
-            this.networkTab.Size = new System.Drawing.Size(1217, 670);
-            this.networkTab.TabIndex = 6;
-            this.networkTab.Text = "Network Control";
-            this.networkTab.ToolTipText = "Network Stuff";
             this.networkTab.UseVisualStyleBackColor = true;
             // 
             // networkSmbBox
             // 
-            this.networkSmbBox.AutoSize = true;
-            this.networkSmbBox.Location = new System.Drawing.Point(456, 73);
+            resources.ApplyResources(this.networkSmbBox, "networkSmbBox");
             this.networkSmbBox.Name = "networkSmbBox";
-            this.networkSmbBox.Size = new System.Drawing.Size(131, 29);
-            this.networkSmbBox.TabIndex = 4;
             this.networkSmbBox.TabStop = true;
-            this.networkSmbBox.Text = "Allow SMB ";
             this.networkSmbBox.UseVisualStyleBackColor = true;
             // 
             // networkOnBox
             // 
-            this.networkOnBox.AutoSize = true;
-            this.networkOnBox.Location = new System.Drawing.Point(604, 73);
+            resources.ApplyResources(this.networkOnBox, "networkOnBox");
             this.networkOnBox.Name = "networkOnBox";
-            this.networkOnBox.Size = new System.Drawing.Size(57, 29);
-            this.networkOnBox.TabIndex = 3;
             this.networkOnBox.TabStop = true;
-            this.networkOnBox.Text = "On";
             this.networkOnBox.UseVisualStyleBackColor = true;
             // 
             // networkOffBox
             // 
-            this.networkOffBox.AutoSize = true;
-            this.networkOffBox.Location = new System.Drawing.Point(371, 73);
+            resources.ApplyResources(this.networkOffBox, "networkOffBox");
             this.networkOffBox.Name = "networkOffBox";
-            this.networkOffBox.Size = new System.Drawing.Size(56, 29);
-            this.networkOffBox.TabIndex = 2;
             this.networkOffBox.TabStop = true;
-            this.networkOffBox.Text = "Off";
             this.networkOffBox.UseVisualStyleBackColor = true;
             // 
             // label25
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(441, 36);
+            resources.ApplyResources(this.label25, "label25");
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(160, 25);
-            this.label25.TabIndex = 1;
-            this.label25.Text = "Firewall Settings:";
             // 
             // firewallRun
             // 
-            this.firewallRun.Location = new System.Drawing.Point(499, 598);
+            resources.ApplyResources(this.firewallRun, "firewallRun");
             this.firewallRun.Name = "firewallRun";
-            this.firewallRun.Size = new System.Drawing.Size(139, 47);
-            this.firewallRun.TabIndex = 0;
-            this.firewallRun.Text = "Run";
             this.firewallRun.UseVisualStyleBackColor = true;
             this.firewallRun.Click += new System.EventHandler(this.FirewallRun_Click);
             // 
             // miscTab
             // 
+            resources.ApplyResources(this.miscTab, "miscTab");
+            this.miscTab.Controls.Add(this.speakNowBtn);
             this.miscTab.Controls.Add(this.nircmdAboutLabel);
             this.miscTab.Controls.Add(this.label24);
             this.miscTab.Controls.Add(this.sendKeyboardDelayBox);
@@ -1057,43 +988,39 @@
             this.miscTab.Controls.Add(this.ttsBox);
             this.miscTab.Controls.Add(this.downloadNirBtn);
             this.miscTab.Controls.Add(this.label9);
-            this.miscTab.Location = new System.Drawing.Point(4, 34);
             this.miscTab.Name = "miscTab";
-            this.miscTab.Padding = new System.Windows.Forms.Padding(3);
-            this.miscTab.Size = new System.Drawing.Size(1217, 670);
-            this.miscTab.TabIndex = 5;
-            this.miscTab.Text = "Misc";
-            this.miscTab.ToolTipText = "Keyboard, Mouse, TTS";
             this.miscTab.UseVisualStyleBackColor = true;
+            // 
+            // speakNowBtn
+            // 
+            resources.ApplyResources(this.speakNowBtn, "speakNowBtn");
+            this.speakNowBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.speakNowBtn.Name = "speakNowBtn";
+            this.speakNowBtn.UseVisualStyleBackColor = true;
+            this.speakNowBtn.Click += new System.EventHandler(this.SpeakNowBtn_Click);
             // 
             // nircmdAboutLabel
             // 
+            resources.ApplyResources(this.nircmdAboutLabel, "nircmdAboutLabel");
             this.nircmdAboutLabel.BackColor = System.Drawing.Color.Transparent;
-            this.nircmdAboutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.nircmdAboutLabel.Location = new System.Drawing.Point(1186, 3);
+            this.nircmdAboutLabel.Cursor = System.Windows.Forms.Cursors.Help;
             this.nircmdAboutLabel.Name = "nircmdAboutLabel";
-            this.nircmdAboutLabel.Size = new System.Drawing.Size(23, 22);
-            this.nircmdAboutLabel.TabIndex = 51;
-            this.nircmdAboutLabel.Text = "?";
             this.nircmdAboutLabel.Click += new System.EventHandler(this.NircmdAboutLabel_Click);
             // 
             // label24
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(1017, 222);
+            resources.ApplyResources(this.label24, "label24");
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(68, 25);
-            this.label24.TabIndex = 50;
-            this.label24.Text = "Delay:";
             // 
             // sendKeyboardDelayBox
             // 
+            resources.ApplyResources(this.sendKeyboardDelayBox, "sendKeyboardDelayBox");
+            this.sendKeyboardDelayBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sendKeyboardDelayBox.Increment = new decimal(new int[] {
             200,
             0,
             0,
             0});
-            this.sendKeyboardDelayBox.Location = new System.Drawing.Point(1020, 250);
             this.sendKeyboardDelayBox.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -1105,9 +1032,6 @@
             0,
             0});
             this.sendKeyboardDelayBox.Name = "sendKeyboardDelayBox";
-            this.sendKeyboardDelayBox.Size = new System.Drawing.Size(83, 30);
-            this.sendKeyboardDelayBox.TabIndex = 49;
-            this.sendKeyboardDelayBox.ThousandsSeparator = true;
             this.sendKeyboardDelayBox.Value = new decimal(new int[] {
             200,
             0,
@@ -1116,30 +1040,23 @@
             // 
             // label23
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(752, 74);
+            resources.ApplyResources(this.label23, "label23");
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(68, 25);
-            this.label23.TabIndex = 48;
-            this.label23.Text = "Delay:";
             // 
             // label22
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(166, 396);
+            resources.ApplyResources(this.label22, "label22");
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(68, 25);
-            this.label22.TabIndex = 47;
-            this.label22.Text = "Delay:";
             // 
             // moveMouseDelayBox
             // 
+            resources.ApplyResources(this.moveMouseDelayBox, "moveMouseDelayBox");
+            this.moveMouseDelayBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.moveMouseDelayBox.Increment = new decimal(new int[] {
             200,
             0,
             0,
             0});
-            this.moveMouseDelayBox.Location = new System.Drawing.Point(171, 424);
             this.moveMouseDelayBox.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -1151,9 +1068,6 @@
             0,
             0});
             this.moveMouseDelayBox.Name = "moveMouseDelayBox";
-            this.moveMouseDelayBox.Size = new System.Drawing.Size(83, 30);
-            this.moveMouseDelayBox.TabIndex = 46;
-            this.moveMouseDelayBox.ThousandsSeparator = true;
             this.moveMouseDelayBox.Value = new decimal(new int[] {
             200,
             0,
@@ -1162,21 +1076,18 @@
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(440, 287);
+            resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 25);
-            this.label10.TabIndex = 45;
-            this.label10.Text = "Delay:";
             // 
             // clickDelayBox
             // 
+            resources.ApplyResources(this.clickDelayBox, "clickDelayBox");
+            this.clickDelayBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clickDelayBox.Increment = new decimal(new int[] {
             200,
             0,
             0,
             0});
-            this.clickDelayBox.Location = new System.Drawing.Point(445, 315);
             this.clickDelayBox.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -1188,9 +1099,6 @@
             0,
             0});
             this.clickDelayBox.Name = "clickDelayBox";
-            this.clickDelayBox.Size = new System.Drawing.Size(83, 30);
-            this.clickDelayBox.TabIndex = 44;
-            this.clickDelayBox.ThousandsSeparator = true;
             this.clickDelayBox.Value = new decimal(new int[] {
             200,
             0,
@@ -1199,181 +1107,128 @@
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(616, 264);
+            resources.ApplyResources(this.label16, "label16");
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(193, 25);
-            this.label16.TabIndex = 43;
-            this.label16.Text = "Send Keyboard Text";
             // 
             // sendKeyboardTextBtn
             // 
-            this.sendKeyboardTextBtn.Location = new System.Drawing.Point(801, 483);
+            resources.ApplyResources(this.sendKeyboardTextBtn, "sendKeyboardTextBtn");
+            this.sendKeyboardTextBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sendKeyboardTextBtn.Name = "sendKeyboardTextBtn";
-            this.sendKeyboardTextBtn.Size = new System.Drawing.Size(81, 29);
-            this.sendKeyboardTextBtn.TabIndex = 42;
-            this.sendKeyboardTextBtn.Text = "Send";
             this.sendKeyboardTextBtn.UseVisualStyleBackColor = true;
             this.sendKeyboardTextBtn.Click += new System.EventHandler(this.SendKeyboardTextBtn_Click);
             // 
             // sendKeyboardBox
             // 
-            this.sendKeyboardBox.Location = new System.Drawing.Point(622, 293);
-            this.sendKeyboardBox.Multiline = true;
+            resources.ApplyResources(this.sendKeyboardBox, "sendKeyboardBox");
             this.sendKeyboardBox.Name = "sendKeyboardBox";
-            this.sendKeyboardBox.Size = new System.Drawing.Size(463, 184);
-            this.sendKeyboardBox.TabIndex = 41;
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(616, 222);
+            resources.ApplyResources(this.label15, "label15");
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(168, 25);
-            this.label15.TabIndex = 40;
-            this.label15.Text = "Keyboard Events:";
             // 
             // moveMouseYBox
             // 
-            this.moveMouseYBox.Location = new System.Drawing.Point(99, 396);
+            resources.ApplyResources(this.moveMouseYBox, "moveMouseYBox");
             this.moveMouseYBox.Name = "moveMouseYBox";
-            this.moveMouseYBox.Size = new System.Drawing.Size(61, 30);
-            this.moveMouseYBox.TabIndex = 39;
             this.moveMouseYBox.TextChanged += new System.EventHandler(this.on_Edit);
             // 
             // moveMouseXBox
             // 
-            this.moveMouseXBox.Location = new System.Drawing.Point(25, 396);
+            resources.ApplyResources(this.moveMouseXBox, "moveMouseXBox");
             this.moveMouseXBox.Name = "moveMouseXBox";
-            this.moveMouseXBox.Size = new System.Drawing.Size(61, 30);
-            this.moveMouseXBox.TabIndex = 38;
             this.moveMouseXBox.TextChanged += new System.EventHandler(this.on_Edit);
             // 
             // moveBtn
             // 
-            this.moveBtn.Location = new System.Drawing.Point(56, 447);
+            resources.ApplyResources(this.moveBtn, "moveBtn");
+            this.moveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.moveBtn.Name = "moveBtn";
-            this.moveBtn.Size = new System.Drawing.Size(72, 37);
-            this.moveBtn.TabIndex = 37;
-            this.moveBtn.Text = "Move";
             this.moveBtn.UseVisualStyleBackColor = true;
             this.moveBtn.Click += new System.EventHandler(this.MoveBtn_Click);
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(30, 356);
+            resources.ApplyResources(this.label14, "label14");
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(126, 25);
-            this.label14.TabIndex = 36;
-            this.label14.Text = "Move Mouse";
             // 
             // doubleClickBtn
             // 
-            this.doubleClickBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.doubleClickBtn.Location = new System.Drawing.Point(143, 315);
+            resources.ApplyResources(this.doubleClickBtn, "doubleClickBtn");
+            this.doubleClickBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.doubleClickBtn.Name = "doubleClickBtn";
-            this.doubleClickBtn.Size = new System.Drawing.Size(118, 29);
-            this.doubleClickBtn.TabIndex = 33;
-            this.doubleClickBtn.Text = "Double Click";
             this.doubleClickBtn.UseVisualStyleBackColor = true;
             this.doubleClickBtn.Click += new System.EventHandler(this.runMouseClick);
             // 
             // upClickBtn
             // 
-            this.upClickBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.upClickBtn.Location = new System.Drawing.Point(362, 320);
+            resources.ApplyResources(this.upClickBtn, "upClickBtn");
+            this.upClickBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.upClickBtn.Name = "upClickBtn";
-            this.upClickBtn.Size = new System.Drawing.Size(77, 24);
-            this.upClickBtn.TabIndex = 32;
-            this.upClickBtn.Text = "Up Only";
             this.upClickBtn.UseVisualStyleBackColor = true;
             this.upClickBtn.Click += new System.EventHandler(this.runMouseClick);
             // 
             // downClickBtn
             // 
-            this.downClickBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.downClickBtn.Location = new System.Drawing.Point(267, 320);
+            resources.ApplyResources(this.downClickBtn, "downClickBtn");
+            this.downClickBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.downClickBtn.Name = "downClickBtn";
-            this.downClickBtn.Size = new System.Drawing.Size(89, 24);
-            this.downClickBtn.TabIndex = 31;
-            this.downClickBtn.Text = "Down Only";
             this.downClickBtn.UseVisualStyleBackColor = true;
             this.downClickBtn.Click += new System.EventHandler(this.runMouseClick);
             // 
             // middleMouseBtn
             // 
-            this.middleMouseBtn.AutoSize = true;
-            this.middleMouseBtn.Location = new System.Drawing.Point(299, 262);
+            resources.ApplyResources(this.middleMouseBtn, "middleMouseBtn");
+            this.middleMouseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.middleMouseBtn.Name = "middleMouseBtn";
-            this.middleMouseBtn.Size = new System.Drawing.Size(153, 29);
-            this.middleMouseBtn.TabIndex = 30;
-            this.middleMouseBtn.Text = "Middle Mouse";
             this.middleMouseBtn.UseVisualStyleBackColor = true;
             // 
             // rightMouseBtn
             // 
-            this.rightMouseBtn.AutoSize = true;
-            this.rightMouseBtn.Location = new System.Drawing.Point(158, 262);
+            resources.ApplyResources(this.rightMouseBtn, "rightMouseBtn");
+            this.rightMouseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rightMouseBtn.Name = "rightMouseBtn";
-            this.rightMouseBtn.Size = new System.Drawing.Size(139, 29);
-            this.rightMouseBtn.TabIndex = 29;
-            this.rightMouseBtn.Text = "Right Mouse";
             this.rightMouseBtn.UseVisualStyleBackColor = true;
             // 
             // leftMouseBtn
             // 
-            this.leftMouseBtn.AutoSize = true;
+            resources.ApplyResources(this.leftMouseBtn, "leftMouseBtn");
             this.leftMouseBtn.Checked = true;
-            this.leftMouseBtn.Location = new System.Drawing.Point(29, 262);
+            this.leftMouseBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.leftMouseBtn.Name = "leftMouseBtn";
-            this.leftMouseBtn.Size = new System.Drawing.Size(127, 29);
-            this.leftMouseBtn.TabIndex = 28;
             this.leftMouseBtn.TabStop = true;
-            this.leftMouseBtn.Text = "Left Mouse";
             this.leftMouseBtn.UseVisualStyleBackColor = true;
             // 
             // mouseFullClickBtn
             // 
-            this.mouseFullClickBtn.Location = new System.Drawing.Point(29, 308);
+            resources.ApplyResources(this.mouseFullClickBtn, "mouseFullClickBtn");
+            this.mouseFullClickBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.mouseFullClickBtn.Name = "mouseFullClickBtn";
-            this.mouseFullClickBtn.Size = new System.Drawing.Size(108, 36);
-            this.mouseFullClickBtn.TabIndex = 26;
-            this.mouseFullClickBtn.Text = "Full Click";
             this.mouseFullClickBtn.UseVisualStyleBackColor = true;
             this.mouseFullClickBtn.Click += new System.EventHandler(this.runMouseClick);
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(26, 222);
+            resources.ApplyResources(this.label13, "label13");
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(143, 25);
-            this.label13.TabIndex = 25;
-            this.label13.Text = "Mouse Events:";
             // 
             // maleVoiceBox
             // 
-            this.maleVoiceBox.AutoSize = true;
-            this.maleVoiceBox.Location = new System.Drawing.Point(31, 85);
+            resources.ApplyResources(this.maleVoiceBox, "maleVoiceBox");
+            this.maleVoiceBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.maleVoiceBox.Name = "maleVoiceBox";
-            this.maleVoiceBox.Size = new System.Drawing.Size(129, 29);
-            this.maleVoiceBox.TabIndex = 24;
-            this.maleVoiceBox.Text = "Male Voice";
             this.maleVoiceBox.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(200, 85);
+            resources.ApplyResources(this.label12, "label12");
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 25);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "Speed";
             // 
             // ttsSpeedBox
             // 
-            this.ttsSpeedBox.Location = new System.Drawing.Point(205, 113);
+            resources.ApplyResources(this.ttsSpeedBox, "ttsSpeedBox");
+            this.ttsSpeedBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ttsSpeedBox.Maximum = new decimal(new int[] {
             10,
             0,
@@ -1385,29 +1240,22 @@
             0,
             -2147483648});
             this.ttsSpeedBox.Name = "ttsSpeedBox";
-            this.ttsSpeedBox.Size = new System.Drawing.Size(56, 30);
-            this.ttsSpeedBox.TabIndex = 22;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(294, 85);
+            resources.ApplyResources(this.label11, "label11");
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(79, 25);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "Volume";
             // 
             // ttsVolumeBox
             // 
-            this.ttsVolumeBox.Location = new System.Drawing.Point(299, 113);
+            resources.ApplyResources(this.ttsVolumeBox, "ttsVolumeBox");
+            this.ttsVolumeBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ttsVolumeBox.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.ttsVolumeBox.Name = "ttsVolumeBox";
-            this.ttsVolumeBox.Size = new System.Drawing.Size(53, 30);
-            this.ttsVolumeBox.TabIndex = 20;
             this.ttsVolumeBox.Value = new decimal(new int[] {
             80,
             0,
@@ -1416,12 +1264,13 @@
             // 
             // ttsDelayBox
             // 
+            resources.ApplyResources(this.ttsDelayBox, "ttsDelayBox");
+            this.ttsDelayBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ttsDelayBox.Increment = new decimal(new int[] {
             200,
             0,
             0,
             0});
-            this.ttsDelayBox.Location = new System.Drawing.Point(755, 102);
             this.ttsDelayBox.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -1433,9 +1282,6 @@
             0,
             0});
             this.ttsDelayBox.Name = "ttsDelayBox";
-            this.ttsDelayBox.Size = new System.Drawing.Size(83, 30);
-            this.ttsDelayBox.TabIndex = 17;
-            this.ttsDelayBox.ThousandsSeparator = true;
             this.ttsDelayBox.Value = new decimal(new int[] {
             200,
             0,
@@ -1444,147 +1290,114 @@
             // 
             // ttsRunBtn
             // 
-            this.ttsRunBtn.Location = new System.Drawing.Point(757, 31);
+            resources.ApplyResources(this.ttsRunBtn, "ttsRunBtn");
+            this.ttsRunBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ttsRunBtn.Name = "ttsRunBtn";
-            this.ttsRunBtn.Size = new System.Drawing.Size(78, 30);
-            this.ttsRunBtn.TabIndex = 3;
-            this.ttsRunBtn.Text = "Run";
             this.ttsRunBtn.UseVisualStyleBackColor = true;
             this.ttsRunBtn.Click += new System.EventHandler(this.TtsRunBtn_Click);
             // 
             // ttsBox
             // 
-            this.ttsBox.Location = new System.Drawing.Point(191, 31);
+            resources.ApplyResources(this.ttsBox, "ttsBox");
             this.ttsBox.Name = "ttsBox";
-            this.ttsBox.Size = new System.Drawing.Size(560, 30);
-            this.ttsBox.TabIndex = 2;
             // 
             // downloadNirBtn
             // 
-            this.downloadNirBtn.Location = new System.Drawing.Point(995, 25);
+            resources.ApplyResources(this.downloadNirBtn, "downloadNirBtn");
+            this.downloadNirBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.downloadNirBtn.Name = "downloadNirBtn";
-            this.downloadNirBtn.Size = new System.Drawing.Size(190, 43);
-            this.downloadNirBtn.TabIndex = 1;
-            this.downloadNirBtn.Text = "Download NirCmd";
             this.downloadNirBtn.UseVisualStyleBackColor = true;
             this.downloadNirBtn.Click += new System.EventHandler(this.DownloadNirBtn_Click);
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(26, 31);
+            resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(159, 25);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Text To Speech:";
             // 
             // fileToolStripMenuItem
             // 
+            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.alwaysOnTopToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
             // 
             // alwaysOnTopToolStripMenuItem
             // 
+            resources.ApplyResources(this.alwaysOnTopToolStripMenuItem, "alwaysOnTopToolStripMenuItem");
             this.alwaysOnTopToolStripMenuItem.CheckOnClick = true;
             this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
-            this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.alwaysOnTopToolStripMenuItem.Text = "Always On Top";
             this.alwaysOnTopToolStripMenuItem.CheckedChanged += new System.EventHandler(this.AlwaysOnTopToolStripMenuItem_change);
             this.alwaysOnTopToolStripMenuItem.CheckStateChanged += new System.EventHandler(this.AlwaysOnTopToolStripMenuItem_change);
             // 
             // exitToolStripMenuItem
             // 
+            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // configToolStripMenuItem
             // 
+            resources.ApplyResources(this.configToolStripMenuItem, "configToolStripMenuItem");
             this.configToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveToolStripMenuItem,
             this.loadToolStripMenuItem});
             this.configToolStripMenuItem.Name = "configToolStripMenuItem";
-            this.configToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.configToolStripMenuItem.Text = "Config";
             // 
             // saveToolStripMenuItem
             // 
-            this.saveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem.Image")));
-            this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.saveToolStripMenuItem, "saveToolStripMenuItem");
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.saveToolStripMenuItem.Text = "Save as";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
             // loadToolStripMenuItem
             // 
-            this.loadToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("loadToolStripMenuItem.Image")));
+            resources.ApplyResources(this.loadToolStripMenuItem, "loadToolStripMenuItem");
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.loadToolStripMenuItem.Text = "Load";
-            this.loadToolStripMenuItem.ToolTipText = "Load Config File";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.LoadToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
+            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.creditsToolStripMenuItem,
             this.howToUseToolStripMenuItem});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.aboutToolStripMenuItem.Text = "About";
             // 
             // creditsToolStripMenuItem
             // 
-            this.creditsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("creditsToolStripMenuItem.Image")));
+            resources.ApplyResources(this.creditsToolStripMenuItem, "creditsToolStripMenuItem");
             this.creditsToolStripMenuItem.Name = "creditsToolStripMenuItem";
-            this.creditsToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.creditsToolStripMenuItem.Text = "Credits";
             this.creditsToolStripMenuItem.Click += new System.EventHandler(this.CreditsToolStripMenuItem_Click);
             // 
             // howToUseToolStripMenuItem
             // 
-            this.howToUseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("howToUseToolStripMenuItem.Image")));
+            resources.ApplyResources(this.howToUseToolStripMenuItem, "howToUseToolStripMenuItem");
             this.howToUseToolStripMenuItem.Name = "howToUseToolStripMenuItem";
-            this.howToUseToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.howToUseToolStripMenuItem.Text = "How To Use";
             this.howToUseToolStripMenuItem.Click += new System.EventHandler(this.HowToUseToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.AllowDrop = true;
-            this.menuStrip1.AutoSize = false;
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.configToolStripMenuItem,
             this.aboutToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1225, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // epsexecForm
             // 
+            resources.ApplyResources(this, "$this");
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1225, 730);
             this.Controls.Add(this.main);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "epsexecForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Enhanced-PsExec Control Panel";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EpsexecForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.any_DragEnter);
@@ -1606,6 +1419,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.frequencySoundBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.soundDelayBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBox)).EndInit();
+            this.fileSystemTab.ResumeLayout(false);
+            this.fileSystemTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.screenHeightBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.screenWidthBox)).EndInit();
             this.networkTab.ResumeLayout(false);
             this.networkTab.PerformLayout();
             this.miscTab.ResumeLayout(false);
@@ -1736,6 +1553,20 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button firewallRun;
         private System.Windows.Forms.RadioButton networkSmbBox;
+        private System.Windows.Forms.Button speakNowBtn;
+        private System.Windows.Forms.TabPage fileSystemTab;
+        private System.Windows.Forms.TextBox getFileLocationBox;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Button getFile;
+        private System.Windows.Forms.Button chooseSaveBtn;
+        private System.Windows.Forms.TextBox saveToBox;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.CheckBox deleteAfterBox;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Button screenshotGoBtn;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.NumericUpDown screenHeightBox;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.NumericUpDown screenWidthBox;
     }
 }
-
