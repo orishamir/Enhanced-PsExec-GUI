@@ -1,11 +1,16 @@
-# [For The Python Version And A More Detailed Explanation](https://pypi.org/project/Enhanced-PsExec/)
+# [For The Python Version And A More Detailed Explanation Click Here](https://pypi.org/project/Enhanced-PsExec/)
 
 ### About
 epsexec (Enhanced psexec) uses [Microsoft's Sysinternals PsExec](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec) utility that uses SMB to execute programs on remote systems.
 PsExec is a light-weight telnet replacement.    
 If you find any bugs, PLEASE report to ***`EpsexecNoReply@gmail.com`***   
 
-# Requirements
+## Installation
+Go To [here](https://github.com/orishamir/Enhanced-PsExec-GUI/releases)   
+This will download an installer that would configure everything    
+
+
+## Requirements
 **Attacker Machine:**   
 1) You MUST have [psexec install](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec)ed   
     (The installer installed it for you)
@@ -39,7 +44,7 @@ Or, you can just disable the firewall entirely administrator CMD:
 
 5) Restart the system.   
 
-## download_nir
+## NirCMD
 [NirCMD](https://www.nirsoft.net/utils/nircmd.html) is A windows command-line utility that allows you to do useful tasks without displaying any user interface.   
 Unfortunately, NirCMD is NOT installed by default on windows systems.   
 Thats why this method exists. all this method do, is download NirCMD on the remote PC using powershell.   
