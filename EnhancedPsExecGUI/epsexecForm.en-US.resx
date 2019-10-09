@@ -117,7 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="miscTab.Text" xml:space="preserve">
+    <value>Fun</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MoreTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MoreTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1217, 670</value>
+  </data>
+  <data name="MoreTab.Text" xml:space="preserve">
+    <value>More</value>
+  </data>
   <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
     <value>231, 123</value>
   </data>
@@ -1678,12 +1691,6 @@
         LhBbbLF9x5aImGVFbLHFFltsscUWW2yxxRZbbLHFFltsscUWW2yxxRZbbLHFFltsscV2uCwp6f8DiEOK
         SNmKU0oAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="alwaysOnTopToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
   </data>
   <data name="saveToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

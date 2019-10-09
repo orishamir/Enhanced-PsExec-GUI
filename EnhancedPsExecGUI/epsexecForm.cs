@@ -13,7 +13,6 @@ using EnhancedPsExec;
 using System.IO;
 using System.Security;
 using System.Runtime.InteropServices;
-using Microsoft.Win32;
 using System.Threading;
 using System.Net.Sockets;
 using System.Speech.Recognition;
@@ -1098,6 +1097,22 @@ namespace EnhancedPsExecGUI
             };
             startPic.Start();
             startPic.Close();
+        }
+        
+        private void remoteConsoleBtn_Click(object sender, EventArgs e)
+        {
+            RemoteConsole remoteConsoleForm = new RemoteConsole(this);
+            remoteConsoleForm.Show();
+            /*
+            Process proc = new Process();
+
+            proc.StartInfo = new ProcessStartInfo
+            {
+                FileName = "cmd.exe",
+                Arguments = $"/C echo Connecting To {ipBox.Text} & timeout /t 2 >nul & psexec.exe \\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -nobanner cmd.exe & cmd",
+            };
+            proc.Start();
+            */
         }
     }
 }

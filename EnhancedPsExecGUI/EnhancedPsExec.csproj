@@ -94,6 +94,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -135,6 +137,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoteConsole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoteConsole.Designer.cs">
+      <DependentUpon>RemoteConsole.cs</DependentUpon>
+    </Compile>
     <Compile Include="scannerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +171,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RemoteConsole.resx">
+      <DependentUpon>RemoteConsole.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="scannerForm.resx">
       <DependentUpon>scannerForm.cs</DependentUpon>
     </EmbeddedResource>

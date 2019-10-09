@@ -146,6 +146,7 @@
             this.ttsBox = new System.Windows.Forms.TextBox();
             this.downloadNirBtn = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.MoreTab = new System.Windows.Forms.TabPage();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -156,6 +157,7 @@
             this.creditsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.howToUseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.remoteConsoleBtn = new System.Windows.Forms.Button();
             this.main.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.urlTab.SuspendLayout();
@@ -181,12 +183,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.ttsSpeedBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ttsVolumeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ttsDelayBox)).BeginInit();
+            this.MoreTab.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // main
             // 
-            resources.ApplyResources(this.main, "main");
             this.main.AllowDrop = true;
             this.main.Controls.Add(this.homeTab);
             this.main.Controls.Add(this.urlTab);
@@ -195,7 +197,9 @@
             this.main.Controls.Add(this.fileSystemTab);
             this.main.Controls.Add(this.networkTab);
             this.main.Controls.Add(this.miscTab);
+            this.main.Controls.Add(this.MoreTab);
             this.main.Cursor = System.Windows.Forms.Cursors.Default;
+            resources.ApplyResources(this.main, "main");
             this.main.Name = "main";
             this.main.SelectedIndex = 0;
             this.main.DragDrop += new System.Windows.Forms.DragEventHandler(this.any_DragDrop);
@@ -203,7 +207,6 @@
             // 
             // homeTab
             // 
-            resources.ApplyResources(this.homeTab, "homeTab");
             this.homeTab.AllowDrop = true;
             this.homeTab.Controls.Add(this.label21);
             this.homeTab.Controls.Add(this.openScannerBtn);
@@ -215,6 +218,7 @@
             this.homeTab.Controls.Add(this.usrBox);
             this.homeTab.Controls.Add(this.ipBox);
             this.homeTab.Controls.Add(this.ipLabel);
+            resources.ApplyResources(this.homeTab, "homeTab");
             this.homeTab.Name = "homeTab";
             this.homeTab.UseVisualStyleBackColor = true;
             this.homeTab.DragDrop += new System.Windows.Forms.DragEventHandler(this.any_DragDrop);
@@ -228,23 +232,23 @@
             // 
             // openScannerBtn
             // 
-            resources.ApplyResources(this.openScannerBtn, "openScannerBtn");
             this.openScannerBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.openScannerBtn, "openScannerBtn");
             this.openScannerBtn.Name = "openScannerBtn";
             this.openScannerBtn.UseVisualStyleBackColor = true;
             this.openScannerBtn.Click += new System.EventHandler(this.OpenScannerBtn_Click);
             // 
             // loadSetting
             // 
-            resources.ApplyResources(this.loadSetting, "loadSetting");
             this.loadSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.loadSetting, "loadSetting");
             this.loadSetting.Name = "loadSetting";
             this.loadSetting.Click += new System.EventHandler(this.LoadSetting_Click);
             // 
             // saveIcon
             // 
-            resources.ApplyResources(this.saveIcon, "saveIcon");
             this.saveIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.saveIcon, "saveIcon");
             this.saveIcon.Name = "saveIcon";
             this.saveIcon.Click += new System.EventHandler(this.SaveIcon_Click);
             // 
@@ -289,7 +293,6 @@
             // 
             // urlTab
             // 
-            resources.ApplyResources(this.urlTab, "urlTab");
             this.urlTab.AllowDrop = true;
             this.urlTab.Controls.Add(this.label20);
             this.urlTab.Controls.Add(this.label6);
@@ -311,6 +314,7 @@
             this.urlTab.Controls.Add(this.urlBox);
             this.urlTab.Controls.Add(this.urlLabel);
             this.urlTab.Controls.Add(this.runBtn);
+            resources.ApplyResources(this.urlTab, "urlTab");
             this.urlTab.Name = "urlTab";
             this.urlTab.UseVisualStyleBackColor = true;
             // 
@@ -326,13 +330,13 @@
             // 
             // delayBetweenBox
             // 
-            resources.ApplyResources(this.delayBetweenBox, "delayBetweenBox");
             this.delayBetweenBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.delayBetweenBox.Increment = new decimal(new int[] {
             200,
             0,
             0,
             0});
+            resources.ApplyResources(this.delayBetweenBox, "delayBetweenBox");
             this.delayBetweenBox.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -358,13 +362,13 @@
             // 
             // delayBeforeBox
             // 
-            resources.ApplyResources(this.delayBeforeBox, "delayBeforeBox");
             this.delayBeforeBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.delayBeforeBox.Increment = new decimal(new int[] {
             200,
             0,
             0,
             0});
+            resources.ApplyResources(this.delayBeforeBox, "delayBeforeBox");
             this.delayBeforeBox.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -385,13 +389,13 @@
             // 
             // delayTerminate
             // 
-            resources.ApplyResources(this.delayTerminate, "delayTerminate");
             this.delayTerminate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.delayTerminate.Increment = new decimal(new int[] {
             100,
             0,
             0,
             0});
+            resources.ApplyResources(this.delayTerminate, "delayTerminate");
             this.delayTerminate.Maximum = new decimal(new int[] {
             65536,
             0,
@@ -406,9 +410,9 @@
             // 
             // terminateChromeBtn
             // 
-            resources.ApplyResources(this.terminateChromeBtn, "terminateChromeBtn");
             this.terminateChromeBtn.BackColor = System.Drawing.Color.DarkRed;
             this.terminateChromeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.terminateChromeBtn, "terminateChromeBtn");
             this.terminateChromeBtn.Name = "terminateChromeBtn";
             this.terminateChromeBtn.UseVisualStyleBackColor = false;
             this.terminateChromeBtn.Click += new System.EventHandler(this.TerminateChromeBtn_Click);
@@ -430,8 +434,8 @@
             // 
             // invisibleBox
             // 
-            resources.ApplyResources(this.invisibleBox, "invisibleBox");
             this.invisibleBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.invisibleBox, "invisibleBox");
             this.invisibleBox.Name = "invisibleBox";
             this.invisibleBox.UseVisualStyleBackColor = true;
             this.invisibleBox.CheckedChanged += new System.EventHandler(this.on_Edit);
@@ -443,16 +447,16 @@
             // 
             // incognitoBox
             // 
-            resources.ApplyResources(this.incognitoBox, "incognitoBox");
             this.incognitoBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.incognitoBox, "incognitoBox");
             this.incognitoBox.Name = "incognitoBox";
             this.incognitoBox.UseVisualStyleBackColor = true;
             this.incognitoBox.CheckedChanged += new System.EventHandler(this.on_Edit);
             // 
             // newWindowBox
             // 
-            resources.ApplyResources(this.newWindowBox, "newWindowBox");
             this.newWindowBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.newWindowBox, "newWindowBox");
             this.newWindowBox.Name = "newWindowBox";
             this.newWindowBox.UseVisualStyleBackColor = true;
             this.newWindowBox.CheckedChanged += new System.EventHandler(this.on_Edit);
@@ -469,8 +473,8 @@
             // 
             // tabsBox
             // 
-            resources.ApplyResources(this.tabsBox, "tabsBox");
             this.tabsBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.tabsBox, "tabsBox");
             this.tabsBox.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -502,15 +506,14 @@
             // 
             // runBtn
             // 
-            resources.ApplyResources(this.runBtn, "runBtn");
             this.runBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.runBtn, "runBtn");
             this.runBtn.Name = "runBtn";
             this.runBtn.UseVisualStyleBackColor = true;
             this.runBtn.Click += new System.EventHandler(this.RunBtn_Click);
             // 
             // processControlTab
             // 
-            resources.ApplyResources(this.processControlTab, "processControlTab");
             this.processControlTab.Controls.Add(this.processDelay);
             this.processControlTab.Controls.Add(this.label7);
             this.processControlTab.Controls.Add(this.excludeBox);
@@ -523,18 +526,19 @@
             this.processControlTab.Controls.Add(this.killBtn);
             this.processControlTab.Controls.Add(this.processesLabel);
             this.processControlTab.Controls.Add(this.getReloadBtn);
+            resources.ApplyResources(this.processControlTab, "processControlTab");
             this.processControlTab.Name = "processControlTab";
             this.processControlTab.UseVisualStyleBackColor = true;
             // 
             // processDelay
             // 
-            resources.ApplyResources(this.processDelay, "processDelay");
             this.processDelay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.processDelay.Increment = new decimal(new int[] {
             200,
             0,
             0,
             0});
+            resources.ApplyResources(this.processDelay, "processDelay");
             this.processDelay.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -584,16 +588,16 @@
             // 
             // clearBtn
             // 
-            resources.ApplyResources(this.clearBtn, "clearBtn");
             this.clearBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.clearBtn, "clearBtn");
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.UseVisualStyleBackColor = true;
             this.clearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
             // processesBox
             // 
-            resources.ApplyResources(this.processesBox, "processesBox");
             this.processesBox.FormattingEnabled = true;
+            resources.ApplyResources(this.processesBox, "processesBox");
             this.processesBox.Name = "processesBox";
             this.processesBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             // 
@@ -609,8 +613,8 @@
             // 
             // killBtn
             // 
-            resources.ApplyResources(this.killBtn, "killBtn");
             this.killBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.killBtn, "killBtn");
             this.killBtn.Name = "killBtn";
             this.killBtn.UseVisualStyleBackColor = true;
             this.killBtn.Click += new System.EventHandler(this.KillBtn_Click);
@@ -622,15 +626,14 @@
             // 
             // getReloadBtn
             // 
-            resources.ApplyResources(this.getReloadBtn, "getReloadBtn");
             this.getReloadBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.getReloadBtn, "getReloadBtn");
             this.getReloadBtn.Name = "getReloadBtn";
             this.getReloadBtn.UseVisualStyleBackColor = true;
             this.getReloadBtn.Click += new System.EventHandler(this.GetReloadBtn_Click);
             // 
             // soundTab
             // 
-            resources.ApplyResources(this.soundTab, "soundTab");
             this.soundTab.AllowDrop = true;
             this.soundTab.Controls.Add(this.durationSoundBox);
             this.soundTab.Controls.Add(this.label19);
@@ -646,6 +649,7 @@
             this.soundTab.Controls.Add(this.volumeBox);
             this.soundTab.Controls.Add(this.muteLabel);
             this.soundTab.Controls.Add(this.unmuteLabel);
+            resources.ApplyResources(this.soundTab, "soundTab");
             this.soundTab.Name = "soundTab";
             this.soundTab.UseVisualStyleBackColor = true;
             this.soundTab.DragDrop += new System.Windows.Forms.DragEventHandler(this.any_DragDrop);
@@ -653,13 +657,13 @@
             // 
             // durationSoundBox
             // 
-            resources.ApplyResources(this.durationSoundBox, "durationSoundBox");
             this.durationSoundBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.durationSoundBox.Increment = new decimal(new int[] {
             200,
             0,
             0,
             0});
+            resources.ApplyResources(this.durationSoundBox, "durationSoundBox");
             this.durationSoundBox.Maximum = new decimal(new int[] {
             60000,
             0,
@@ -679,13 +683,13 @@
             // 
             // frequencySoundBox
             // 
-            resources.ApplyResources(this.frequencySoundBox, "frequencySoundBox");
             this.frequencySoundBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.frequencySoundBox.Increment = new decimal(new int[] {
             500,
             0,
             0,
             0});
+            resources.ApplyResources(this.frequencySoundBox, "frequencySoundBox");
             this.frequencySoundBox.Maximum = new decimal(new int[] {
             60000,
             0,
@@ -705,8 +709,8 @@
             // 
             // runBeepSoundBtn
             // 
-            resources.ApplyResources(this.runBeepSoundBtn, "runBeepSoundBtn");
             this.runBeepSoundBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.runBeepSoundBtn, "runBeepSoundBtn");
             this.runBeepSoundBtn.Name = "runBeepSoundBtn";
             this.runBeepSoundBtn.UseVisualStyleBackColor = true;
             this.runBeepSoundBtn.Click += new System.EventHandler(this.RunBeepSoundBtn_Click);
@@ -718,8 +722,8 @@
             // 
             // soundRunBtn
             // 
-            resources.ApplyResources(this.soundRunBtn, "soundRunBtn");
             this.soundRunBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.soundRunBtn, "soundRunBtn");
             this.soundRunBtn.Name = "soundRunBtn";
             this.soundRunBtn.UseVisualStyleBackColor = true;
             this.soundRunBtn.Click += new System.EventHandler(this.SoundRunBtn_Click);
@@ -731,13 +735,13 @@
             // 
             // soundDelayBox
             // 
-            resources.ApplyResources(this.soundDelayBox, "soundDelayBox");
             this.soundDelayBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.soundDelayBox.Increment = new decimal(new int[] {
             200,
             0,
             0,
             0});
+            resources.ApplyResources(this.soundDelayBox, "soundDelayBox");
             this.soundDelayBox.Maximum = new decimal(new int[] {
             65536,
             0,
@@ -771,23 +775,22 @@
             // 
             // muteLabel
             // 
-            resources.ApplyResources(this.muteLabel, "muteLabel");
             this.muteLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.muteLabel, "muteLabel");
             this.muteLabel.ForeColor = System.Drawing.Color.Red;
             this.muteLabel.Name = "muteLabel";
             this.muteLabel.Click += new System.EventHandler(this.MuteLabel_Click);
             // 
             // unmuteLabel
             // 
-            resources.ApplyResources(this.unmuteLabel, "unmuteLabel");
             this.unmuteLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.unmuteLabel, "unmuteLabel");
             this.unmuteLabel.ForeColor = System.Drawing.Color.Blue;
             this.unmuteLabel.Name = "unmuteLabel";
             this.unmuteLabel.Click += new System.EventHandler(this.UnmuteLabel_Click);
             // 
             // fileSystemTab
             // 
-            resources.ApplyResources(this.fileSystemTab, "fileSystemTab");
             this.fileSystemTab.Controls.Add(this.label30);
             this.fileSystemTab.Controls.Add(this.screenHeightBox);
             this.fileSystemTab.Controls.Add(this.label29);
@@ -801,6 +804,7 @@
             this.fileSystemTab.Controls.Add(this.getFileLocationBox);
             this.fileSystemTab.Controls.Add(this.label26);
             this.fileSystemTab.Controls.Add(this.getFile);
+            resources.ApplyResources(this.fileSystemTab, "fileSystemTab");
             this.fileSystemTab.Name = "fileSystemTab";
             this.fileSystemTab.UseVisualStyleBackColor = true;
             // 
@@ -811,13 +815,13 @@
             // 
             // screenHeightBox
             // 
-            resources.ApplyResources(this.screenHeightBox, "screenHeightBox");
             this.screenHeightBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.screenHeightBox.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
+            resources.ApplyResources(this.screenHeightBox, "screenHeightBox");
             this.screenHeightBox.Maximum = new decimal(new int[] {
             2160,
             0,
@@ -837,8 +841,8 @@
             // 
             // screenWidthBox
             // 
-            resources.ApplyResources(this.screenWidthBox, "screenWidthBox");
             this.screenWidthBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.screenWidthBox, "screenWidthBox");
             this.screenWidthBox.Maximum = new decimal(new int[] {
             4096,
             0,
@@ -865,8 +869,8 @@
             // 
             // screenshotGoBtn
             // 
-            resources.ApplyResources(this.screenshotGoBtn, "screenshotGoBtn");
             this.screenshotGoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.screenshotGoBtn, "screenshotGoBtn");
             this.screenshotGoBtn.Name = "screenshotGoBtn";
             this.screenshotGoBtn.UseVisualStyleBackColor = true;
             this.screenshotGoBtn.Click += new System.EventHandler(this.screenshotGoBtn_Click);
@@ -900,20 +904,20 @@
             // 
             // getFile
             // 
-            resources.ApplyResources(this.getFile, "getFile");
             this.getFile.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.getFile, "getFile");
             this.getFile.Name = "getFile";
             this.getFile.UseVisualStyleBackColor = true;
             this.getFile.Click += new System.EventHandler(this.getFile_Click);
             // 
             // networkTab
             // 
-            resources.ApplyResources(this.networkTab, "networkTab");
             this.networkTab.Controls.Add(this.networkSmbBox);
             this.networkTab.Controls.Add(this.networkOnBox);
             this.networkTab.Controls.Add(this.networkOffBox);
             this.networkTab.Controls.Add(this.label25);
             this.networkTab.Controls.Add(this.firewallRun);
+            resources.ApplyResources(this.networkTab, "networkTab");
             this.networkTab.Name = "networkTab";
             this.networkTab.UseVisualStyleBackColor = true;
             // 
@@ -952,7 +956,6 @@
             // 
             // miscTab
             // 
-            resources.ApplyResources(this.miscTab, "miscTab");
             this.miscTab.Controls.Add(this.speakNowBtn);
             this.miscTab.Controls.Add(this.nircmdAboutLabel);
             this.miscTab.Controls.Add(this.label24);
@@ -988,22 +991,23 @@
             this.miscTab.Controls.Add(this.ttsBox);
             this.miscTab.Controls.Add(this.downloadNirBtn);
             this.miscTab.Controls.Add(this.label9);
+            resources.ApplyResources(this.miscTab, "miscTab");
             this.miscTab.Name = "miscTab";
             this.miscTab.UseVisualStyleBackColor = true;
             // 
             // speakNowBtn
             // 
-            resources.ApplyResources(this.speakNowBtn, "speakNowBtn");
             this.speakNowBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.speakNowBtn, "speakNowBtn");
             this.speakNowBtn.Name = "speakNowBtn";
             this.speakNowBtn.UseVisualStyleBackColor = true;
             this.speakNowBtn.Click += new System.EventHandler(this.SpeakNowBtn_Click);
             // 
             // nircmdAboutLabel
             // 
-            resources.ApplyResources(this.nircmdAboutLabel, "nircmdAboutLabel");
             this.nircmdAboutLabel.BackColor = System.Drawing.Color.Transparent;
             this.nircmdAboutLabel.Cursor = System.Windows.Forms.Cursors.Help;
+            resources.ApplyResources(this.nircmdAboutLabel, "nircmdAboutLabel");
             this.nircmdAboutLabel.Name = "nircmdAboutLabel";
             this.nircmdAboutLabel.Click += new System.EventHandler(this.NircmdAboutLabel_Click);
             // 
@@ -1014,13 +1018,13 @@
             // 
             // sendKeyboardDelayBox
             // 
-            resources.ApplyResources(this.sendKeyboardDelayBox, "sendKeyboardDelayBox");
             this.sendKeyboardDelayBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sendKeyboardDelayBox.Increment = new decimal(new int[] {
             200,
             0,
             0,
             0});
+            resources.ApplyResources(this.sendKeyboardDelayBox, "sendKeyboardDelayBox");
             this.sendKeyboardDelayBox.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -1050,13 +1054,13 @@
             // 
             // moveMouseDelayBox
             // 
-            resources.ApplyResources(this.moveMouseDelayBox, "moveMouseDelayBox");
             this.moveMouseDelayBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.moveMouseDelayBox.Increment = new decimal(new int[] {
             200,
             0,
             0,
             0});
+            resources.ApplyResources(this.moveMouseDelayBox, "moveMouseDelayBox");
             this.moveMouseDelayBox.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -1081,13 +1085,13 @@
             // 
             // clickDelayBox
             // 
-            resources.ApplyResources(this.clickDelayBox, "clickDelayBox");
             this.clickDelayBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clickDelayBox.Increment = new decimal(new int[] {
             200,
             0,
             0,
             0});
+            resources.ApplyResources(this.clickDelayBox, "clickDelayBox");
             this.clickDelayBox.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -1112,8 +1116,8 @@
             // 
             // sendKeyboardTextBtn
             // 
-            resources.ApplyResources(this.sendKeyboardTextBtn, "sendKeyboardTextBtn");
             this.sendKeyboardTextBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.sendKeyboardTextBtn, "sendKeyboardTextBtn");
             this.sendKeyboardTextBtn.Name = "sendKeyboardTextBtn";
             this.sendKeyboardTextBtn.UseVisualStyleBackColor = true;
             this.sendKeyboardTextBtn.Click += new System.EventHandler(this.SendKeyboardTextBtn_Click);
@@ -1142,8 +1146,8 @@
             // 
             // moveBtn
             // 
-            resources.ApplyResources(this.moveBtn, "moveBtn");
             this.moveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.moveBtn, "moveBtn");
             this.moveBtn.Name = "moveBtn";
             this.moveBtn.UseVisualStyleBackColor = true;
             this.moveBtn.Click += new System.EventHandler(this.MoveBtn_Click);
@@ -1155,24 +1159,24 @@
             // 
             // doubleClickBtn
             // 
-            resources.ApplyResources(this.doubleClickBtn, "doubleClickBtn");
             this.doubleClickBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.doubleClickBtn, "doubleClickBtn");
             this.doubleClickBtn.Name = "doubleClickBtn";
             this.doubleClickBtn.UseVisualStyleBackColor = true;
             this.doubleClickBtn.Click += new System.EventHandler(this.runMouseClick);
             // 
             // upClickBtn
             // 
-            resources.ApplyResources(this.upClickBtn, "upClickBtn");
             this.upClickBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.upClickBtn, "upClickBtn");
             this.upClickBtn.Name = "upClickBtn";
             this.upClickBtn.UseVisualStyleBackColor = true;
             this.upClickBtn.Click += new System.EventHandler(this.runMouseClick);
             // 
             // downClickBtn
             // 
-            resources.ApplyResources(this.downClickBtn, "downClickBtn");
             this.downClickBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.downClickBtn, "downClickBtn");
             this.downClickBtn.Name = "downClickBtn";
             this.downClickBtn.UseVisualStyleBackColor = true;
             this.downClickBtn.Click += new System.EventHandler(this.runMouseClick);
@@ -1202,8 +1206,8 @@
             // 
             // mouseFullClickBtn
             // 
-            resources.ApplyResources(this.mouseFullClickBtn, "mouseFullClickBtn");
             this.mouseFullClickBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.mouseFullClickBtn, "mouseFullClickBtn");
             this.mouseFullClickBtn.Name = "mouseFullClickBtn";
             this.mouseFullClickBtn.UseVisualStyleBackColor = true;
             this.mouseFullClickBtn.Click += new System.EventHandler(this.runMouseClick);
@@ -1227,8 +1231,8 @@
             // 
             // ttsSpeedBox
             // 
-            resources.ApplyResources(this.ttsSpeedBox, "ttsSpeedBox");
             this.ttsSpeedBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.ttsSpeedBox, "ttsSpeedBox");
             this.ttsSpeedBox.Maximum = new decimal(new int[] {
             10,
             0,
@@ -1248,8 +1252,8 @@
             // 
             // ttsVolumeBox
             // 
-            resources.ApplyResources(this.ttsVolumeBox, "ttsVolumeBox");
             this.ttsVolumeBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.ttsVolumeBox, "ttsVolumeBox");
             this.ttsVolumeBox.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1264,13 +1268,13 @@
             // 
             // ttsDelayBox
             // 
-            resources.ApplyResources(this.ttsDelayBox, "ttsDelayBox");
             this.ttsDelayBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ttsDelayBox.Increment = new decimal(new int[] {
             200,
             0,
             0,
             0});
+            resources.ApplyResources(this.ttsDelayBox, "ttsDelayBox");
             this.ttsDelayBox.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -1290,8 +1294,8 @@
             // 
             // ttsRunBtn
             // 
-            resources.ApplyResources(this.ttsRunBtn, "ttsRunBtn");
             this.ttsRunBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.ttsRunBtn, "ttsRunBtn");
             this.ttsRunBtn.Name = "ttsRunBtn";
             this.ttsRunBtn.UseVisualStyleBackColor = true;
             this.ttsRunBtn.Click += new System.EventHandler(this.TtsRunBtn_Click);
@@ -1303,8 +1307,8 @@
             // 
             // downloadNirBtn
             // 
-            resources.ApplyResources(this.downloadNirBtn, "downloadNirBtn");
             this.downloadNirBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.downloadNirBtn, "downloadNirBtn");
             this.downloadNirBtn.Name = "downloadNirBtn";
             this.downloadNirBtn.UseVisualStyleBackColor = true;
             this.downloadNirBtn.Click += new System.EventHandler(this.DownloadNirBtn_Click);
@@ -1314,35 +1318,42 @@
             resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
             // 
+            // MoreTab
+            // 
+            this.MoreTab.Controls.Add(this.remoteConsoleBtn);
+            resources.ApplyResources(this.MoreTab, "MoreTab");
+            this.MoreTab.Name = "MoreTab";
+            this.MoreTab.UseVisualStyleBackColor = true;
+            // 
             // fileToolStripMenuItem
             // 
-            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.alwaysOnTopToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             // 
             // alwaysOnTopToolStripMenuItem
             // 
-            resources.ApplyResources(this.alwaysOnTopToolStripMenuItem, "alwaysOnTopToolStripMenuItem");
             this.alwaysOnTopToolStripMenuItem.CheckOnClick = true;
             this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
+            resources.ApplyResources(this.alwaysOnTopToolStripMenuItem, "alwaysOnTopToolStripMenuItem");
             this.alwaysOnTopToolStripMenuItem.CheckedChanged += new System.EventHandler(this.AlwaysOnTopToolStripMenuItem_change);
             this.alwaysOnTopToolStripMenuItem.CheckStateChanged += new System.EventHandler(this.AlwaysOnTopToolStripMenuItem_change);
             // 
             // exitToolStripMenuItem
             // 
-            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // configToolStripMenuItem
             // 
-            resources.ApplyResources(this.configToolStripMenuItem, "configToolStripMenuItem");
             this.configToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveToolStripMenuItem,
             this.loadToolStripMenuItem});
             this.configToolStripMenuItem.Name = "configToolStripMenuItem";
+            resources.ApplyResources(this.configToolStripMenuItem, "configToolStripMenuItem");
             // 
             // saveToolStripMenuItem
             // 
@@ -1358,11 +1369,11 @@
             // 
             // aboutToolStripMenuItem
             // 
-            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.creditsToolStripMenuItem,
             this.howToUseToolStripMenuItem});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             // 
             // creditsToolStripMenuItem
             // 
@@ -1378,8 +1389,8 @@
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.AllowDrop = true;
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -1387,10 +1398,17 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
             // 
+            // remoteConsoleBtn
+            // 
+            resources.ApplyResources(this.remoteConsoleBtn, "remoteConsoleBtn");
+            this.remoteConsoleBtn.Name = "remoteConsoleBtn";
+            this.remoteConsoleBtn.UseVisualStyleBackColor = true;
+            this.remoteConsoleBtn.Click += new System.EventHandler(this.remoteConsoleBtn_Click);
+            // 
             // epsexecForm
             // 
-            resources.ApplyResources(this, "$this");
             this.AllowDrop = true;
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.main);
             this.Controls.Add(this.menuStrip1);
@@ -1433,6 +1451,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ttsSpeedBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ttsVolumeBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ttsDelayBox)).EndInit();
+            this.MoreTab.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -1568,5 +1587,7 @@
         private System.Windows.Forms.NumericUpDown screenHeightBox;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.NumericUpDown screenWidthBox;
+        private System.Windows.Forms.TabPage MoreTab;
+        private System.Windows.Forms.Button remoteConsoleBtn;
     }
 }

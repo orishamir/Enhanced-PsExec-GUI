@@ -13,3 +13,4 @@ D:\ori\hacking\programming\python\package\EnhancedPsExecGUI\obj\x64\Release\Enha
 D:\ori\hacking\programming\python\package\EnhancedPsExecGUI\bin\x64\Release\en-US\EnhancedPsExec.resources.dll
 D:\ori\hacking\programming\python\package\EnhancedPsExecGUI\obj\x64\Release\EnhancedPsExecGUI.epsexecForm.en-US.resources
 D:\ori\hacking\programming\python\package\EnhancedPsExecGUI\obj\x64\Release\en-US\EnhancedPsExec.resources.dll
+D:\ori\hacking\programming\python\package\EnhancedPsExecGUI\obj\x64\Release\EnhancedPsExec.RemoteConsole.resources
