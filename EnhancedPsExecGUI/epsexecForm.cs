@@ -1,28 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
-using Microsoft.VisualBasic;
-using EnhancedPsExec;
 using System.IO;
-using System.Security;
-using System.Runtime.InteropServices;
 using System.Threading;
-using System.Net.Sockets;
 using System.Speech.Recognition;
+using EnhancedPsExec;
 
 namespace EnhancedPsExecGUI
 {
-
     public partial class epsexecForm : Form
     {
-
         public epsexecForm()
         {
             InitializeComponent();
@@ -65,6 +55,8 @@ namespace EnhancedPsExecGUI
         bool fileJustGotEdited = false;
         SpeechRecognitionEngine recog = new SpeechRecognitionEngine();
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(epsexecForm));
+        keyboard keyboardForm = null;
+        public scriptingHowTo howto;
         private void Form1_Load(object sender, EventArgs e)
         {
             recog.LoadGrammarAsync(new DictationGrammar());
@@ -174,6 +166,9 @@ namespace EnhancedPsExecGUI
             fileJustGotEdited = false;
         }
 
+        // [DllImport("kernel32.dll", SetLastError = true)]
+        // [return: MarshalAs(UnmanagedType.Bool)]
+        // static extern bool AllocConsole();
         private void RunBtn_Click(object sender, EventArgs e)
         {
 
@@ -237,7 +232,7 @@ namespace EnhancedPsExecGUI
 
         private void CreditsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CreditsFormBox creditsFormBox = new CreditsFormBox(this);
+            CreditsForm creditsFormBox = new CreditsForm(this);
             creditsFormBox.Show();
 
         }
@@ -413,7 +408,6 @@ namespace EnhancedPsExecGUI
                 // Close Process
                 if (line.StartsWith("processes=("))
                 {
-                    killBtn.Visible = true;
                     string processes = line.Substring(11, line.Substring(11).Length - 2);
 
                     foreach (string prcs in processes.Split(','))
@@ -557,7 +551,7 @@ namespace EnhancedPsExecGUI
                 else
                 {
                     processesBox.Items.Add("\n\nProcess Name                  PID");
-                    processesBox.Items.Add("=====================================================================");
+                    processesBox.Items.Add("======================================================");
                 }
                 filterTextRule += $" \"{filterTextBox.Text}\" ";
 
@@ -569,7 +563,7 @@ namespace EnhancedPsExecGUI
                     FileName = "cmd.exe",
                     //Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -i cmd.exe /c tasklist {filterConditions} & echo. & echo Copy your process(es) & pause >nul",
                     //Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s tasklist {filterTextRule}",
-                    Arguments = $"/c psexec.exe \\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s tasklist {filterTextRule}",
+                    Arguments = $"/c psexec.exe \\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -nobanner -accepteula tasklist {filterTextRule}",
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
 
@@ -581,7 +575,7 @@ namespace EnhancedPsExecGUI
             while (!proc.StandardOutput.EndOfStream)
             {
                 string line = proc.StandardOutput.ReadLine();
-                if (line != "\n" && line != "PsExec v2.2 - Execute processes remotely" && line != "Copyright (C) 2001-2016 Mark Russinovich" && line != "Sysinternals - www.sysinternals.com")
+                if (line.Length > 20 /* && line != "\n" && line != "PsExec v2.2 - Execute processes remotely" && line != "Copyright (C) 2001-2016 Mark Russinovich" && line != "Sysinternals - www.sysinternals.com"*/)
                     processesBox.Items.Add(line);
             }
             proc.Close();
@@ -633,7 +627,7 @@ namespace EnhancedPsExecGUI
         private void TtsRunBtn_Click(object sender, EventArgs e)
         {
             string maleVoice = maleVoiceBox.Checked ? "-s" : "";
-            string toSay = ttsBox.Text;
+            //string toSay = ttsBox.Text;
             var proc2 = new Process
             {
                 StartInfo = new ProcessStartInfo
@@ -887,7 +881,7 @@ namespace EnhancedPsExecGUI
 
         private void EpsexecForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (fileName == "c21f969b5f03d33d43e04f8f136e7682" || fileJustGotEdited)
+            if (/*fileName == "c21f969b5f03d33d43e04f8f136e7682" || */fileJustGotEdited)
             {
                 var result = MessageBox.Show("Would you like to save your file?", "You have unsaved changes", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
@@ -1022,7 +1016,7 @@ namespace EnhancedPsExecGUI
                 StartInfo = new ProcessStartInfo
                 {
                     FileName = "psexec.exe",
-                    Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -i -accepteula nircmd.exe savescreenshot C:\\capture.png 0 0 {screenWidthBox.Value} {screenHeightBox.Value}",
+                    Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -i -accepteula nircmd.exe savescreenshot C:\\captur.png 0 0 {screenWidthBox.Value} {screenHeightBox.Value}",
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
 
@@ -1037,7 +1031,7 @@ namespace EnhancedPsExecGUI
                 StartInfo = new ProcessStartInfo
                 {
                     FileName = "cmd.exe",
-                    Arguments = $"/c psexec.exe \\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -nobanner powershell.exe /c Format-Hex C:\\capture.png",
+                    Arguments = $"/c psexec.exe \\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -nobanner powershell.exe /c Format-Hex C:\\captur.png",
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
 
@@ -1050,7 +1044,7 @@ namespace EnhancedPsExecGUI
                 StartInfo = new ProcessStartInfo
                 {
                     FileName = "cmd.exe",
-                    Arguments = $"/c psexec.exe \\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -nobanner cmd.exe /c del C:\\capture.png",
+                    Arguments = $"/c psexec.exe \\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -nobanner cmd.exe /c del C:\\captur.png",
                 }
             };
             //delIt.Start();
@@ -1058,6 +1052,7 @@ namespace EnhancedPsExecGUI
             List<String> lines = new List<string>();
             List<String> byte_lines = new List<string>();
             proc.Close();
+            Console.WriteLine("\nProcesses stopped\n");
             // get out the bad shit
             int i = 0;
             foreach (string line in raw_lines)
@@ -1113,6 +1108,352 @@ namespace EnhancedPsExecGUI
             };
             proc.Start();
             */
+        }
+
+        private void parseCommands(string[] gotten)
+        {
+            int i = 0;
+            foreach (string command in gotten)
+            {
+                if (command.Trim().ToLower().StartsWith("do"))
+                {
+                    // syntax: do X times{}
+                    int times = int.Parse(command.Split(' ')[1]);
+
+                    List<string> loopContent = new List<string>();
+                    // get loop content
+                    string line = gotten[i+1];
+                    int x = 2;
+                    while (!line.Contains("}") && line.Trim().Length > 3){
+                        loopContent.Add(line.Trim());
+                        Console.WriteLine("line: " +line);
+                        line = gotten[i + x];
+                        x++;
+                    }
+
+                    // actually do the things
+                    while (times > 0) {
+                        parseCommands(loopContent.ToArray());
+                        times--;
+                    }                      
+                }
+                else if (command.Trim().ToLower().StartsWith("move"))
+                {
+                    // Command syntax like this: move x,y
+                    try
+                    {
+                        moveMouseXBox.Text = command.Trim().Substring(4).Replace(" ", "").Split(',')[0].Trim();
+                        moveMouseYBox.Text = command.Trim().Substring(4).Replace(" ", "").Split(',')[1].Trim();
+                        MoveBtn_Click(new object(), new EventArgs());
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        Console.WriteLine("no");
+                    }
+                }
+                else if (command.Trim().ToLower().StartsWith("openurl"))
+                {
+                    // Syntax: openurl url, tabs, <<incognito>, <newwindow>, <invisible>>
+                    try
+                    {
+                        string url = command.Trim().Substring(7).Replace(" ", "").Split(',')[0];
+                        urlBox.Text = url;
+
+                        int tabs = int.Parse(command.Trim().Substring(7).Replace(" ", "").Split(',')[1]);
+                        tabsBox.Value = tabs;
+                    }
+                    catch (Exception) { }
+                    incognitoBox.Checked = command.Trim().Substring(7).Replace(" ", "").Contains("incognito,") || command.Substring(7).Replace(" ", "").Contains(",incognito");
+                    invisibleBox.Checked = command.Trim().Substring(7).Replace(" ", "").Contains("invisible,") || command.Substring(7).Replace(" ", "").Contains(",invisible");
+                    newWindowBox.Checked = command.Trim().Substring(7).Replace(" ", "").Contains("newwindow,") || command.Substring(7).Replace(" ", "").Contains(",newwindow");
+                    RunBtn_Click(new object(), new EventArgs());
+                }
+                else if (command.Trim().ToLower().StartsWith("press"))
+                {
+                    // Command syntax like this: press [right|left|middle], [down|up|click|doubleclick]
+                    string newCommand = command.Trim().Substring(5).Replace(" ", "").ToLower();
+                    string button = newCommand.Split(',')[0];
+                    string op = newCommand.Split(',')[1];
+
+                    switch (button)
+                    {
+                        case "right":
+                            rightMouseBtn.Checked = true;
+                            break;
+                        case "left":
+                            leftMouseBtn.Checked = true;
+                            break;
+                        case "middle":
+                            middleMouseBtn.Checked = true;
+                            break;
+
+                        default:
+                            leftMouseBtn.Checked = true;
+                            break;
+                    }
+                    Button b = new Button();
+
+                    switch (op)
+                    {
+                        case "down":
+                            b.Name = "down";
+                            break;
+
+                        case "up":
+                            b.Name = "up";
+                            break;
+
+                        case "click":
+                            b.Name = "mouseFullClickBtn";
+                            break;
+
+                        case "doubleclick":
+                            b.Name = "doubleClickBtn";
+                            break;
+
+                        default:
+                            b.Name = "mouseFullClickBtn";
+                            break;
+                    }
+                    runMouseClick(b, new EventArgs());
+                }
+                else if (command.Trim().StartsWith("click"))
+                {
+                    moveMouseXBox.Text = command.Trim().Substring(5).Replace(" ", "").Split(',')[0].Trim();
+                    moveMouseYBox.Text = command.Trim().Substring(5).Replace(" ", "").Split(',')[1].Trim();
+
+                    Button b = new Button();
+                    b.Name = "mouseFullClickBtn";
+
+                    MoveBtn_Click(new object(), new EventArgs());
+                    runMouseClick(b, new EventArgs());
+                }
+                else if (command.Trim().ToLower().StartsWith("setvolume"))
+                {
+                    // Syntax: setvolume vol
+                    try
+                    {
+                        volumeBox.Value = int.Parse(command.Trim().Substring(7).Trim());
+                        percentLabel.Text = volumeBox.Value.ToString();
+                        SoundRunBtn_Click(new object(), new EventArgs());
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+
+                    }
+                }
+                else if (command.Trim().ToLower() == "mute")
+                    MuteLabel_Click(new object(), new EventArgs());
+
+                else if (command.Trim().ToLower() == "unmute")
+                    UnmuteLabel_Click(new object(), new EventArgs());
+
+                else if (command.Trim().ToLower().StartsWith("delay"))
+                {
+                    // Command syntax like this: wait MS
+                    Thread.Sleep(int.Parse(command.Trim().Substring(5)));
+                }
+                else if (command.Trim().ToLower().StartsWith("beep"))
+                {
+                    try
+                    {
+                        frequencySoundBox.Value = int.Parse(command.Trim().Substring(4).Replace(" ", "").Split(',')[0].Trim());
+                        durationSoundBox.Value = int.Parse(command.Trim().Substring(4).Replace(" ", "").Split(',')[1].Trim());
+                        RunBeepSoundBtn_Click(new object(), new EventArgs());
+                    }
+                    catch (Exception) { }
+                }
+
+                i++;
+            }
+        }
+        private void runScriptBtn_Click(object sender, EventArgs e)
+        {
+            parseCommands(scriptBox.Text.Split('\n'));
+        }
+        private void docsScriptBtn_Click(object sender, EventArgs e)
+        {
+            if (howto == null)
+            {
+                howto = new scriptingHowTo(this);
+                howto.Show();
+            }else
+                howto.Focus();
+
+            /*MessageBox.Show("delay <MS> - delay x milliseconds before continuing.\n\n\n" +
+                            //"openurl url, tabs, [incognito/newwindow/invisible] - Not Implemented yet.\n\n\n" +
+
+                            "setvolume <Vol> - Percentage of volume to set. A number from 0-100\n\n" +
+                            "beep <frequency>, <duration>\n\n" +
+                            "mute - Mute the system's sound.\n\n"+
+                            "unmute - Unmute the system's sound.\n\n\n"+
+
+                            "move <x>, <y> - Move the computer's mouse position to (x, y)\n\n"+
+                            "press <button>, <op> - Button is left/right/middle, op is doubleclick/click/down/up\n\n"+
+                            "click <x>, <y> - Left click on (x,y) position of screen. (Moves mouse to x,y then left click)\n\n\n"
+                            
+
+                , "How to use", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            */
+        }
+
+        private void hideInTaskbarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.ShowInTaskbar = !hideInTaskbarToolStripMenuItem.Checked;
+        }
+
+        private void openKeyboardBtn_Click(object sender, EventArgs e)
+        {
+            keyboardForm = new keyboard(this);
+            keyboardForm.Show();
+        }
+
+        private void showPassBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (showPassBox.Checked)
+                passwordBox.PasswordChar = '\0';
+            else
+                passwordBox.PasswordChar = '*';
+        }
+
+        private void processesBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (processesBox.SelectedItems.Count > 0)
+            {
+                muteProcessBtn.Enabled = true;
+                unmuteProcessBtn.Enabled = true;
+                volumeProcessBox.Enabled = true;
+                processVolumeBtn.Enabled = true;
+                killBtn.Enabled = true;
+            }
+            else
+            {
+                muteProcessBtn.Enabled = false;
+                processVolumeBtn.Enabled = false;
+                volumeProcessBox.Enabled = false;
+                unmuteProcessBtn.Enabled = false;
+                killBtn.Enabled = false;
+            }
+        }
+
+        private void muteProcessBtn_Click(object sender, EventArgs e)
+        {
+            List<string> newItems;
+            Thread.Sleep((ushort)processDelay.Value);
+
+            var proc2 = new Process();
+            foreach (string line in processesBox.SelectedItems)
+            {
+                newItems = new List<string>();
+                foreach (string i in line.Split(' '))
+                    if (i != "" && i != null)
+                        newItems.Add(i);
+                string procname = newItems[0];
+
+                proc2 = new Process
+                {
+                    StartInfo = new ProcessStartInfo
+                    {
+                        FileName = "psexec.exe",
+                        Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -i nircmd muteappvolume \"{procname}\" 1 ",
+                        UseShellExecute = false,
+                        RedirectStandardOutput = true,
+
+                        CreateNoWindow = true
+                    }
+                };
+                proc2.Start();
+            }
+            proc2.Close();
+        }
+
+        private void unmuteProcessBtn_Click(object sender, EventArgs e)
+        {
+            List<string> newItems;
+            Thread.Sleep((ushort)processDelay.Value);
+
+            var proc2 = new Process();
+            foreach (string line in processesBox.SelectedItems)
+            {
+                newItems = new List<string>();
+                foreach (string i in line.Split(' '))
+                    if (i != "" && i != null)
+                        newItems.Add(i);
+                string procname = newItems[0];
+
+                proc2 = new Process
+                {
+                    StartInfo = new ProcessStartInfo
+                    {
+                        FileName = "psexec.exe",
+                        Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -i nircmd muteappvolume \"{procname}\" 0",
+                        UseShellExecute = false,
+                        RedirectStandardOutput = true,
+
+                        CreateNoWindow = true
+                    }
+                };
+                proc2.Start();
+            }
+            proc2.Close();
+        }
+
+        private void setProcessVolumeBtn_Click(object sender, EventArgs e)
+        {
+            List<string> newItems;
+            Thread.Sleep((ushort)processDelay.Value);
+
+            var proc2 = new Process();
+            foreach (string line in processesBox.SelectedItems)
+            {
+                newItems = new List<string>();
+                foreach (string i in line.Split(' '))
+                    if (i != "" && i != null)
+                        newItems.Add(i);
+                string procname = newItems[0];
+
+                proc2 = new Process
+                {
+                    StartInfo = new ProcessStartInfo
+                    {
+                        FileName = "psexec.exe",
+                        Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -i nircmd setappvolume \"{procname}\" {volumeProcessBox.Value}",
+                        UseShellExecute = false,
+                        RedirectStandardOutput = true,
+
+                        CreateNoWindow = true
+                    }
+                };
+                proc2.Start();
+            }
+            proc2.Close();
+        }
+
+        private void main_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (main.SelectedTab == scriptTab)
+                this.MinimizeBox = false;
+            
+            else
+                this.MinimizeBox = true;
+            
+        }
+
+        private void epsexecForm_HelpButtonClicked(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (howto == null)
+            {
+                howto = new scriptingHowTo(this);
+                howto.Show();
+            }
+            else
+                howto.Focus();
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            epsexecForm mf = new epsexecForm();
+            mf.Show();
         }
     }
 }

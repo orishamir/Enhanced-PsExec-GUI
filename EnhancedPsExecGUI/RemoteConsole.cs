@@ -1,14 +1,8 @@
 ﻿using EnhancedPsExecGUI;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Forms;
 
 namespace EnhancedPsExec
@@ -17,12 +11,26 @@ namespace EnhancedPsExec
     {
         epsexecForm mainForm;
         Process proc;
+        string lastCmd = "";
+        List<string> lastCmds = new List<string>();
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            Console.WriteLine("key: " + (int)keyData);
+            if (keyData == Keys.Up)
+            {
+                commandToSendBox.Text = lastCmd;
+                return false;
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
         public RemoteConsole(epsexecForm f)
         {
             InitializeComponent();
             mainForm = f;
 
             proc = new Process();
+            
             proc.StartInfo.RedirectStandardError = true;
             proc.StartInfo.RedirectStandardOutput = true;
             proc.StartInfo.RedirectStandardInput = true;
@@ -32,8 +40,8 @@ namespace EnhancedPsExec
             //proc.StartInfo.FileName = "psexec.exe";
             //proc.StartInfo.Arguments = $"\\\\{mainForm.ipBox.Text} -u {mainForm.usrBox.Text} -p {mainForm.passwordBox.Text} -s -accepteula cmd.exe";
             proc.StartInfo.FileName = "cmd.exe";
-            proc.StartInfo.Arguments = "/c cmd";
-
+            //proc.StartInfo.Arguments = $"\\\\{mainForm.ipBox.Text} -u {mainForm.usrBox.Text} -p {mainForm.passwordBox.Text} -s -accepteula cmd.exe";
+            proc.StartInfo.Arguments = "/c cmd.exe";
             proc.OutputDataReceived += new DataReceivedEventHandler((s, e) =>
             {
                 AppendTextBox("\n" + e.Data);
@@ -52,7 +60,7 @@ namespace EnhancedPsExec
 
         public void AppendTextBox(string value)
         {
-            if (InvokeRequired)
+           if (InvokeRequired)
             {
                 this.Invoke(new Action<string>(AppendTextBox), new object[] { value });
                 return;
@@ -65,7 +73,14 @@ namespace EnhancedPsExec
 
         private void sendBtn_Click(object sender, EventArgs e)
         {
+            if (commandToSendBox.Text.ToLower() == "cls")
+            {
+                outputBox.Clear();
+                commandToSendBox.Clear();
+                return;
+            }
             proc.StandardInput.WriteLine(commandToSendBox.Text);
+            commandToSendBox.Clear();
         }
 
         private void clearOutputBoxBtn_Click(object sender, EventArgs e)

@@ -245,10 +245,10 @@
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label15.Location = new System.Drawing.Point(100, 651);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(882, 22);
+            this.label15.Size = new System.Drawing.Size(944, 22);
             this.label15.TabIndex = 18;
-            this.label15.Text = "4.) Recommended: Add an SMB rule to the firewall. this will make for a faster con" +
-    "necting experience. no delay";
+            this.label15.Text = "4.) Recommended: disable firewall on the remote machine. this will make for a fas" +
+    "ter connecting experience. No delay";
             // 
             // label16
             // 
@@ -259,6 +259,7 @@
             this.label16.Size = new System.Drawing.Size(391, 22);
             this.label16.TabIndex = 19;
             this.label16.Text = "     To do this, go to the <Not Implemented> tab.";
+            this.label16.Visible = false;
             // 
             // label17
             // 
@@ -269,6 +270,7 @@
             this.label17.Size = new System.Drawing.Size(437, 22);
             this.label17.TabIndex = 20;
             this.label17.Text = "     This can be done remotely with Enhanced-PsExec";
+            this.label17.Visible = false;
             // 
             // logoHowToUseLbl
             // 

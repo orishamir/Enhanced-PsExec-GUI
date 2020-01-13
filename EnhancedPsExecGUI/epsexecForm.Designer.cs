@@ -31,10 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(epsexecForm));
             this.main = new System.Windows.Forms.TabControl();
             this.homeTab = new System.Windows.Forms.TabPage();
+            this.showPassBox = new System.Windows.Forms.CheckBox();
             this.label21 = new System.Windows.Forms.Label();
             this.openScannerBtn = new System.Windows.Forms.Button();
-            this.loadSetting = new System.Windows.Forms.Label();
-            this.saveIcon = new System.Windows.Forms.Label();
             this.passwdLabel = new System.Windows.Forms.Label();
             this.usrnameLabel = new System.Windows.Forms.Label();
             this.passwordBox = new System.Windows.Forms.TextBox();
@@ -49,8 +48,6 @@
             this.delayBeforeBox = new System.Windows.Forms.NumericUpDown();
             this.delayTerminate = new System.Windows.Forms.NumericUpDown();
             this.terminateChromeBtn = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.invisibleLabel = new System.Windows.Forms.Label();
             this.invisibleBox = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,6 +60,10 @@
             this.urlLabel = new System.Windows.Forms.Label();
             this.runBtn = new System.Windows.Forms.Button();
             this.processControlTab = new System.Windows.Forms.TabPage();
+            this.processVolumeBtn = new System.Windows.Forms.Button();
+            this.volumeProcessBox = new System.Windows.Forms.NumericUpDown();
+            this.unmuteProcessBtn = new System.Windows.Forms.Button();
+            this.muteProcessBtn = new System.Windows.Forms.Button();
             this.processDelay = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.excludeBox = new System.Windows.Forms.CheckBox();
@@ -88,8 +89,6 @@
             this.percentLabel = new System.Windows.Forms.Label();
             this.amountLabel = new System.Windows.Forms.Label();
             this.volumeBox = new System.Windows.Forms.TrackBar();
-            this.muteLabel = new System.Windows.Forms.Label();
-            this.unmuteLabel = new System.Windows.Forms.Label();
             this.fileSystemTab = new System.Windows.Forms.TabPage();
             this.label30 = new System.Windows.Forms.Label();
             this.screenHeightBox = new System.Windows.Forms.NumericUpDown();
@@ -104,13 +103,8 @@
             this.getFileLocationBox = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.getFile = new System.Windows.Forms.Button();
-            this.networkTab = new System.Windows.Forms.TabPage();
-            this.networkSmbBox = new System.Windows.Forms.RadioButton();
-            this.networkOnBox = new System.Windows.Forms.RadioButton();
-            this.networkOffBox = new System.Windows.Forms.RadioButton();
-            this.label25 = new System.Windows.Forms.Label();
-            this.firewallRun = new System.Windows.Forms.Button();
             this.miscTab = new System.Windows.Forms.TabPage();
+            this.openKeyboardBtn = new System.Windows.Forms.Button();
             this.speakNowBtn = new System.Windows.Forms.Button();
             this.nircmdAboutLabel = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -146,18 +140,36 @@
             this.ttsBox = new System.Windows.Forms.TextBox();
             this.downloadNirBtn = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.scriptTab = new System.Windows.Forms.TabPage();
+            this.docsScriptBtn = new System.Windows.Forms.Button();
+            this.runScriptBtn = new System.Windows.Forms.Button();
+            this.scriptBox = new System.Windows.Forms.TextBox();
             this.MoreTab = new System.Windows.Forms.TabPage();
+            this.remoteConsoleBtn = new System.Windows.Forms.Button();
+            this.networkTab = new System.Windows.Forms.TabPage();
+            this.networkSmbBox = new System.Windows.Forms.RadioButton();
+            this.networkOnBox = new System.Windows.Forms.RadioButton();
+            this.networkOffBox = new System.Windows.Forms.RadioButton();
+            this.label25 = new System.Windows.Forms.Label();
+            this.firewallRun = new System.Windows.Forms.Button();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hideInTaskbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.loadSetting = new System.Windows.Forms.Label();
+            this.saveIcon = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.muteLabel = new System.Windows.Forms.Label();
+            this.unmuteLabel = new System.Windows.Forms.Label();
+            this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creditsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.howToUseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.remoteConsoleBtn = new System.Windows.Forms.Button();
             this.main.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.urlTab.SuspendLayout();
@@ -166,6 +178,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.delayTerminate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabsBox)).BeginInit();
             this.processControlTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.volumeProcessBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.processDelay)).BeginInit();
             this.soundTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.durationSoundBox)).BeginInit();
@@ -175,7 +188,6 @@
             this.fileSystemTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.screenHeightBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.screenWidthBox)).BeginInit();
-            this.networkTab.SuspendLayout();
             this.miscTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sendKeyboardDelayBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moveMouseDelayBox)).BeginInit();
@@ -183,7 +195,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ttsSpeedBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ttsVolumeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ttsDelayBox)).BeginInit();
+            this.scriptTab.SuspendLayout();
             this.MoreTab.SuspendLayout();
+            this.networkTab.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -195,19 +209,22 @@
             this.main.Controls.Add(this.processControlTab);
             this.main.Controls.Add(this.soundTab);
             this.main.Controls.Add(this.fileSystemTab);
-            this.main.Controls.Add(this.networkTab);
             this.main.Controls.Add(this.miscTab);
+            this.main.Controls.Add(this.scriptTab);
             this.main.Controls.Add(this.MoreTab);
+            this.main.Controls.Add(this.networkTab);
             this.main.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.main, "main");
             this.main.Name = "main";
             this.main.SelectedIndex = 0;
+            this.main.SelectedIndexChanged += new System.EventHandler(this.main_SelectedIndexChanged);
             this.main.DragDrop += new System.Windows.Forms.DragEventHandler(this.any_DragDrop);
             this.main.DragEnter += new System.Windows.Forms.DragEventHandler(this.any_DragEnter);
             // 
             // homeTab
             // 
             this.homeTab.AllowDrop = true;
+            this.homeTab.Controls.Add(this.showPassBox);
             this.homeTab.Controls.Add(this.label21);
             this.homeTab.Controls.Add(this.openScannerBtn);
             this.homeTab.Controls.Add(this.loadSetting);
@@ -224,6 +241,13 @@
             this.homeTab.DragDrop += new System.Windows.Forms.DragEventHandler(this.any_DragDrop);
             this.homeTab.DragEnter += new System.Windows.Forms.DragEventHandler(this.any_DragEnter);
             // 
+            // showPassBox
+            // 
+            resources.ApplyResources(this.showPassBox, "showPassBox");
+            this.showPassBox.Name = "showPassBox";
+            this.showPassBox.UseVisualStyleBackColor = true;
+            this.showPassBox.CheckedChanged += new System.EventHandler(this.showPassBox_CheckedChanged);
+            // 
             // label21
             // 
             resources.ApplyResources(this.label21, "label21");
@@ -237,20 +261,6 @@
             this.openScannerBtn.Name = "openScannerBtn";
             this.openScannerBtn.UseVisualStyleBackColor = true;
             this.openScannerBtn.Click += new System.EventHandler(this.OpenScannerBtn_Click);
-            // 
-            // loadSetting
-            // 
-            this.loadSetting.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.loadSetting, "loadSetting");
-            this.loadSetting.Name = "loadSetting";
-            this.loadSetting.Click += new System.EventHandler(this.LoadSetting_Click);
-            // 
-            // saveIcon
-            // 
-            this.saveIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.saveIcon, "saveIcon");
-            this.saveIcon.Name = "saveIcon";
-            this.saveIcon.Click += new System.EventHandler(this.SaveIcon_Click);
             // 
             // passwdLabel
             // 
@@ -410,22 +420,12 @@
             // 
             // terminateChromeBtn
             // 
-            this.terminateChromeBtn.BackColor = System.Drawing.Color.DarkRed;
+            this.terminateChromeBtn.BackColor = System.Drawing.Color.Firebrick;
             this.terminateChromeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.terminateChromeBtn, "terminateChromeBtn");
             this.terminateChromeBtn.Name = "terminateChromeBtn";
             this.terminateChromeBtn.UseVisualStyleBackColor = false;
             this.terminateChromeBtn.Click += new System.EventHandler(this.TerminateChromeBtn_Click);
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
             // 
             // invisibleLabel
             // 
@@ -514,6 +514,10 @@
             // 
             // processControlTab
             // 
+            this.processControlTab.Controls.Add(this.processVolumeBtn);
+            this.processControlTab.Controls.Add(this.volumeProcessBox);
+            this.processControlTab.Controls.Add(this.unmuteProcessBtn);
+            this.processControlTab.Controls.Add(this.muteProcessBtn);
             this.processControlTab.Controls.Add(this.processDelay);
             this.processControlTab.Controls.Add(this.label7);
             this.processControlTab.Controls.Add(this.excludeBox);
@@ -529,6 +533,44 @@
             resources.ApplyResources(this.processControlTab, "processControlTab");
             this.processControlTab.Name = "processControlTab";
             this.processControlTab.UseVisualStyleBackColor = true;
+            // 
+            // processVolumeBtn
+            // 
+            resources.ApplyResources(this.processVolumeBtn, "processVolumeBtn");
+            this.processVolumeBtn.Name = "processVolumeBtn";
+            this.processVolumeBtn.UseVisualStyleBackColor = true;
+            this.processVolumeBtn.Click += new System.EventHandler(this.setProcessVolumeBtn_Click);
+            // 
+            // volumeProcessBox
+            // 
+            resources.ApplyResources(this.volumeProcessBox, "volumeProcessBox");
+            this.volumeProcessBox.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.volumeProcessBox.Name = "volumeProcessBox";
+            this.volumeProcessBox.Value = new decimal(new int[] {
+            80,
+            0,
+            0,
+            0});
+            // 
+            // unmuteProcessBtn
+            // 
+            this.unmuteProcessBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.unmuteProcessBtn, "unmuteProcessBtn");
+            this.unmuteProcessBtn.Name = "unmuteProcessBtn";
+            this.unmuteProcessBtn.UseVisualStyleBackColor = true;
+            this.unmuteProcessBtn.Click += new System.EventHandler(this.unmuteProcessBtn_Click);
+            // 
+            // muteProcessBtn
+            // 
+            this.muteProcessBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.muteProcessBtn, "muteProcessBtn");
+            this.muteProcessBtn.Name = "muteProcessBtn";
+            this.muteProcessBtn.UseVisualStyleBackColor = true;
+            this.muteProcessBtn.Click += new System.EventHandler(this.muteProcessBtn_Click);
             // 
             // processDelay
             // 
@@ -599,7 +641,8 @@
             this.processesBox.FormattingEnabled = true;
             resources.ApplyResources(this.processesBox, "processesBox");
             this.processesBox.Name = "processesBox";
-            this.processesBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.processesBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.processesBox.SelectedIndexChanged += new System.EventHandler(this.processesBox_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -768,26 +811,10 @@
             // 
             resources.ApplyResources(this.volumeBox, "volumeBox");
             this.volumeBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.volumeBox.Maximum = 101;
+            this.volumeBox.Maximum = 100;
             this.volumeBox.Name = "volumeBox";
-            this.volumeBox.Value = 70;
+            this.volumeBox.Value = 80;
             this.volumeBox.Scroll += new System.EventHandler(this.VolumeBox_Scroll);
-            // 
-            // muteLabel
-            // 
-            this.muteLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.muteLabel, "muteLabel");
-            this.muteLabel.ForeColor = System.Drawing.Color.Red;
-            this.muteLabel.Name = "muteLabel";
-            this.muteLabel.Click += new System.EventHandler(this.MuteLabel_Click);
-            // 
-            // unmuteLabel
-            // 
-            this.unmuteLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.unmuteLabel, "unmuteLabel");
-            this.unmuteLabel.ForeColor = System.Drawing.Color.Blue;
-            this.unmuteLabel.Name = "unmuteLabel";
-            this.unmuteLabel.Click += new System.EventHandler(this.UnmuteLabel_Click);
             // 
             // fileSystemTab
             // 
@@ -910,52 +937,9 @@
             this.getFile.UseVisualStyleBackColor = true;
             this.getFile.Click += new System.EventHandler(this.getFile_Click);
             // 
-            // networkTab
-            // 
-            this.networkTab.Controls.Add(this.networkSmbBox);
-            this.networkTab.Controls.Add(this.networkOnBox);
-            this.networkTab.Controls.Add(this.networkOffBox);
-            this.networkTab.Controls.Add(this.label25);
-            this.networkTab.Controls.Add(this.firewallRun);
-            resources.ApplyResources(this.networkTab, "networkTab");
-            this.networkTab.Name = "networkTab";
-            this.networkTab.UseVisualStyleBackColor = true;
-            // 
-            // networkSmbBox
-            // 
-            resources.ApplyResources(this.networkSmbBox, "networkSmbBox");
-            this.networkSmbBox.Name = "networkSmbBox";
-            this.networkSmbBox.TabStop = true;
-            this.networkSmbBox.UseVisualStyleBackColor = true;
-            // 
-            // networkOnBox
-            // 
-            resources.ApplyResources(this.networkOnBox, "networkOnBox");
-            this.networkOnBox.Name = "networkOnBox";
-            this.networkOnBox.TabStop = true;
-            this.networkOnBox.UseVisualStyleBackColor = true;
-            // 
-            // networkOffBox
-            // 
-            resources.ApplyResources(this.networkOffBox, "networkOffBox");
-            this.networkOffBox.Name = "networkOffBox";
-            this.networkOffBox.TabStop = true;
-            this.networkOffBox.UseVisualStyleBackColor = true;
-            // 
-            // label25
-            // 
-            resources.ApplyResources(this.label25, "label25");
-            this.label25.Name = "label25";
-            // 
-            // firewallRun
-            // 
-            resources.ApplyResources(this.firewallRun, "firewallRun");
-            this.firewallRun.Name = "firewallRun";
-            this.firewallRun.UseVisualStyleBackColor = true;
-            this.firewallRun.Click += new System.EventHandler(this.FirewallRun_Click);
-            // 
             // miscTab
             // 
+            this.miscTab.Controls.Add(this.openKeyboardBtn);
             this.miscTab.Controls.Add(this.speakNowBtn);
             this.miscTab.Controls.Add(this.nircmdAboutLabel);
             this.miscTab.Controls.Add(this.label24);
@@ -994,6 +978,14 @@
             resources.ApplyResources(this.miscTab, "miscTab");
             this.miscTab.Name = "miscTab";
             this.miscTab.UseVisualStyleBackColor = true;
+            // 
+            // openKeyboardBtn
+            // 
+            this.openKeyboardBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.openKeyboardBtn, "openKeyboardBtn");
+            this.openKeyboardBtn.Name = "openKeyboardBtn";
+            this.openKeyboardBtn.UseVisualStyleBackColor = true;
+            this.openKeyboardBtn.Click += new System.EventHandler(this.openKeyboardBtn_Click);
             // 
             // speakNowBtn
             // 
@@ -1318,6 +1310,38 @@
             resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
             // 
+            // scriptTab
+            // 
+            this.scriptTab.Controls.Add(this.docsScriptBtn);
+            this.scriptTab.Controls.Add(this.runScriptBtn);
+            this.scriptTab.Controls.Add(this.scriptBox);
+            resources.ApplyResources(this.scriptTab, "scriptTab");
+            this.scriptTab.Name = "scriptTab";
+            this.scriptTab.UseVisualStyleBackColor = true;
+            // 
+            // docsScriptBtn
+            // 
+            this.docsScriptBtn.Cursor = System.Windows.Forms.Cursors.Help;
+            resources.ApplyResources(this.docsScriptBtn, "docsScriptBtn");
+            this.docsScriptBtn.Name = "docsScriptBtn";
+            this.docsScriptBtn.UseVisualStyleBackColor = true;
+            this.docsScriptBtn.Click += new System.EventHandler(this.docsScriptBtn_Click);
+            // 
+            // runScriptBtn
+            // 
+            this.runScriptBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.runScriptBtn, "runScriptBtn");
+            this.runScriptBtn.Name = "runScriptBtn";
+            this.runScriptBtn.UseVisualStyleBackColor = true;
+            this.runScriptBtn.Click += new System.EventHandler(this.runScriptBtn_Click);
+            // 
+            // scriptBox
+            // 
+            this.scriptBox.AcceptsReturn = true;
+            this.scriptBox.AcceptsTab = true;
+            resources.ApplyResources(this.scriptBox, "scriptBox");
+            this.scriptBox.Name = "scriptBox";
+            // 
             // MoreTab
             // 
             this.MoreTab.Controls.Add(this.remoteConsoleBtn);
@@ -1325,21 +1349,73 @@
             this.MoreTab.Name = "MoreTab";
             this.MoreTab.UseVisualStyleBackColor = true;
             // 
+            // remoteConsoleBtn
+            // 
+            resources.ApplyResources(this.remoteConsoleBtn, "remoteConsoleBtn");
+            this.remoteConsoleBtn.Name = "remoteConsoleBtn";
+            this.remoteConsoleBtn.UseVisualStyleBackColor = true;
+            this.remoteConsoleBtn.Click += new System.EventHandler(this.remoteConsoleBtn_Click);
+            // 
+            // networkTab
+            // 
+            this.networkTab.Controls.Add(this.networkSmbBox);
+            this.networkTab.Controls.Add(this.networkOnBox);
+            this.networkTab.Controls.Add(this.networkOffBox);
+            this.networkTab.Controls.Add(this.label25);
+            this.networkTab.Controls.Add(this.firewallRun);
+            resources.ApplyResources(this.networkTab, "networkTab");
+            this.networkTab.Name = "networkTab";
+            this.networkTab.UseVisualStyleBackColor = true;
+            // 
+            // networkSmbBox
+            // 
+            resources.ApplyResources(this.networkSmbBox, "networkSmbBox");
+            this.networkSmbBox.Name = "networkSmbBox";
+            this.networkSmbBox.TabStop = true;
+            this.networkSmbBox.UseVisualStyleBackColor = true;
+            // 
+            // networkOnBox
+            // 
+            resources.ApplyResources(this.networkOnBox, "networkOnBox");
+            this.networkOnBox.Name = "networkOnBox";
+            this.networkOnBox.TabStop = true;
+            this.networkOnBox.UseVisualStyleBackColor = true;
+            // 
+            // networkOffBox
+            // 
+            resources.ApplyResources(this.networkOffBox, "networkOffBox");
+            this.networkOffBox.Name = "networkOffBox";
+            this.networkOffBox.TabStop = true;
+            this.networkOffBox.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            resources.ApplyResources(this.label25, "label25");
+            this.label25.Name = "label25";
+            // 
+            // firewallRun
+            // 
+            resources.ApplyResources(this.firewallRun, "firewallRun");
+            this.firewallRun.Name = "firewallRun";
+            this.firewallRun.UseVisualStyleBackColor = true;
+            this.firewallRun.Click += new System.EventHandler(this.FirewallRun_Click);
+            // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.alwaysOnTopToolStripMenuItem,
+            this.hideInTaskbarToolStripMenuItem,
+            this.newToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             // 
-            // alwaysOnTopToolStripMenuItem
+            // hideInTaskbarToolStripMenuItem
             // 
-            this.alwaysOnTopToolStripMenuItem.CheckOnClick = true;
-            this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
-            resources.ApplyResources(this.alwaysOnTopToolStripMenuItem, "alwaysOnTopToolStripMenuItem");
-            this.alwaysOnTopToolStripMenuItem.CheckedChanged += new System.EventHandler(this.AlwaysOnTopToolStripMenuItem_change);
-            this.alwaysOnTopToolStripMenuItem.CheckStateChanged += new System.EventHandler(this.AlwaysOnTopToolStripMenuItem_change);
+            this.hideInTaskbarToolStripMenuItem.CheckOnClick = true;
+            this.hideInTaskbarToolStripMenuItem.Name = "hideInTaskbarToolStripMenuItem";
+            resources.ApplyResources(this.hideInTaskbarToolStripMenuItem, "hideInTaskbarToolStripMenuItem");
+            this.hideInTaskbarToolStripMenuItem.Click += new System.EventHandler(this.hideInTaskbarToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -1355,6 +1431,81 @@
             this.configToolStripMenuItem.Name = "configToolStripMenuItem";
             resources.ApplyResources(this.configToolStripMenuItem, "configToolStripMenuItem");
             // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.creditsToolStripMenuItem,
+            this.howToUseToolStripMenuItem});
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.AllowDrop = true;
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.configToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.menuStrip1.Name = "menuStrip1";
+            // 
+            // loadSetting
+            // 
+            this.loadSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.loadSetting, "loadSetting");
+            this.loadSetting.Name = "loadSetting";
+            this.loadSetting.Click += new System.EventHandler(this.LoadSetting_Click);
+            // 
+            // saveIcon
+            // 
+            this.saveIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.saveIcon, "saveIcon");
+            this.saveIcon.Name = "saveIcon";
+            this.saveIcon.Click += new System.EventHandler(this.SaveIcon_Click);
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // muteLabel
+            // 
+            this.muteLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.muteLabel, "muteLabel");
+            this.muteLabel.ForeColor = System.Drawing.Color.Red;
+            this.muteLabel.Name = "muteLabel";
+            this.muteLabel.Click += new System.EventHandler(this.MuteLabel_Click);
+            // 
+            // unmuteLabel
+            // 
+            this.unmuteLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.unmuteLabel, "unmuteLabel");
+            this.unmuteLabel.ForeColor = System.Drawing.Color.Blue;
+            this.unmuteLabel.Name = "unmuteLabel";
+            this.unmuteLabel.Click += new System.EventHandler(this.UnmuteLabel_Click);
+            // 
+            // alwaysOnTopToolStripMenuItem
+            // 
+            this.alwaysOnTopToolStripMenuItem.CheckOnClick = true;
+            this.alwaysOnTopToolStripMenuItem.Image = global::EnhancedPsExec.Properties.Resources.images;
+            this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
+            resources.ApplyResources(this.alwaysOnTopToolStripMenuItem, "alwaysOnTopToolStripMenuItem");
+            this.alwaysOnTopToolStripMenuItem.CheckedChanged += new System.EventHandler(this.AlwaysOnTopToolStripMenuItem_change);
+            this.alwaysOnTopToolStripMenuItem.CheckStateChanged += new System.EventHandler(this.AlwaysOnTopToolStripMenuItem_change);
+            // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.Image = global::EnhancedPsExec.Properties.Resources.newformimg;
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            resources.ApplyResources(this.newToolStripMenuItem, "newToolStripMenuItem");
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
+            // 
             // saveToolStripMenuItem
             // 
             resources.ApplyResources(this.saveToolStripMenuItem, "saveToolStripMenuItem");
@@ -1366,14 +1517,6 @@
             resources.ApplyResources(this.loadToolStripMenuItem, "loadToolStripMenuItem");
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.LoadToolStripMenuItem_Click);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.creditsToolStripMenuItem,
-            this.howToUseToolStripMenuItem});
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             // 
             // creditsToolStripMenuItem
             // 
@@ -1387,24 +1530,6 @@
             this.howToUseToolStripMenuItem.Name = "howToUseToolStripMenuItem";
             this.howToUseToolStripMenuItem.Click += new System.EventHandler(this.HowToUseToolStripMenuItem_Click);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.AllowDrop = true;
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
-            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.configToolStripMenuItem,
-            this.aboutToolStripMenuItem});
-            this.menuStrip1.Name = "menuStrip1";
-            // 
-            // remoteConsoleBtn
-            // 
-            resources.ApplyResources(this.remoteConsoleBtn, "remoteConsoleBtn");
-            this.remoteConsoleBtn.Name = "remoteConsoleBtn";
-            this.remoteConsoleBtn.UseVisualStyleBackColor = true;
-            this.remoteConsoleBtn.Click += new System.EventHandler(this.remoteConsoleBtn_Click);
-            // 
             // epsexecForm
             // 
             this.AllowDrop = true;
@@ -1413,9 +1538,11 @@
             this.Controls.Add(this.main);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.HelpButton = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "epsexecForm";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.epsexecForm_HelpButtonClicked);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EpsexecForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.any_DragEnter);
@@ -1430,6 +1557,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabsBox)).EndInit();
             this.processControlTab.ResumeLayout(false);
             this.processControlTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.volumeProcessBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.processDelay)).EndInit();
             this.soundTab.ResumeLayout(false);
             this.soundTab.PerformLayout();
@@ -1441,8 +1569,6 @@
             this.fileSystemTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.screenHeightBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.screenWidthBox)).EndInit();
-            this.networkTab.ResumeLayout(false);
-            this.networkTab.PerformLayout();
             this.miscTab.ResumeLayout(false);
             this.miscTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sendKeyboardDelayBox)).EndInit();
@@ -1451,7 +1577,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.ttsSpeedBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ttsVolumeBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ttsDelayBox)).EndInit();
+            this.scriptTab.ResumeLayout(false);
+            this.scriptTab.PerformLayout();
             this.MoreTab.ResumeLayout(false);
+            this.networkTab.ResumeLayout(false);
+            this.networkTab.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -1459,135 +1589,146 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl main;
-        private System.Windows.Forms.TabPage homeTab;
-        private System.Windows.Forms.Label passwdLabel;
-        private System.Windows.Forms.Label usrnameLabel;
-        private System.Windows.Forms.Label ipLabel;
-        private System.Windows.Forms.TabPage urlTab;
-        private System.Windows.Forms.TextBox urlBox;
-        private System.Windows.Forms.Label urlLabel;
-        private System.Windows.Forms.Button runBtn;
-        private System.Windows.Forms.Label tabsLabel;
-        private System.Windows.Forms.NumericUpDown tabsBox;
-        private System.Windows.Forms.CheckBox newWindowBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox incognitoBox;
-        private System.Windows.Forms.Label invisibleLabel;
-        private System.Windows.Forms.CheckBox invisibleBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button terminateChromeBtn;
-        private System.Windows.Forms.NumericUpDown delayTerminate;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown delayBetweenBox;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown delayBeforeBox;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem configToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem creditsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem howToUseToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.TabPage processControlTab;
-        private System.Windows.Forms.TabPage soundTab;
-        private System.Windows.Forms.Label saveIcon;
-        private System.Windows.Forms.Label loadSetting;
-        private System.Windows.Forms.Label muteLabel;
-        private System.Windows.Forms.Label percentLabel;
-        private System.Windows.Forms.Label amountLabel;
-        private System.Windows.Forms.TrackBar volumeBox;
-        private System.Windows.Forms.Label unmuteLabel;
-        private System.Windows.Forms.Label delyLabel;
-        private System.Windows.Forms.NumericUpDown soundDelayBox;
-        private System.Windows.Forms.Button soundRunBtn;
-        private System.Windows.Forms.Button getReloadBtn;
-        private System.Windows.Forms.Label processesLabel;
-        private System.Windows.Forms.Button killBtn;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox filterTextBox;
-        private System.Windows.Forms.ListBox processesBox;
-        private System.Windows.Forms.Button clearBtn;
-        private System.Windows.Forms.CheckBox autoClearBox;
-        private System.Windows.Forms.CheckBox caseInsensitiveBox;
-        private System.Windows.Forms.CheckBox excludeBox;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.NumericUpDown processDelay;
-        private System.Windows.Forms.TabPage miscTab;
-        private System.Windows.Forms.Button downloadNirBtn;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button ttsRunBtn;
-        private System.Windows.Forms.TextBox ttsBox;
-        private System.Windows.Forms.NumericUpDown ttsDelayBox;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.NumericUpDown ttsVolumeBox;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.NumericUpDown ttsSpeedBox;
-        private System.Windows.Forms.CheckBox maleVoiceBox;
-        private System.Windows.Forms.Button doubleClickBtn;
-        private System.Windows.Forms.Button upClickBtn;
-        private System.Windows.Forms.Button downClickBtn;
-        private System.Windows.Forms.RadioButton middleMouseBtn;
-        private System.Windows.Forms.RadioButton rightMouseBtn;
-        private System.Windows.Forms.RadioButton leftMouseBtn;
-        private System.Windows.Forms.Button mouseFullClickBtn;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button moveBtn;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox moveMouseYBox;
-        private System.Windows.Forms.TextBox moveMouseXBox;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button sendKeyboardTextBtn;
-        private System.Windows.Forms.NumericUpDown frequencySoundBox;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button runBeepSoundBtn;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.NumericUpDown durationSoundBox;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Button openScannerBtn;
         public System.Windows.Forms.TextBox ipBox;
         public System.Windows.Forms.TextBox passwordBox;
         public System.Windows.Forms.TextBox usrBox;
-        private System.Windows.Forms.ToolStripMenuItem alwaysOnTopToolStripMenuItem;
         public System.Windows.Forms.TextBox sendKeyboardBox;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.NumericUpDown moveMouseDelayBox;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown clickDelayBox;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.NumericUpDown sendKeyboardDelayBox;
-        private System.Windows.Forms.Label nircmdAboutLabel;
-        private System.Windows.Forms.TabPage networkTab;
-        private System.Windows.Forms.RadioButton networkOnBox;
-        private System.Windows.Forms.RadioButton networkOffBox;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Button firewallRun;
-        private System.Windows.Forms.RadioButton networkSmbBox;
-        private System.Windows.Forms.Button speakNowBtn;
-        private System.Windows.Forms.TabPage fileSystemTab;
-        private System.Windows.Forms.TextBox getFileLocationBox;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button getFile;
-        private System.Windows.Forms.Button chooseSaveBtn;
-        private System.Windows.Forms.TextBox saveToBox;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.CheckBox deleteAfterBox;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Button screenshotGoBtn;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.NumericUpDown screenHeightBox;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.NumericUpDown screenWidthBox;
-        private System.Windows.Forms.TabPage MoreTab;
-        private System.Windows.Forms.Button remoteConsoleBtn;
+        public System.Windows.Forms.Button downloadNirBtn;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Button ttsRunBtn;
+        public System.Windows.Forms.TextBox ttsBox;
+        public System.Windows.Forms.NumericUpDown ttsDelayBox;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.NumericUpDown ttsVolumeBox;
+        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.NumericUpDown ttsSpeedBox;
+        public System.Windows.Forms.CheckBox maleVoiceBox;
+        public System.Windows.Forms.Button doubleClickBtn;
+        public System.Windows.Forms.Button upClickBtn;
+        public System.Windows.Forms.Button downClickBtn;
+        public System.Windows.Forms.RadioButton middleMouseBtn;
+        public System.Windows.Forms.RadioButton rightMouseBtn;
+        public System.Windows.Forms.RadioButton leftMouseBtn;
+        public System.Windows.Forms.Button mouseFullClickBtn;
+        public System.Windows.Forms.Label label13;
+        public System.Windows.Forms.Button moveBtn;
+        public System.Windows.Forms.Label label14;
+        public System.Windows.Forms.TextBox moveMouseYBox;
+        public System.Windows.Forms.TextBox moveMouseXBox;
+        public System.Windows.Forms.Label label15;
+        public System.Windows.Forms.Label label16;
+        public System.Windows.Forms.Button sendKeyboardTextBtn;
+        public System.Windows.Forms.Label label22;
+        public System.Windows.Forms.NumericUpDown moveMouseDelayBox;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.NumericUpDown clickDelayBox;
+        public System.Windows.Forms.Label label23;
+        public System.Windows.Forms.Label label24;
+        public System.Windows.Forms.NumericUpDown sendKeyboardDelayBox;
+        public System.Windows.Forms.Label nircmdAboutLabel;
+        public System.Windows.Forms.Button speakNowBtn;
+        public System.Windows.Forms.Button openKeyboardBtn;
+        public System.Windows.Forms.TabControl main;
+        public System.Windows.Forms.TabPage homeTab;
+        public System.Windows.Forms.Label passwdLabel;
+        public System.Windows.Forms.Label usrnameLabel;
+        public System.Windows.Forms.Label ipLabel;
+        public System.Windows.Forms.TabPage urlTab;
+        public System.Windows.Forms.TextBox urlBox;
+        public System.Windows.Forms.Label urlLabel;
+        public System.Windows.Forms.Button runBtn;
+        public System.Windows.Forms.Label tabsLabel;
+        public System.Windows.Forms.NumericUpDown tabsBox;
+        public System.Windows.Forms.CheckBox newWindowBox;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.CheckBox incognitoBox;
+        public System.Windows.Forms.Label invisibleLabel;
+        public System.Windows.Forms.CheckBox invisibleBox;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Button terminateChromeBtn;
+        public System.Windows.Forms.NumericUpDown delayTerminate;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.NumericUpDown delayBetweenBox;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.NumericUpDown delayBeforeBox;
+        public System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem configToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem creditsToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem howToUseToolStripMenuItem;
+        public System.Windows.Forms.MenuStrip menuStrip1;
+        public System.Windows.Forms.TabPage processControlTab;
+        public System.Windows.Forms.TabPage soundTab;
+        public System.Windows.Forms.Label saveIcon;
+        public System.Windows.Forms.Label loadSetting;
+        public System.Windows.Forms.Label muteLabel;
+        public System.Windows.Forms.Label percentLabel;
+        public System.Windows.Forms.Label amountLabel;
+        public System.Windows.Forms.TrackBar volumeBox;
+        public System.Windows.Forms.Label unmuteLabel;
+        public System.Windows.Forms.Label delyLabel;
+        public System.Windows.Forms.NumericUpDown soundDelayBox;
+        public System.Windows.Forms.Button soundRunBtn;
+        public System.Windows.Forms.Button getReloadBtn;
+        public System.Windows.Forms.Label processesLabel;
+        public System.Windows.Forms.Button killBtn;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.TextBox filterTextBox;
+        public System.Windows.Forms.ListBox processesBox;
+        public System.Windows.Forms.Button clearBtn;
+        public System.Windows.Forms.CheckBox autoClearBox;
+        public System.Windows.Forms.CheckBox caseInsensitiveBox;
+        public System.Windows.Forms.CheckBox excludeBox;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.NumericUpDown processDelay;
+        public System.Windows.Forms.TabPage miscTab;
+        public System.Windows.Forms.NumericUpDown frequencySoundBox;
+        public System.Windows.Forms.Label label18;
+        public System.Windows.Forms.Button runBeepSoundBtn;
+        public System.Windows.Forms.Label label17;
+        public System.Windows.Forms.NumericUpDown durationSoundBox;
+        public System.Windows.Forms.Label label19;
+        public System.Windows.Forms.Label label20;
+        public System.Windows.Forms.Button openScannerBtn;
+        public System.Windows.Forms.ToolStripMenuItem alwaysOnTopToolStripMenuItem;
+        public System.Windows.Forms.Label label21;
+        public System.Windows.Forms.TabPage networkTab;
+        public System.Windows.Forms.RadioButton networkOnBox;
+        public System.Windows.Forms.RadioButton networkOffBox;
+        public System.Windows.Forms.Label label25;
+        public System.Windows.Forms.Button firewallRun;
+        public System.Windows.Forms.RadioButton networkSmbBox;
+        public System.Windows.Forms.TabPage fileSystemTab;
+        public System.Windows.Forms.TextBox getFileLocationBox;
+        public System.Windows.Forms.Label label26;
+        public System.Windows.Forms.Button getFile;
+        public System.Windows.Forms.Button chooseSaveBtn;
+        public System.Windows.Forms.TextBox saveToBox;
+        public System.Windows.Forms.Label label27;
+        public System.Windows.Forms.CheckBox deleteAfterBox;
+        public System.Windows.Forms.Label label28;
+        public System.Windows.Forms.Button screenshotGoBtn;
+        public System.Windows.Forms.Label label30;
+        public System.Windows.Forms.NumericUpDown screenHeightBox;
+        public System.Windows.Forms.Label label29;
+        public System.Windows.Forms.NumericUpDown screenWidthBox;
+        public System.Windows.Forms.TabPage MoreTab;
+        public System.Windows.Forms.Button remoteConsoleBtn;
+        public System.Windows.Forms.TabPage scriptTab;
+        public System.Windows.Forms.TextBox scriptBox;
+        public System.Windows.Forms.Button runScriptBtn;
+        public System.Windows.Forms.Button docsScriptBtn;
+        public System.Windows.Forms.ToolStripMenuItem hideInTaskbarToolStripMenuItem;
+        private System.Windows.Forms.CheckBox showPassBox;
+        public System.Windows.Forms.Button muteProcessBtn;
+        public System.Windows.Forms.Button unmuteProcessBtn;
+        private System.Windows.Forms.Button processVolumeBtn;
+        public System.Windows.Forms.NumericUpDown volumeProcessBox;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
     }
 }
