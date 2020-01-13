@@ -1125,7 +1125,7 @@ namespace EnhancedPsExecGUI
                     string line = gotten[i+1];
                     int x = 2;
                     while (!line.Contains("}") && line.Trim().Length > 3){
-                        loopContent.Add(line.Trim());
+                        loopContent.Add(line.Trim().TrimStart('\t').TrimStart(' '));
                         Console.WriteLine("line: " +line);
                         line = gotten[i + x];
                         x++;
