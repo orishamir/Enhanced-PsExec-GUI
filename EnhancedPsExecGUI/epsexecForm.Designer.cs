@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(epsexecForm));
             this.main = new System.Windows.Forms.TabControl();
             this.homeTab = new System.Windows.Forms.TabPage();
+            this.connectBtn = new System.Windows.Forms.Button();
             this.showPassBox = new System.Windows.Forms.CheckBox();
             this.label21 = new System.Windows.Forms.Label();
             this.openScannerBtn = new System.Windows.Forms.Button();
+            this.loadSetting = new System.Windows.Forms.Label();
+            this.saveIcon = new System.Windows.Forms.Label();
             this.passwdLabel = new System.Windows.Forms.Label();
             this.usrnameLabel = new System.Windows.Forms.Label();
             this.passwordBox = new System.Windows.Forms.TextBox();
@@ -48,6 +52,8 @@
             this.delayBeforeBox = new System.Windows.Forms.NumericUpDown();
             this.delayTerminate = new System.Windows.Forms.NumericUpDown();
             this.terminateChromeBtn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.invisibleLabel = new System.Windows.Forms.Label();
             this.invisibleBox = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -89,6 +95,8 @@
             this.percentLabel = new System.Windows.Forms.Label();
             this.amountLabel = new System.Windows.Forms.Label();
             this.volumeBox = new System.Windows.Forms.TrackBar();
+            this.muteLabel = new System.Windows.Forms.Label();
+            this.unmuteLabel = new System.Windows.Forms.Label();
             this.fileSystemTab = new System.Windows.Forms.TabPage();
             this.label30 = new System.Windows.Forms.Label();
             this.screenHeightBox = new System.Windows.Forms.NumericUpDown();
@@ -104,6 +112,8 @@
             this.label26 = new System.Windows.Forms.Label();
             this.getFile = new System.Windows.Forms.Button();
             this.miscTab = new System.Windows.Forms.TabPage();
+            this.paexecAboutLabel = new System.Windows.Forms.Label();
+            this.downloadPaexecBtn = new System.Windows.Forms.Button();
             this.openKeyboardBtn = new System.Windows.Forms.Button();
             this.speakNowBtn = new System.Windows.Forms.Button();
             this.nircmdAboutLabel = new System.Windows.Forms.Label();
@@ -144,7 +154,7 @@
             this.docsScriptBtn = new System.Windows.Forms.Button();
             this.runScriptBtn = new System.Windows.Forms.Button();
             this.scriptBox = new System.Windows.Forms.TextBox();
-            this.MoreTab = new System.Windows.Forms.TabPage();
+            this.remoteConsoleTab = new System.Windows.Forms.TabPage();
             this.remoteConsoleBtn = new System.Windows.Forms.Button();
             this.networkTab = new System.Windows.Forms.TabPage();
             this.networkSmbBox = new System.Windows.Forms.RadioButton();
@@ -153,23 +163,20 @@
             this.label25 = new System.Windows.Forms.Label();
             this.firewallRun = new System.Windows.Forms.Button();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hideInTaskbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.configToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.loadSetting = new System.Windows.Forms.Label();
-            this.saveIcon = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.muteLabel = new System.Windows.Forms.Label();
-            this.unmuteLabel = new System.Windows.Forms.Label();
-            this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hideInTaskbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creditsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.howToUseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.main.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.urlTab.SuspendLayout();
@@ -196,7 +203,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ttsVolumeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ttsDelayBox)).BeginInit();
             this.scriptTab.SuspendLayout();
-            this.MoreTab.SuspendLayout();
+            this.remoteConsoleTab.SuspendLayout();
             this.networkTab.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -211,7 +218,7 @@
             this.main.Controls.Add(this.fileSystemTab);
             this.main.Controls.Add(this.miscTab);
             this.main.Controls.Add(this.scriptTab);
-            this.main.Controls.Add(this.MoreTab);
+            this.main.Controls.Add(this.remoteConsoleTab);
             this.main.Controls.Add(this.networkTab);
             this.main.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.main, "main");
@@ -224,6 +231,7 @@
             // homeTab
             // 
             this.homeTab.AllowDrop = true;
+            this.homeTab.Controls.Add(this.connectBtn);
             this.homeTab.Controls.Add(this.showPassBox);
             this.homeTab.Controls.Add(this.label21);
             this.homeTab.Controls.Add(this.openScannerBtn);
@@ -240,6 +248,13 @@
             this.homeTab.UseVisualStyleBackColor = true;
             this.homeTab.DragDrop += new System.Windows.Forms.DragEventHandler(this.any_DragDrop);
             this.homeTab.DragEnter += new System.Windows.Forms.DragEventHandler(this.any_DragEnter);
+            // 
+            // connectBtn
+            // 
+            resources.ApplyResources(this.connectBtn, "connectBtn");
+            this.connectBtn.Name = "connectBtn";
+            this.connectBtn.UseVisualStyleBackColor = true;
+            this.connectBtn.Click += new System.EventHandler(this.connectBtn_Click);
             // 
             // showPassBox
             // 
@@ -261,6 +276,22 @@
             this.openScannerBtn.Name = "openScannerBtn";
             this.openScannerBtn.UseVisualStyleBackColor = true;
             this.openScannerBtn.Click += new System.EventHandler(this.OpenScannerBtn_Click);
+            // 
+            // loadSetting
+            // 
+            this.loadSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.loadSetting, "loadSetting");
+            this.loadSetting.Name = "loadSetting";
+            this.toolTip1.SetToolTip(this.loadSetting, resources.GetString("loadSetting.ToolTip"));
+            this.loadSetting.Click += new System.EventHandler(this.LoadSetting_Click);
+            // 
+            // saveIcon
+            // 
+            this.saveIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.saveIcon, "saveIcon");
+            this.saveIcon.Name = "saveIcon";
+            this.toolTip1.SetToolTip(this.saveIcon, resources.GetString("saveIcon.ToolTip"));
+            this.saveIcon.Click += new System.EventHandler(this.SaveIcon_Click);
             // 
             // passwdLabel
             // 
@@ -426,6 +457,16 @@
             this.terminateChromeBtn.Name = "terminateChromeBtn";
             this.terminateChromeBtn.UseVisualStyleBackColor = false;
             this.terminateChromeBtn.Click += new System.EventHandler(this.TerminateChromeBtn_Click);
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
             // 
             // invisibleLabel
             // 
@@ -816,6 +857,24 @@
             this.volumeBox.Value = 80;
             this.volumeBox.Scroll += new System.EventHandler(this.VolumeBox_Scroll);
             // 
+            // muteLabel
+            // 
+            this.muteLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.muteLabel, "muteLabel");
+            this.muteLabel.ForeColor = System.Drawing.Color.Red;
+            this.muteLabel.Name = "muteLabel";
+            this.toolTip1.SetToolTip(this.muteLabel, resources.GetString("muteLabel.ToolTip"));
+            this.muteLabel.Click += new System.EventHandler(this.MuteLabel_Click);
+            // 
+            // unmuteLabel
+            // 
+            this.unmuteLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.unmuteLabel, "unmuteLabel");
+            this.unmuteLabel.ForeColor = System.Drawing.Color.Blue;
+            this.unmuteLabel.Name = "unmuteLabel";
+            this.toolTip1.SetToolTip(this.unmuteLabel, resources.GetString("unmuteLabel.ToolTip"));
+            this.unmuteLabel.Click += new System.EventHandler(this.UnmuteLabel_Click);
+            // 
             // fileSystemTab
             // 
             this.fileSystemTab.Controls.Add(this.label30);
@@ -939,6 +998,8 @@
             // 
             // miscTab
             // 
+            this.miscTab.Controls.Add(this.paexecAboutLabel);
+            this.miscTab.Controls.Add(this.downloadPaexecBtn);
             this.miscTab.Controls.Add(this.openKeyboardBtn);
             this.miscTab.Controls.Add(this.speakNowBtn);
             this.miscTab.Controls.Add(this.nircmdAboutLabel);
@@ -978,6 +1039,22 @@
             resources.ApplyResources(this.miscTab, "miscTab");
             this.miscTab.Name = "miscTab";
             this.miscTab.UseVisualStyleBackColor = true;
+            // 
+            // paexecAboutLabel
+            // 
+            this.paexecAboutLabel.BackColor = System.Drawing.Color.Transparent;
+            this.paexecAboutLabel.Cursor = System.Windows.Forms.Cursors.Help;
+            resources.ApplyResources(this.paexecAboutLabel, "paexecAboutLabel");
+            this.paexecAboutLabel.Name = "paexecAboutLabel";
+            this.paexecAboutLabel.Click += new System.EventHandler(this.paexecAboutLabel_Click);
+            // 
+            // downloadPaexecBtn
+            // 
+            this.downloadPaexecBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.downloadPaexecBtn, "downloadPaexecBtn");
+            this.downloadPaexecBtn.Name = "downloadPaexecBtn";
+            this.downloadPaexecBtn.UseVisualStyleBackColor = true;
+            this.downloadPaexecBtn.Click += new System.EventHandler(this.downloadPaexecBtn_Click);
             // 
             // openKeyboardBtn
             // 
@@ -1342,12 +1419,12 @@
             resources.ApplyResources(this.scriptBox, "scriptBox");
             this.scriptBox.Name = "scriptBox";
             // 
-            // MoreTab
+            // remoteConsoleTab
             // 
-            this.MoreTab.Controls.Add(this.remoteConsoleBtn);
-            resources.ApplyResources(this.MoreTab, "MoreTab");
-            this.MoreTab.Name = "MoreTab";
-            this.MoreTab.UseVisualStyleBackColor = true;
+            this.remoteConsoleTab.Controls.Add(this.remoteConsoleBtn);
+            resources.ApplyResources(this.remoteConsoleTab, "remoteConsoleTab");
+            this.remoteConsoleTab.Name = "remoteConsoleTab";
+            this.remoteConsoleTab.UseVisualStyleBackColor = true;
             // 
             // remoteConsoleBtn
             // 
@@ -1403,101 +1480,17 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem,
+            this.saveToolStripMenuItem,
+            this.loadToolStripMenuItem,
+            this.toolStripSeparator1,
             this.alwaysOnTopToolStripMenuItem,
             this.hideInTaskbarToolStripMenuItem,
-            this.newToolStripMenuItem,
-            this.exitToolStripMenuItem});
+            this.exitToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.preferencesToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
-            // 
-            // hideInTaskbarToolStripMenuItem
-            // 
-            this.hideInTaskbarToolStripMenuItem.CheckOnClick = true;
-            this.hideInTaskbarToolStripMenuItem.Name = "hideInTaskbarToolStripMenuItem";
-            resources.ApplyResources(this.hideInTaskbarToolStripMenuItem, "hideInTaskbarToolStripMenuItem");
-            this.hideInTaskbarToolStripMenuItem.Click += new System.EventHandler(this.hideInTaskbarToolStripMenuItem_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
-            // 
-            // configToolStripMenuItem
-            // 
-            this.configToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saveToolStripMenuItem,
-            this.loadToolStripMenuItem});
-            this.configToolStripMenuItem.Name = "configToolStripMenuItem";
-            resources.ApplyResources(this.configToolStripMenuItem, "configToolStripMenuItem");
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.creditsToolStripMenuItem,
-            this.howToUseToolStripMenuItem});
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.AllowDrop = true;
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
-            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.configToolStripMenuItem,
-            this.aboutToolStripMenuItem});
-            this.menuStrip1.Name = "menuStrip1";
-            // 
-            // loadSetting
-            // 
-            this.loadSetting.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.loadSetting, "loadSetting");
-            this.loadSetting.Name = "loadSetting";
-            this.loadSetting.Click += new System.EventHandler(this.LoadSetting_Click);
-            // 
-            // saveIcon
-            // 
-            this.saveIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.saveIcon, "saveIcon");
-            this.saveIcon.Name = "saveIcon";
-            this.saveIcon.Click += new System.EventHandler(this.SaveIcon_Click);
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
-            // 
-            // muteLabel
-            // 
-            this.muteLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.muteLabel, "muteLabel");
-            this.muteLabel.ForeColor = System.Drawing.Color.Red;
-            this.muteLabel.Name = "muteLabel";
-            this.muteLabel.Click += new System.EventHandler(this.MuteLabel_Click);
-            // 
-            // unmuteLabel
-            // 
-            this.unmuteLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.unmuteLabel, "unmuteLabel");
-            this.unmuteLabel.ForeColor = System.Drawing.Color.Blue;
-            this.unmuteLabel.Name = "unmuteLabel";
-            this.unmuteLabel.Click += new System.EventHandler(this.UnmuteLabel_Click);
-            // 
-            // alwaysOnTopToolStripMenuItem
-            // 
-            this.alwaysOnTopToolStripMenuItem.CheckOnClick = true;
-            this.alwaysOnTopToolStripMenuItem.Image = global::EnhancedPsExec.Properties.Resources.images;
-            this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
-            resources.ApplyResources(this.alwaysOnTopToolStripMenuItem, "alwaysOnTopToolStripMenuItem");
-            this.alwaysOnTopToolStripMenuItem.CheckedChanged += new System.EventHandler(this.AlwaysOnTopToolStripMenuItem_change);
-            this.alwaysOnTopToolStripMenuItem.CheckStateChanged += new System.EventHandler(this.AlwaysOnTopToolStripMenuItem_change);
             // 
             // newToolStripMenuItem
             // 
@@ -1518,6 +1511,52 @@
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.LoadToolStripMenuItem_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            // 
+            // alwaysOnTopToolStripMenuItem
+            // 
+            this.alwaysOnTopToolStripMenuItem.CheckOnClick = true;
+            this.alwaysOnTopToolStripMenuItem.Image = global::EnhancedPsExec.Properties.Resources.images;
+            this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
+            resources.ApplyResources(this.alwaysOnTopToolStripMenuItem, "alwaysOnTopToolStripMenuItem");
+            this.alwaysOnTopToolStripMenuItem.CheckedChanged += new System.EventHandler(this.AlwaysOnTopToolStripMenuItem_change);
+            // 
+            // hideInTaskbarToolStripMenuItem
+            // 
+            this.hideInTaskbarToolStripMenuItem.CheckOnClick = true;
+            this.hideInTaskbarToolStripMenuItem.Image = global::EnhancedPsExec.Properties.Resources.invisible_icon;
+            this.hideInTaskbarToolStripMenuItem.Name = "hideInTaskbarToolStripMenuItem";
+            resources.ApplyResources(this.hideInTaskbarToolStripMenuItem, "hideInTaskbarToolStripMenuItem");
+            this.hideInTaskbarToolStripMenuItem.CheckStateChanged += new System.EventHandler(this.hideInTaskbarToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            // 
+            // preferencesToolStripMenuItem
+            // 
+            this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
+            resources.ApplyResources(this.preferencesToolStripMenuItem, "preferencesToolStripMenuItem");
+            this.preferencesToolStripMenuItem.Click += new System.EventHandler(this.preferencesToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.creditsToolStripMenuItem,
+            this.howToUseToolStripMenuItem});
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
+            // 
             // creditsToolStripMenuItem
             // 
             resources.ApplyResources(this.creditsToolStripMenuItem, "creditsToolStripMenuItem");
@@ -1530,6 +1569,20 @@
             this.howToUseToolStripMenuItem.Name = "howToUseToolStripMenuItem";
             this.howToUseToolStripMenuItem.Click += new System.EventHandler(this.HowToUseToolStripMenuItem_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.AllowDrop = true;
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.menuStrip1.Name = "menuStrip1";
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            // 
             // epsexecForm
             // 
             this.AllowDrop = true;
@@ -1537,7 +1590,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.main);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.HelpButton = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
@@ -1545,6 +1597,8 @@
             this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.epsexecForm_HelpButtonClicked);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EpsexecForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResizeBegin += new System.EventHandler(this.epsexecForm_ResizeBegin);
+            this.ResizeEnd += new System.EventHandler(this.epsexecForm_ResizeEnd);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.any_DragEnter);
             this.main.ResumeLayout(false);
             this.homeTab.ResumeLayout(false);
@@ -1579,7 +1633,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ttsDelayBox)).EndInit();
             this.scriptTab.ResumeLayout(false);
             this.scriptTab.PerformLayout();
-            this.MoreTab.ResumeLayout(false);
+            this.remoteConsoleTab.ResumeLayout(false);
             this.networkTab.ResumeLayout(false);
             this.networkTab.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -1655,9 +1709,6 @@
         public System.Windows.Forms.NumericUpDown delayBeforeBox;
         public System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem configToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem creditsToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem howToUseToolStripMenuItem;
@@ -1717,18 +1768,27 @@
         public System.Windows.Forms.NumericUpDown screenHeightBox;
         public System.Windows.Forms.Label label29;
         public System.Windows.Forms.NumericUpDown screenWidthBox;
-        public System.Windows.Forms.TabPage MoreTab;
+        public System.Windows.Forms.TabPage remoteConsoleTab;
         public System.Windows.Forms.Button remoteConsoleBtn;
         public System.Windows.Forms.TabPage scriptTab;
         public System.Windows.Forms.TextBox scriptBox;
         public System.Windows.Forms.Button runScriptBtn;
         public System.Windows.Forms.Button docsScriptBtn;
         public System.Windows.Forms.ToolStripMenuItem hideInTaskbarToolStripMenuItem;
-        private System.Windows.Forms.CheckBox showPassBox;
         public System.Windows.Forms.Button muteProcessBtn;
         public System.Windows.Forms.Button unmuteProcessBtn;
-        private System.Windows.Forms.Button processVolumeBtn;
         public System.Windows.Forms.NumericUpDown volumeProcessBox;
-        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        public System.Windows.Forms.Label paexecAboutLabel;
+        public System.Windows.Forms.Button downloadPaexecBtn;
+        public System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
+        public System.Windows.Forms.ToolTip toolTip1;
+        public System.Windows.Forms.CheckBox showPassBox;
+        public System.Windows.Forms.Button processVolumeBtn;
+        public System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        public System.Windows.Forms.Button connectBtn;
+        public System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        public System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        public System.Windows.Forms.ToolStripMenuItem preferencesToolStripMenuItem;
     }
 }

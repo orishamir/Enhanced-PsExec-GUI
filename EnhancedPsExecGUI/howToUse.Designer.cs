@@ -56,6 +56,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.PaExecLabel = new System.Windows.Forms.LinkLabel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -298,7 +301,7 @@
             this.nircmdLabel.AutoSize = true;
             this.nircmdLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.nircmdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.nircmdLabel.Location = new System.Drawing.Point(673, 737);
+            this.nircmdLabel.Location = new System.Drawing.Point(764, 737);
             this.nircmdLabel.Name = "nircmdLabel";
             this.nircmdLabel.Size = new System.Drawing.Size(72, 22);
             this.nircmdLabel.TabIndex = 26;
@@ -313,25 +316,65 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label12.Location = new System.Drawing.Point(100, 737);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(576, 22);
+            this.label12.Size = new System.Drawing.Size(670, 22);
             this.label12.TabIndex = 25;
-            this.label12.Text = "WARNING: There are multiple features that require you to have";
+            this.label12.Text = "WARNING: There are multiple features that require the Target PC to have";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label19.Location = new System.Drawing.Point(738, 737);
+            this.label19.Location = new System.Drawing.Point(833, 737);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(217, 22);
             this.label19.TabIndex = 27;
             this.label19.Text = "On the remote machine";
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            // 
+            // PaExecLabel
+            // 
+            this.PaExecLabel.AutoSize = true;
+            this.PaExecLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PaExecLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.PaExecLabel.Location = new System.Drawing.Point(764, 759);
+            this.PaExecLabel.Name = "PaExecLabel";
+            this.PaExecLabel.Size = new System.Drawing.Size(78, 22);
+            this.PaExecLabel.TabIndex = 29;
+            this.PaExecLabel.TabStop = true;
+            this.PaExecLabel.Text = "PaExec";
+            this.toolTip1.SetToolTip(this.PaExecLabel, "https://www.poweradmin.com/paexec/");
+            this.PaExecLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.PaExecLabel_LinkClicked);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label21.Location = new System.Drawing.Point(100, 759);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(670, 22);
+            this.label21.TabIndex = 30;
+            this.label21.Text = "WARNING: There are multiple features that require the Target PC to have";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label20.Location = new System.Drawing.Point(848, 759);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(217, 22);
+            this.label20.TabIndex = 31;
+            this.label20.Text = "On the remote machine";
             // 
             // howToUse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1295, 787);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.PaExecLabel);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.nircmdLabel);
             this.Controls.Add(this.label12);
@@ -357,6 +400,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logoHowToUseLbl);
+            this.Controls.Add(this.label20);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "howToUse";
@@ -397,5 +441,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.LinkLabel PaExecLabel;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
     }
 }

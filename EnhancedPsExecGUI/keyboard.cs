@@ -29,7 +29,7 @@ namespace EnhancedPsExec
             Console.WriteLine("key: " + (int)keyData);
             if ((int)keyData == 131089) {
                 ctrlBtn_Click(new object(), new EventArgs());
-                return false;
+                return true;
             }
             
             if (keyData == Keys.Left || keyData == Keys.Right || keyData == Keys.Down || keyData == Keys.Up)
@@ -48,13 +48,13 @@ namespace EnhancedPsExec
                     b.Name = "downBtn";
 
                 arrowsBtn_click(b, new EventArgs());
-                return false;
+                return true;
             }
             if(keyData == Keys.LWin || keyData == Keys.RWin)
             {
                 winKey_Click(new object(), new EventArgs());
                 this.Focus();
-                return false;
+                return true;
             }
             
             switch (keyData)
@@ -65,8 +65,7 @@ namespace EnhancedPsExec
 
                 case Keys.Tab:
                     tabKey_Click(new object(), new EventArgs());
-                    return false;
-                    break;
+                    return true;
 
                 case Keys.Escape:
                     escBtn_Click(new object(), new EventArgs());
@@ -74,12 +73,11 @@ namespace EnhancedPsExec
 
                 case Keys.Space:
                     return false;
-                    break;
                 
                 case Keys.Alt:
                     altBtn_Click(new object(), new EventArgs());
-                    
                     break;
+
                 case Keys.Back:
                     try
                     {
@@ -100,11 +98,7 @@ namespace EnhancedPsExec
                     catch (ArgumentOutOfRangeException) { }
                     catch (IndexOutOfRangeException) { }
 
-                    return false;
-                    break;
-                
-                
-
+                    return true;
             }
             
             return base.ProcessCmdKey(ref msg, keyData);
@@ -525,21 +519,25 @@ namespace EnhancedPsExec
             Console.WriteLine("sendmeFR: " + sendMeFR);
             
             focusThis.Focus();
-            Thread.Sleep(5000);
-            var proc2 = new Process
+            if (mainForm.injectedCmdProc == null)
             {
-                StartInfo = new ProcessStartInfo
+                var proc2 = new Process
                 {
-                    FileName = "psexec.exe",
-                    Arguments = $"\\\\{mainForm.ipBox.Text} -u {mainForm.usrBox.Text} -p {mainForm.passwordBox.Text} -s -i -accepteula nircmd.exe sendkeypress {sendMeFR}",
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
+                    StartInfo = new ProcessStartInfo
+                    {
+                        FileName = "psexec.exe",
+                        Arguments = $"\\\\{mainForm.ipBox.Text} -u {mainForm.usrBox.Text} -p {mainForm.passwordBox.Text} -s -i -accepteula nircmd.exe sendkeypress {sendMeFR}",
+                        UseShellExecute = false,
+                        RedirectStandardOutput = true,
 
-                    CreateNoWindow = true
-                }
-            };
-            proc2.Start();
-            proc2.Close();
+                        CreateNoWindow = true
+                    }
+                };
+                proc2.Start();
+                proc2.Close();
+            }
+            else
+                mainForm.injectedCmdProc.StandardInput.WriteLine($"paexec.exe -s -i -accepteula nircmd.exe sendkeypress {sendMeFR}");
         }
 
         private void winKey_Click(object sender, EventArgs e)

@@ -33,7 +33,19 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_7A2A5D717EA550519B5B1E64CAF5C5B5"
+        "OwnerKey" = "8:_16D78F3B37D546E0973B101AD9BF8FED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_7D502DC7C51649F7B40554B355305064"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8445DEFAA83F445FB9B9533AA0E9E9CA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -51,7 +63,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_CDAD6C636CE94B38B425EAF37821DF76"
+        "MsmKey" = "8:_CE515210112A4CEE8DC766E32F7E2F9B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -63,8 +75,20 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_FAA46E714E1D433AA4563222EB1E5BBA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_16D78F3B37D546E0973B101AD9BF8FED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_7A2A5D717EA550519B5B1E64CAF5C5B5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -145,35 +169,6 @@
     {
         "CustomAction"
         {
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_51E6C70524804FEEAA0E692E228423F9"
-            {
-            "Name" = "8:Run after installation"
-            "Condition" = "8:"
-            "Object" = "8:_16D78F3B37D546E0973B101AD9BF8FED"
-            "FileType" = "3:2"
-            "InstallAction" = "3:2"
-            "Arguments" = "8:"
-            "EntryPoint" = "8:"
-            "Sequence" = "3:1"
-            "Identifier" = "8:_DF72B42B_5CA7_40DA_8007_94CED8C16476"
-            "InstallerClass" = "11:FALSE"
-            "CustomActionData" = "8:"
-            "Run64Bit" = "11:TRUE"
-            }
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_66993313AFAA4EF4ADDA6C57C273BC9C"
-            {
-            "Name" = "8:uninstall"
-            "Condition" = "8:"
-            "Object" = "8:_CDAD6C636CE94B38B425EAF37821DF76"
-            "FileType" = "3:4"
-            "InstallAction" = "3:4"
-            "Arguments" = "8:"
-            "EntryPoint" = "8:"
-            "Sequence" = "3:1"
-            "Identifier" = "8:_5D8A5BC2_20F8_4CF4_A9C6_CBAE2DE8B8C9"
-            "InstallerClass" = "11:FALSE"
-            "CustomActionData" = "8:"
-            }
         }
         "DefaultFeature"
         {
@@ -204,6 +199,11 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
+                    "_1611B86D1A764967952B54CC4491939F"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:515"
+                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -243,12 +243,63 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7A2A5D717EA550519B5B1E64CAF5C5B5"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:INIFileParser, Version=2.5.2.0, Culture=neutral, PublicKeyToken=79af7b307b65cf3c, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_7A2A5D717EA550519B5B1E64CAF5C5B5"
+                    {
+                    "Name" = "8:INIFileParser.dll"
+                    "Attributes" = "3:515"
+                    }
+                }
+            "SourcePath" = "8:INIFileParser.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_1E4DC9BCE628423BB15AFE2F63665E84"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:TRUE"
+            "Hidden" = "11:TRUE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7D502DC7C51649F7B40554B355305064"
             {
             "SourcePath" = "8:C:\\Windows\\System32\\PsExec.exe"
             "TargetName" = "8:PsExec.exe"
             "Tag" = "8:"
             "Folder" = "8:_ADC8A5FFB9CA48D9AD78AB558F095BDA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8445DEFAA83F445FB9B9533AA0E9E9CA"
+            {
+            "SourcePath" = "8:D:\\Downloads\\paexec.exe"
+            "TargetName" = "8:paexec.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_D8F0FACDF1944F4C98AB1CC83DBB018F"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -272,8 +323,8 @@
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
+            "ReadOnly" = "11:TRUE"
+            "Hidden" = "11:TRUE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
@@ -303,17 +354,17 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CDAD6C636CE94B38B425EAF37821DF76"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CE515210112A4CEE8DC766E32F7E2F9B"
             {
-            "SourcePath" = "8:..\\EnhancedPsExecGUI\\uninstall.vbs"
-            "TargetName" = "8:uninstall.vbs"
+            "SourcePath" = "8:..\\EnhancedPsExecGUI\\bin\\x64\\Release\\config\\config.ini"
+            "TargetName" = "8:config.ini"
             "Tag" = "8:"
-            "Folder" = "8:_1E4DC9BCE628423BB15AFE2F63665E84"
+            "Folder" = "8:_1273D8270F484E29AEB1E509E21B9734"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
-            "ReadOnly" = "11:TRUE"
-            "Hidden" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
@@ -332,8 +383,28 @@
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
+            "ReadOnly" = "11:TRUE"
             "Hidden" = "11:TRUE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FAA46E714E1D433AA4563222EB1E5BBA"
+            {
+            "SourcePath" = "8:D:\\Downloads\\paexec.exe"
+            "TargetName" = "8:paexec.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_ADC8A5FFB9CA48D9AD78AB558F095BDA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
@@ -382,6 +453,17 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_1273D8270F484E29AEB1E509E21B9734"
+                    {
+                    "Name" = "8:config"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_21A4235B2DAE45DA9E7113DE623E1998"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_994AC514B2E442DE91973D7BDEB88B1F"
@@ -456,7 +538,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Enhanced-PsExec"
         "ProductCode" = "8:{A52EF195-19A2-4AB8-9F8D-2E2B8E4FF5D6}"
-        "PackageCode" = "8:{EBA32898-3724-4F20-8F51-C819EAC0FF50}"
+        "PackageCode" = "8:{677848E3-FF78-4E6F-A4BA-208B31D27380}"
         "UpgradeCode" = "8:{8CD340A1-0FA4-4E12-B05C-4E6922648986}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

@@ -33,7 +33,7 @@
             this.outputBox = new System.Windows.Forms.RichTextBox();
             this.clearOutputBoxBtn = new System.Windows.Forms.Button();
             this.fontBox = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
+            this.fontSizeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fontBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +64,7 @@
             this.outputBox.Size = new System.Drawing.Size(862, 525);
             this.outputBox.TabIndex = 4;
             this.outputBox.Text = "";
+            this.outputBox.WordWrap = false;
             this.outputBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.outputBox_LinkClicked);
             // 
             // clearOutputBoxBtn
@@ -97,15 +98,15 @@
             0});
             this.fontBox.ValueChanged += new System.EventHandler(this.fontBox_ValueChanged);
             // 
-            // label1
+            // fontSizeLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.Location = new System.Drawing.Point(883, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 25);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Font Size:";
+            this.fontSizeLabel.AutoSize = true;
+            this.fontSizeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.fontSizeLabel.Location = new System.Drawing.Point(883, 44);
+            this.fontSizeLabel.Name = "fontSizeLabel";
+            this.fontSizeLabel.Size = new System.Drawing.Size(101, 25);
+            this.fontSizeLabel.TabIndex = 7;
+            this.fontSizeLabel.Text = "Font Size:";
             // 
             // RemoteConsole
             // 
@@ -113,7 +114,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 617);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.fontSizeLabel);
             this.Controls.Add(this.fontBox);
             this.Controls.Add(this.clearOutputBoxBtn);
             this.Controls.Add(this.outputBox);
@@ -122,6 +123,9 @@
             this.Name = "RemoteConsole";
             this.ShowIcon = false;
             this.Text = "RemoteConsole";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RemoteConsole_FormClosing);
+            this.ResizeBegin += new System.EventHandler(this.RemoteConsole_ResizeBegin);
+            this.ResizeEnd += new System.EventHandler(this.RemoteConsole_ResizeEnd);
             ((System.ComponentModel.ISupportInitialize)(this.fontBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -134,6 +138,6 @@
         private System.Windows.Forms.RichTextBox outputBox;
         public System.Windows.Forms.Button clearOutputBoxBtn;
         private System.Windows.Forms.NumericUpDown fontBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label fontSizeLabel;
     }
 }

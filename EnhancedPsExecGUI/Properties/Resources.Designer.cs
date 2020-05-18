@@ -93,6 +93,16 @@ namespace EnhancedPsExec.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap invisible_icon {
+            get {
+                object obj = ResourceManager.GetObject("invisible_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap newformimg {
             get {
                 object obj = ResourceManager.GetObject("newformimg", resourceCulture);

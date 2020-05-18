@@ -33,8 +33,6 @@ namespace EnhancedPsExec
                 }
                 catch (System.Net.Sockets.SocketException)
                 {
-                    if (!canImport)
-                        canImport = false;
                     networkPCsBox.Items.Add($"{ip} Status: Closed");
                 }
             }
@@ -65,7 +63,7 @@ namespace EnhancedPsExec
             
             foreach (string line in lines.Split('\n'))
             {
-                if (line.Length < 30)
+                if (line.Length < 20 || (!line.Trim().StartsWith("10.") && !line.Trim().StartsWith("192.168") && !line.Trim().StartsWith("172.")) || line.Trim().Split(' ')[0].EndsWith(".255"))
                     continue;
 
                 string newLine = line.Substring(2);
@@ -94,6 +92,11 @@ namespace EnhancedPsExec
 
                 networkPCsBox.SelectedIndices.Add(i);
             }
+        }
+
+        private void networkPCsBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

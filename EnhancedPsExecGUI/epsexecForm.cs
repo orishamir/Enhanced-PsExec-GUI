@@ -8,6 +8,7 @@ using System.IO;
 using System.Threading;
 using System.Speech.Recognition;
 using EnhancedPsExec;
+using System.Net.NetworkInformation;
 
 namespace EnhancedPsExecGUI
 {
@@ -20,45 +21,77 @@ namespace EnhancedPsExecGUI
             ContextMenuStrip s = new ContextMenuStrip();
 
             // add one right click menu item named as hello           
-            ToolStripMenuItem load = new ToolStripMenuItem();
-            ToolStripMenuItem save = new ToolStripMenuItem();
-            alwaysOnTop  = new ToolStripMenuItem();
-            load.Text = "Load";
-            load.Image = this.loadSetting.Image;
+            ToolStripMenuItem loadRightclick = new ToolStripMenuItem();
+            ToolStripMenuItem saveRightclick = new ToolStripMenuItem();
+            ToolStripMenuItem hideInBarRightclick = new ToolStripMenuItem();
+            alwaysOnTopRightclick = new ToolStripMenuItem();
+            loadRightclick.Text = "Load";
+            loadRightclick.Image = this.loadSetting.Image;
 
-            save.Text = "Save";
-            save.Image = this.saveToolStripMenuItem.Image;
+            saveRightclick.Text = "Save";
+            saveRightclick.Image = this.saveToolStripMenuItem.Image;
 
-            alwaysOnTop.Text = "Always On Top";
-            alwaysOnTop.Image = this.alwaysOnTopToolStripMenuItem.Image;
+            alwaysOnTopRightclick.Text = "Always On Top";
+            alwaysOnTopRightclick.Image = this.alwaysOnTopToolStripMenuItem.Image;
+
+            hideInBarRightclick.Text = "Hide In Taskbar";
+            hideInBarRightclick.Image = this.hideInTaskbarToolStripMenuItem.Image;
+
             // add the clickevent of hello item
-            load.Click += (o, e) => loadToolStripMenuItem.PerformClick();
-            save.Click += (o, e) => saveToolStripMenuItem.PerformClick();
-            alwaysOnTop.Click += (o, e) =>
+            loadRightclick.Click += (o, e) => loadToolStripMenuItem.PerformClick();
+            saveRightclick.Click += (o, e) => saveToolStripMenuItem.PerformClick();
+            alwaysOnTopRightclick.Click += (o, e) =>
             {
-                this.TopMost = !this.TopMost;
-                alwaysOnTop.Checked = this.TopMost;
-                alwaysOnTopToolStripMenuItem.Checked = this.TopMost;
+                alwaysOnTopToolStripMenuItem.PerformClick();
+                //this.TopMost = !this.TopMost;
+                //alwaysOnTopRightclick.Checked = this.TopMost;
+                //alwaysOnTopToolStripMenuItem.Checked = this.TopMost;
+            };
+            hideInBarRightclick.Click += (o, e) =>
+            {
+                hideInTaskbarToolStripMenuItem.PerformClick();
+                //this.ShowInTaskbar = !this.ShowInTaskbar;
+                //hideInBarRightclick.Checked = !this.ShowInTaskbar;
+                //hideInTaskbarToolStripMenuItem.Checked = !this.ShowInTaskbar;
             };
             // add the item in right click menu
-            s.Items.Add(load);
-            s.Items.Add(save);
-            s.Items.Add(alwaysOnTop);
+            s.Items.Add(loadRightclick);
+            s.Items.Add(saveRightclick);
+            s.Items.Add(alwaysOnTopRightclick);
+            s.Items.Add(hideInBarRightclick);
             // attach the right click menu with form
             this.ContextMenuStrip = s;
         }
-        ToolStripMenuItem alwaysOnTop;
-        string IP = "";
-        string username = "";
-        string password = "";
-        string fileName = "c21f969b5f03d33d43e04f8f136e7682";
-        bool fileJustGotEdited = false;
-        SpeechRecognitionEngine recog = new SpeechRecognitionEngine();
+        ToolStripMenuItem alwaysOnTopRightclick;
+        public string IP = "";
+        public string username = "";
+        public string password = "";
+        public string fileName = "c21f969b5f03d33d43e04f8f136e7682";
+        public bool fileJustGotEdited = false;
+        public SpeechRecognitionEngine recog = new SpeechRecognitionEngine();
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(epsexecForm));
-        keyboard keyboardForm = null;
+
+        public keyboard keyboardForm = null;
         public scriptingHowTo howto;
+
+        public Process injectedCmdProc;
+
+        // resize
+        public int incByX = 0;
+        public int incByY = 0;
+
+
+        public bool ignoreNotConnected = false;
+        public bool ignoreIpEmpty = false;
+        public PrefForm prefForm;
+        public string configPath = "config\\config.ini";
+
+        public string connectedOutputStr = "";
         private void Form1_Load(object sender, EventArgs e)
         {
+            prefForm = new PrefForm(this);
+            
+            // ---
             recog.LoadGrammarAsync(new DictationGrammar());
             recog.SetInputToDefaultAudioDevice();
             recog.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recog_SpeechRecognized);
@@ -154,6 +187,8 @@ namespace EnhancedPsExecGUI
                 if (run)
                     RunBtn_Click(sender, e);
             }
+
+            
             string[] passedInArgs = Environment.GetCommandLineArgs();
 
             if (passedInArgs.Length > 1)
@@ -164,11 +199,49 @@ namespace EnhancedPsExecGUI
                 loadFile(fileName);
             }
             fileJustGotEdited = false;
+
+            ///////////////////////////////////////////
+            ///// get configuration
+            if (!File.Exists(configPath))
+            {
+                File.WriteAllLines(configPath, new string[]{
+                    "; Settings",
+                    "; Feel free to edit this",
+                    "; Do not get rid of any setting.set it to true / false",
+                    "",
+                    "ignore_ip_warn = true",
+                    "ignore_not_connected_warn = false",
+                    "always_on_top = false",
+                    "hide_in_taskbar = false"
+                    });
+            }
+
+            IniParser.FileIniDataParser parser = new IniParser.FileIniDataParser();
+            
+            IniParser.Model.IniData data = parser.ReadFile(configPath);
+
+            //this.ignoreIpEmpty = Boolean.Parse(data.GetKey("ignore_ip_warn"));
+            //this.ignoreNotConnected = Boolean.Parse(data.GetKey("ignore_not_connected_warn"));
+
+            
+            this.ignoreIpEmpty = Boolean.Parse(data.GetKey("ignore_ip_warn"));
+            this.ignoreNotConnected = Boolean.Parse(data.GetKey("ignore_not_connected_warn"));
+            //Thread.Sleep(50000);
+            //this.alwaysOnTopToolStripMenuItem.Checked = Boolean.Parse(data.GetKey("always_on_top"));
+            
+            this.TopMost = Boolean.Parse(data.GetKey("always_on_top"));
+
+            this.hideInTaskbarToolStripMenuItem.Checked = Boolean.Parse(data.GetKey("hide_in_taskbar"));
+            this.ShowInTaskbar = !hideInTaskbarToolStripMenuItem.Checked;
+            
         }
 
-        // [DllImport("kernel32.dll", SetLastError = true)]
-        // [return: MarshalAs(UnmanagedType.Bool)]
-        // static extern bool AllocConsole();
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Tab || keyData == (Keys.Shift | Keys.Tab))
+                return false; // STOP return true indicates that it had been handled.
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
         private void RunBtn_Click(object sender, EventArgs e)
         {
 
@@ -200,7 +273,6 @@ namespace EnhancedPsExecGUI
             proc.Close();
         }
 
-
         private void TerminateChromeBtn_Click(object sender, EventArgs e)
         {
             IP = ipBox.Text;
@@ -208,20 +280,26 @@ namespace EnhancedPsExecGUI
             password = passwordBox.Text;
 
             ushort delay = (ushort)delayTerminate.Value;
-            var proc = new Process
+            if (injectedCmdProc == null)
             {
-                StartInfo = new ProcessStartInfo
+                var proc = new Process
                 {
-                    FileName = "psexec.exe",
-                    Arguments = $"\\\\{IP} -u {username} -p {password} cmd.exe /c taskkill /F /IM chrome.exe /T",
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
-                    CreateNoWindow = true
-                }
-            };
-            Thread.Sleep((ushort)delayTerminate.Value);
-            proc.Start();
-            proc.Close();
+                    StartInfo = new ProcessStartInfo
+                    {
+                        FileName = "psexec.exe",
+                        Arguments = $"\\\\{IP} -u {username} -p {password} -s cmd.exe /c timeout /t {delay} & taskkill /F /IM chrome.exe /T",
+                        UseShellExecute = false,
+                        RedirectStandardOutput = true,
+                        CreateNoWindow = true
+                    }
+                };
+                proc.Start();
+                proc.Close();
+            }
+            else
+                injectedCmdProc.StandardInput.WriteLine($"timeout /t {delay} && taskkill /F /IM chrome.exe /T");
+            Thread.Sleep(1500);
+            Console.WriteLine(connectedOutputStr);
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -229,12 +307,10 @@ namespace EnhancedPsExecGUI
             this.Close();
         }
 
-
         private void CreditsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CreditsForm creditsFormBox = new CreditsForm(this);
             creditsFormBox.Show();
-
         }
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -482,103 +558,137 @@ namespace EnhancedPsExecGUI
 
         private void MuteLabel_Click(object sender, EventArgs e)
         {
-
-            var proc = new Process
+            if (injectedCmdProc == null)
             {
-                StartInfo = new ProcessStartInfo
+                var proc = new Process
                 {
-                    FileName = "psexec.exe",
-                    Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -d -s -accepteula nircmd.exe cmdwait {soundDelayBox.Value} nircmd mutesysvolume 1",
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
-                    CreateNoWindow = true
-                }
-            };
-            proc.Start();
-            proc.Close();
+                    StartInfo = new ProcessStartInfo
+                    {
+                        FileName = "psexec.exe",
+                        Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -d -s -accepteula nircmd.exe cmdwait {soundDelayBox.Value} nircmd mutesysvolume 1",
+                        UseShellExecute = false,
+                        RedirectStandardOutput = true,
+                        CreateNoWindow = true
+                    }
+                };
+                proc.Start();
+                proc.Close();
+            }else
+                injectedCmdProc.StandardInput.WriteLine($"nircmd.exe cmdwait {soundDelayBox.Value} nircmd mutesysvolume 1");
 
         }
 
         private void UnmuteLabel_Click(object sender, EventArgs e)
         {
-            var proc = new Process
+            if (injectedCmdProc == null)
             {
-                StartInfo = new ProcessStartInfo
+                var proc = new Process
                 {
-                    FileName = "psexec.exe",
-                    Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -d -s -accepteula nircmd.exe cmdwait {soundDelayBox.Value} nircmd mutesysvolume 0",
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
-                    CreateNoWindow = true
-                }
-            };
-            proc.Start();
-            proc.Close();
+                    StartInfo = new ProcessStartInfo
+                    {
+                        FileName = "psexec.exe",
+                        Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -d -s -accepteula nircmd.exe cmdwait {soundDelayBox.Value} nircmd mutesysvolume 0",
+                        UseShellExecute = false,
+                        RedirectStandardOutput = true,
+                        CreateNoWindow = true
+                    }
+                };
+                proc.Start();
+                proc.Close();
+            }else
+                injectedCmdProc.StandardInput.WriteLine($"nircmd.exe cmdwait {soundDelayBox.Value} nircmd mutesysvolume 0");
         }
 
         private void SoundRunBtn_Click(object sender, EventArgs e)
         {
-            var proc = new Process
+            if (injectedCmdProc == null)
             {
-                StartInfo = new ProcessStartInfo
+                
+                var proc = new Process
                 {
-                    FileName = "psexec.exe",
-                    Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -d -s -accepteula nircmd.exe cmdwait {soundDelayBox.Value} nircmd setsysvolume {655 * volumeBox.Value}",
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
-                    CreateNoWindow = true
-                }
-            };
-            proc.Start();
-            proc.Close();
+                    StartInfo = new ProcessStartInfo
+                    {
+                        FileName = "psexec.exe",
+                        Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -d -s -accepteula nircmd.exe cmdwait {soundDelayBox.Value} nircmd setsysvolume {655 * volumeBox.Value}",
+                        UseShellExecute = false,
+                        RedirectStandardOutput = true,
+                        CreateNoWindow = true
+                    }
+                };
+                proc.Start();
+                proc.Close();
+            }else
+                injectedCmdProc.StandardInput.WriteLine($"nircmd.exe cmdwait {soundDelayBox.Value} nircmd.exe setsysvolume {655 * volumeBox.Value}");
+        }
+        private void RunBeepSoundBtn_Click(object sender, EventArgs e)
+        {
+            // if not connected
+            if (injectedCmdProc == null) {
+
+                var proc2 = new Process
+                {
+                    StartInfo = new ProcessStartInfo
+                    {
+                        FileName = "psexec.exe",
+                        Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -d -i -accepteula nircmd.exe beep {frequencySoundBox.Value} {durationSoundBox.Value}",
+                        UseShellExecute = false,
+                        RedirectStandardOutput = true,
+
+                        CreateNoWindow = true
+                    }
+                };
+                proc2.Start();
+                proc2.Close();
+             }else
+                injectedCmdProc.StandardInput.WriteLine($"paexec.exe -accepteula -d -i nircmd.exe beep {frequencySoundBox.Value} {durationSoundBox.Value}");
         }
 
         private void GetReloadBtn_Click(object sender, EventArgs e)
         {
-            fileJustGotEdited = true;
-            // get processes
+            //if (injectedCmdProc == null)
+            //  return;
+            string filter = "";
+
+            if (filterTextBox.Text.Trim() != "")
+            {
+                filter = " | findstr";
+                if (caseInsensitiveBox.Checked)
+                    filter += " /I";
+                if (excludeBox.Checked)
+                    filter += " /V";
+                filter += $" {filterTextBox.Text}";
+            }
+
+            connectedOutputStr = "";
+            injectedCmdProc.StandardInput.WriteLine("tasklist" + filter);
+            
+            Console.WriteLine("command: " + "tasklist" + filter);
+            Thread.Sleep(750);
+            string output = "";
+            bool start = false;
+            if (filterTextBox.Text.Trim() != "")
+                start = true;
+
+            foreach (string str in connectedOutputStr.Split('\n'))
+            {
+                if (str.StartsWith("Image Name"))
+                    start = true;
+
+                if (start)
+                    if (str.Length > 2)
+                        output += str + "\n";
+            }
+
             if (autoClearBox.Checked)
                 processesBox.Items.Clear();
 
-            string filterTextRule = "";
-            if (filterTextBox.Text != "")
-            {
-                filterTextRule += "| findstr";
-                if (caseInsensitiveBox.Checked)
-                    filterTextRule += " /I ";
-                if (excludeBox.Checked)
-                    filterTextRule += " /V ";
-                else
-                {
-                    processesBox.Items.Add("\n\nProcess Name                  PID");
-                    processesBox.Items.Add("======================================================");
-                }
-                filterTextRule += $" \"{filterTextBox.Text}\" ";
-
-            }
-            var proc = new Process
-            {
-                StartInfo = new ProcessStartInfo
-                {
-                    FileName = "cmd.exe",
-                    //Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -i cmd.exe /c tasklist {filterConditions} & echo. & echo Copy your process(es) & pause >nul",
-                    //Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s tasklist {filterTextRule}",
-                    Arguments = $"/c psexec.exe \\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -nobanner -accepteula tasklist {filterTextRule}",
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
-
-                    CreateNoWindow = true
-                }
-            };
-            proc.Start();
-
-            while (!proc.StandardOutput.EndOfStream)
-            {
-                string line = proc.StandardOutput.ReadLine();
-                if (line.Length > 20 /* && line != "\n" && line != "PsExec v2.2 - Execute processes remotely" && line != "Copyright (C) 2001-2016 Mark Russinovich" && line != "Sysinternals - www.sysinternals.com"*/)
-                    processesBox.Items.Add(line);
-            }
-            proc.Close();
+            // add to list
+            foreach (string line in output.Split('\n'))
+                processesBox.Items.Add(line);
+            
+            // rem
+            if (filterTextBox.Text.Trim() != "")
+                processesBox.Items.RemoveAt(0);
             processesBox.Visible = true;
             processesLabel.Visible = true;
             killBtn.Enabled = true;
@@ -591,22 +701,28 @@ namespace EnhancedPsExecGUI
             foreach (string lineTaskToKill in processesBox.SelectedItems)
             {
                 string taskToKill = lineTaskToKill.Split(' ')[0];
-
-                var proc2 = new Process
-                {
-                    StartInfo = new ProcessStartInfo
-                    {
-                        FileName = "psexec.exe",
-                        Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s cmd.exe /c taskkill /F /IM {taskToKill}",
-                        UseShellExecute = false,
-                        RedirectStandardOutput = true,
-
-                        CreateNoWindow = true
-                    }
-                };
                 Thread.Sleep((ushort)processDelay.Value);
-                proc2.Start();
-                proc2.Close();
+                if (injectedCmdProc == null)
+                {
+
+                    var proc2 = new Process
+                    {
+                        StartInfo = new ProcessStartInfo
+                        {
+                            FileName = "psexec.exe",
+                            Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s cmd.exe /c taskkill /F /IM {taskToKill} /T",
+                            UseShellExecute = false,
+                            RedirectStandardOutput = true,
+
+                            CreateNoWindow = true
+                        }
+                    };
+
+                    proc2.Start();
+                    proc2.Close();
+                }
+                else
+                    this.injectedCmdProc.StandardInput.WriteLine($"start cmd.exe /c taskkill /F /IM {taskToKill} /T");
 
             }
 
@@ -666,20 +782,24 @@ namespace EnhancedPsExecGUI
             else if (middleMouseBtn.Checked)
                 leftRightMiddle = "middle";
 
-            var proc2 = new Process
+            if (injectedCmdProc == null)
             {
-                StartInfo = new ProcessStartInfo
+                var proc2 = new Process
                 {
-                    FileName = "psexec.exe",
-                    Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -i -accepteula nircmd.exe cmdwait {clickDelayBox.Value} sendmouse {leftRightMiddle} {buttonType}",
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
+                    StartInfo = new ProcessStartInfo
+                    {
+                        FileName = "psexec.exe",
+                        Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -i -accepteula nircmd.exe cmdwait {clickDelayBox.Value} sendmouse {leftRightMiddle} {buttonType}",
+                        UseShellExecute = false,
+                        RedirectStandardOutput = true,
 
-                    CreateNoWindow = true
-                }
-            };
-            proc2.Start();
-            proc2.Close();
+                        CreateNoWindow = true
+                    }
+                };
+                proc2.Start();
+                proc2.Close();
+            } else
+                this.injectedCmdProc.StandardInput.WriteLine($"paexec.exe -s -i -accepteula nircmd.exe cmdwait {clickDelayBox.Value} sendmouse {leftRightMiddle} {buttonType}");
         }
 
         private void MoveBtn_Click(object sender, EventArgs e)
@@ -687,21 +807,26 @@ namespace EnhancedPsExecGUI
             string moveX = moveMouseXBox.Text;
             string moveY = moveMouseYBox.Text;
 
-            var proc2 = new Process
+            // if not connected
+            if (injectedCmdProc == null)
             {
-                StartInfo = new ProcessStartInfo
+                var proc2 = new Process
                 {
-                    FileName = "psexec.exe",
-                    Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -i -accepteula nircmd.exe cmdwait {moveMouseDelayBox.Value} setcursor {moveX} {moveY}",
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
+                    StartInfo = new ProcessStartInfo
+                    {
+                        FileName = "psexec.exe",
+                        Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -i -accepteula nircmd.exe cmdwait {moveMouseDelayBox.Value} setcursor {moveX} {moveY}",
+                        UseShellExecute = false,
+                        RedirectStandardOutput = true,
 
-                    CreateNoWindow = true
-                }
-            };
-
-            proc2.Start();
-            proc2.Close();
+                        CreateNoWindow = true
+                    }
+                };
+                proc2.Start();
+                proc2.Close();
+            }
+            else
+                this.injectedCmdProc.StandardInput.WriteLine($"paexec.exe -s -i -accepteula nircmd.exe cmdwait {moveMouseDelayBox.Value} setcursor {moveX} {moveY}");
         }
 
         private void SendKeyboardTextBtn_Click(object sender, EventArgs e)
@@ -769,20 +894,25 @@ namespace EnhancedPsExecGUI
             sendMe = sendMe.Replace("\r", "");
             //Console.WriteLine(sendMe);
 
-            var proc2 = new Process
+            if (injectedCmdProc == null)
             {
-                StartInfo = new ProcessStartInfo
+                var proc2 = new Process
                 {
-                    FileName = "psexec.exe",
-                    Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -i -accepteula nircmd.exe cmdwait {sendKeyboardDelayBox.Value} sendkeypress {sendMe}",
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
+                    StartInfo = new ProcessStartInfo
+                    {
+                        FileName = "psexec.exe",
+                        Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -i -accepteula nircmd.exe cmdwait {sendKeyboardDelayBox.Value} sendkeypress {sendMe}",
+                        UseShellExecute = false,
+                        RedirectStandardOutput = true,
 
-                    CreateNoWindow = true
-                }
-            };
-            proc2.Start();
-            proc2.Close();
+                        CreateNoWindow = true
+                    }
+                };
+                proc2.Start();
+                proc2.Close();
+            }
+            else
+                injectedCmdProc.StandardInput.WriteLine($"paexec.exe -d -s -i -accepteula nircmd.exe cmdwait {sendKeyboardDelayBox.Value} sendkeypress {sendMe}");
         }
 
         private void DownloadNirBtn_Click(object sender, EventArgs e)
@@ -805,25 +935,10 @@ namespace EnhancedPsExecGUI
             };
             proc2.Start();
             proc2.Close();
+            //injectedCmdProc.StandardInput.WriteLine($"paexec -i -s -d  powershell.exe /c {powershellCommand}");
+
         }
 
-        private void RunBeepSoundBtn_Click(object sender, EventArgs e)
-        {
-            var proc2 = new Process
-            {
-                StartInfo = new ProcessStartInfo
-                {
-                    FileName = "psexec.exe",
-                    Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -d -i -accepteula nircmd.exe beep {frequencySoundBox.Value} {durationSoundBox.Value}",
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
-
-                    CreateNoWindow = true
-                }
-            };
-            proc2.Start();
-            proc2.Close();
-        }
 
         private void OpenScannerBtn_Click(object sender, EventArgs e)
         {
@@ -834,8 +949,27 @@ namespace EnhancedPsExecGUI
         private void AlwaysOnTopToolStripMenuItem_change(object sender, EventArgs e)
         {
             this.TopMost = alwaysOnTopToolStripMenuItem.Checked;
-            alwaysOnTop.Checked = this.TopMost;
-            
+            alwaysOnTopRightclick.Checked = this.TopMost;
+
+            List<string> lines = new List<string>();
+            lines.Add("; Settings");
+            lines.Add(";   Feel free to edit this");
+            lines.Add(";   Do not get rid of any setting. set it to true/false");
+            lines.Add("");
+            lines.Add("ignore_ip_warn            = " + ignoreIpEmpty.ToString().ToLower());
+            lines.Add("ignore_not_connected_warn = " + ignoreNotConnected.ToString().ToLower());
+            lines.Add("always_on_top             = " + this.TopMost.ToString().ToLower());
+            lines.Add("hide_in_taskbar           = " + (!this.ShowInTaskbar).ToString().ToLower());
+
+            try
+            {
+                prefForm.alwaysOnTopBox.Checked = this.TopMost;
+            }
+            catch (Exception)
+            {
+                // DO NOT FUCKING REMOVE THIS OR EVERYTHING GOES TO SHIT
+            }
+            File.WriteAllLines(configPath, lines.ToArray());
         }
 
         private void NircmdAboutLabel_Click(object sender, EventArgs e)
@@ -846,37 +980,30 @@ namespace EnhancedPsExecGUI
         private void FirewallRun_Click(object sender, EventArgs e)
         {
             string network_command = "";
+            if (networkOffBox.Checked)
+                network_command = "netsh advfirewall set allprofiles state off";
+            
+            else if (networkOnBox.Checked)
+                network_command = "netsh advfirewall set allprofiles state on";
+            
+            else if (networkSmbBox.Checked)
+                network_command = "netsh advfirewall firewall set rule group=\"File and Printer Sharing(SMB-In)\" new profile=private & netsh advfirewall firewall set rule name=\"File and Printer Sharing(SMB-In)\" dir=in new enable=Yes";
+            
             var proc2 = new Process
             {
                 StartInfo = new ProcessStartInfo
                 {
                     FileName = "psexec.exe",
-                    Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -d -i -accepteula {network_command}",
+                    Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -accepteula {network_command}",
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
 
                     CreateNoWindow = true
                 }
             };
-
-            if (networkOffBox.Checked)
-            {
-                network_command = "netsh advfirewall set allprofiles state off";
-                proc2.Start();
-                proc2.Close();
-            }
-            else if (networkOnBox.Checked)
-            {
-                network_command = "netsh advfirewall set allprofiles state on";
-                proc2.Start();
-                proc2.Close();
-            }
-            else if (networkSmbBox.Checked)
-            {
-                network_command = "netsh advfirewall firewall set rule group=\"File and Printer Sharing(SMB-In)\" new profile=private & netsh advfirewall firewall set rule name=\"File and Printer Sharing(SMB-In)\" dir=in new enable=Yes";
-                proc2.Start();
-                proc2.Close();
-            }
+            
+            proc2.Start();
+            proc2.Close();
         }
 
         private void EpsexecForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -889,6 +1016,11 @@ namespace EnhancedPsExecGUI
                 else if (result == DialogResult.Cancel)
                     e.Cancel = true;
 
+            }
+            if (this.injectedCmdProc != null) {
+                this.injectedCmdProc.StandardInput.WriteLine("exit");
+                
+                this.injectedCmdProc.Close();
             }
         }
         private void on_Edit(object sender, EventArgs e)
@@ -1098,6 +1230,7 @@ namespace EnhancedPsExecGUI
         {
             RemoteConsole remoteConsoleForm = new RemoteConsole(this);
             remoteConsoleForm.Show();
+            
             /*
             Process proc = new Process();
 
@@ -1299,7 +1432,29 @@ namespace EnhancedPsExecGUI
 
         private void hideInTaskbarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             this.ShowInTaskbar = !hideInTaskbarToolStripMenuItem.Checked;
+
+            List<string> lines = new List<string>();
+            lines.Add("; Settings");
+            lines.Add(";   Feel free to edit this");
+            lines.Add(";   Do not get rid of any setting. set it to true/false");
+            lines.Add("");
+            lines.Add("ignore_ip_warn            = " + ignoreIpEmpty.ToString().ToLower());
+            lines.Add("ignore_not_connected_warn = " + ignoreNotConnected.ToString().ToLower());
+            lines.Add("always_on_top             = " + this.TopMost.ToString().ToLower());
+            lines.Add("hide_in_taskbar           = " + (!this.ShowInTaskbar).ToString().ToLower());
+            try
+            {
+                prefForm.hideInTaskbarBox.Checked = !this.ShowInTaskbar;
+            }
+            catch (Exception)
+            {
+                // THIS GETS REMOVED AND EVERYTHING COLLAPSES?
+            }
+            
+
+            File.WriteAllLines(configPath, lines.ToArray());
         }
 
         private void openKeyboardBtn_Click(object sender, EventArgs e)
@@ -1349,20 +1504,24 @@ namespace EnhancedPsExecGUI
                     if (i != "" && i != null)
                         newItems.Add(i);
                 string procname = newItems[0];
-
-                proc2 = new Process
+                if (injectedCmdProc == null)
                 {
-                    StartInfo = new ProcessStartInfo
+                    proc2 = new Process
                     {
-                        FileName = "psexec.exe",
-                        Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -i nircmd muteappvolume \"{procname}\" 1 ",
-                        UseShellExecute = false,
-                        RedirectStandardOutput = true,
+                        StartInfo = new ProcessStartInfo
+                        {
+                            FileName = "psexec.exe",
+                            Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -i nircmd muteappvolume \"{procname}\" 1 ",
+                            UseShellExecute = false,
+                            RedirectStandardOutput = true,
 
-                        CreateNoWindow = true
-                    }
-                };
-                proc2.Start();
+                            CreateNoWindow = true
+                        }
+                    };
+                    proc2.Start();
+                }
+                else
+                    injectedCmdProc.StandardInput.WriteLine($"paexec.exe -s -i -d nircmd muteappvolume \"{procname}\" 1");
             }
             proc2.Close();
         }
@@ -1381,19 +1540,24 @@ namespace EnhancedPsExecGUI
                         newItems.Add(i);
                 string procname = newItems[0];
 
-                proc2 = new Process
+                if (injectedCmdProc == null)
                 {
-                    StartInfo = new ProcessStartInfo
+                    proc2 = new Process
                     {
-                        FileName = "psexec.exe",
-                        Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -i nircmd muteappvolume \"{procname}\" 0",
-                        UseShellExecute = false,
-                        RedirectStandardOutput = true,
+                        StartInfo = new ProcessStartInfo
+                        {
+                            FileName = "psexec.exe",
+                            Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -i nircmd muteappvolume \"{procname}\" 0",
+                            UseShellExecute = false,
+                            RedirectStandardOutput = true,
 
-                        CreateNoWindow = true
-                    }
-                };
-                proc2.Start();
+                            CreateNoWindow = true
+                        }
+                    };
+                    proc2.Start();
+                }
+                else
+                    injectedCmdProc.StandardInput.WriteLine($"paexec.exe -d -s -i nircmd muteappvolume \"{procname}\" 0");
             }
             proc2.Close();
         }
@@ -1412,31 +1576,52 @@ namespace EnhancedPsExecGUI
                         newItems.Add(i);
                 string procname = newItems[0];
 
-                proc2 = new Process
+                if (injectedCmdProc == null)
                 {
-                    StartInfo = new ProcessStartInfo
+                    proc2 = new Process
                     {
-                        FileName = "psexec.exe",
-                        Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -i nircmd setappvolume \"{procname}\" {volumeProcessBox.Value}",
-                        UseShellExecute = false,
-                        RedirectStandardOutput = true,
+                        StartInfo = new ProcessStartInfo
+                        {
+                            FileName = "psexec.exe",
+                            Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -i nircmd setappvolume \"{procname}\" {volumeProcessBox.Value}",
+                            UseShellExecute = false,
+                            RedirectStandardOutput = true,
 
-                        CreateNoWindow = true
-                    }
-                };
-                proc2.Start();
+                            CreateNoWindow = true
+                        }
+                    };
+                    proc2.Start();
+                }
+                else
+                    injectedCmdProc.StandardInput.WriteLine($"paexec.exe -d -s -i nircmd setappvolume \"{procname}\" {volumeProcessBox.Value}");
             }
             proc2.Close();
         }
 
         private void main_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (main.SelectedTab == scriptTab)
-                this.MinimizeBox = false;
-            
-            else
-                this.MinimizeBox = true;
-            
+            this.MinimizeBox = (main.SelectedTab != scriptTab);
+            if(ipBox.Text.Trim() == "" && !ignoreIpEmpty && main.SelectedTab != homeTab)
+            {
+                DialogResult result = MessageBox.Show("IP box not filled (Disable this in Preferences).", "oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                main.SelectedTab = homeTab;
+            }
+            else if (ipBox.Text.Length > 0 && !ignoreNotConnected && main.SelectedTab == processControlTab && injectedCmdProc == null)
+            {
+                DialogResult result = MessageBox.Show("You did not connect to the PC.\r\n"+
+                    "This is not acceptable for the Process Tab.\r\n\r\n", "Oh No!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                main.SelectedTab = homeTab;
+            }
+            else if (ipBox.Text.Length > 0 && !ignoreNotConnected && main.SelectedTab != homeTab && injectedCmdProc == null)
+            {
+                DialogResult result = MessageBox.Show("You did not connect to the PC.\r\nThis will cause severe delays (unless firewall disabled).", "Not Connected Yet", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Warning);
+                if (result == DialogResult.Ignore)
+                    ignoreNotConnected = true;
+                else if (result == DialogResult.Abort)
+                    main.SelectedTab = homeTab;
+                else if (result == DialogResult.Retry)
+                    main_SelectedIndexChanged(sender, e);
+            }
         }
 
         private void epsexecForm_HelpButtonClicked(object sender, System.ComponentModel.CancelEventArgs e)
@@ -1455,5 +1640,306 @@ namespace EnhancedPsExecGUI
             epsexecForm mf = new epsexecForm();
             mf.Show();
         }
+
+        private void connectBtn_Click(object sender, EventArgs e)
+        {
+            injectedCmdProc = new Process();
+
+            injectedCmdProc.StartInfo.RedirectStandardError = true;
+            injectedCmdProc.StartInfo.RedirectStandardOutput = true;
+            injectedCmdProc.StartInfo.RedirectStandardInput = true;
+
+            injectedCmdProc.StartInfo.UseShellExecute = false;
+            injectedCmdProc.StartInfo.CreateNoWindow = true;
+            injectedCmdProc.StartInfo.FileName = "paexec.exe";
+            injectedCmdProc.StartInfo.Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -accepteula -high -s cmd.exe";
+
+            injectedCmdProc.OutputDataReceived += new DataReceivedEventHandler((s, ee) =>
+            {
+                //AppendTextBox(e.Data + "  \n");
+                connectedOutputStr += ee.Data + "\n";
+            });
+            //injectedCmdProc.ErrorDataReceived += new DataReceivedEventHandler((s, e) =>
+            //{
+                //AppendTextBox(e.Data + "");
+            //});
+
+            injectedCmdProc.Start();
+            injectedCmdProc.BeginOutputReadLine();
+            injectedCmdProc.BeginErrorReadLine();
+            //injectedCmdProc.StandardInput.WriteLine
+        }
+        private void epsexecForm_ResizeBegin(object sender, EventArgs e)
+        {
+            incByX = this.Width;
+            incByY = this.Height;
+        }
+
+        private void epsexecForm_ResizeEnd(object sender, EventArgs e)
+        {
+            int diffX = this.Width - incByX;
+            int diffY = this.Height - incByY;
+            if (this.Width - diffX < 1240 || this.Height - diffY < 770) {
+                diffX = 0;
+                diffY = 0;
+                return;
+            }
+            string getType(object comp)
+            {
+                try
+                {
+                    System.Drawing.Point p = ((Button)comp).Location;
+                    return "Button";
+                }
+                catch (Exception)
+                {
+                    try
+                    {
+                        System.Drawing.Point p = ((Label)comp).Location;
+                        return "Label";
+                    }
+                    catch (Exception)
+                    {
+                        try
+                        {
+                            System.Drawing.Point p = ((NumericUpDown)comp).Location;
+                            return "NumericUpDown";
+                        }
+                        catch (Exception)
+                        {
+                            try
+                            {
+                                System.Drawing.Point p = ((CheckBox)comp).Location;
+                                return "CheckBox";
+                            }
+                            catch (Exception)
+                            {
+                                try
+                                {
+                                    System.Drawing.Point p = ((TextBox)comp).Location;
+                                    return "TextBox";
+                                }
+                                catch (Exception)
+                                {
+                                    try
+                                    {
+                                        System.Drawing.Point p = ((ListBox)comp).Location;
+                                        return "ListBox";
+                                    }
+                                    catch (Exception)
+                                    {
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                return "";
+            }
+            
+            main.Width += diffX;
+            main.Height += diffY;
+
+            List<object> componentsResizeBoth = new List<object>();
+            List<object> componentsResizeXonly = new List<object>();
+            List<object> componentsResizeYonly = new List<object>();
+
+            List<object> componentsMoveBoth = new List<object>();
+            List<object> componentsMoveXonly = new List<object>();
+            List<object> componentsMoveYonly = new List<object>();
+            // URL control
+            componentsMoveBoth.Add(runBtn);
+
+            componentsMoveBoth.Add(label5);
+            componentsMoveBoth.Add(label6);
+            componentsMoveBoth.Add(delayBeforeBox);
+            componentsMoveBoth.Add(delayBetweenBox);
+            componentsMoveXonly.Add(label20);
+            componentsMoveXonly.Add(terminateChromeBtn);
+            componentsMoveXonly.Add(delayTerminate);
+
+            componentsMoveYonly.Add(label1);
+            componentsMoveYonly.Add(label2);
+            componentsMoveYonly.Add(label3);
+            componentsMoveYonly.Add(label4);
+            componentsMoveYonly.Add(invisibleLabel);
+            componentsMoveYonly.Add(invisibleBox);
+            componentsMoveYonly.Add(newWindowBox);
+            componentsMoveYonly.Add(incognitoBox);
+
+            componentsResizeXonly.Add(urlBox);
+
+            //------ process control-----------
+            componentsResizeBoth.Add(processesBox);
+
+            componentsMoveYonly.Add(clearBtn);
+            componentsMoveYonly.Add(killBtn);
+            componentsMoveYonly.Add(muteProcessBtn);
+            componentsMoveYonly.Add(unmuteProcessBtn);
+            componentsMoveYonly.Add(volumeProcessBox);
+            componentsMoveYonly.Add(processVolumeBtn);
+
+            componentsMoveXonly.Add(getReloadBtn);
+            componentsMoveXonly.Add(autoClearBox);
+            componentsMoveXonly.Add(caseInsensitiveBox);
+            componentsMoveXonly.Add(excludeBox);
+            componentsMoveXonly.Add(label8);
+            componentsMoveXonly.Add(filterTextBox);
+            //-------------
+
+
+            List<object> all = new List<object>();
+            all.AddRange(componentsMoveBoth);
+            all.AddRange(componentsMoveXonly);
+            all.AddRange(componentsMoveYonly);
+
+            all.AddRange(componentsResizeBoth);
+            all.AddRange(componentsResizeXonly);
+            all.AddRange(componentsResizeYonly);
+
+            componentsResizeXonly.AddRange(componentsResizeBoth);
+            componentsResizeYonly.AddRange(componentsResizeBoth);
+            
+            componentsMoveXonly.AddRange(componentsMoveBoth);
+            componentsMoveYonly.AddRange(componentsMoveBoth);
+
+            
+            foreach (object objComp in all)
+            {
+                switch (getType(objComp))
+                {
+                    case "Button":
+                        Button compB = (Button)objComp;
+                        if (componentsResizeXonly.Contains((object)compB))
+                            compB.Width += diffX;
+                        if (componentsResizeYonly.Contains((object)compB))
+                            compB.Height += diffY;
+
+                        // location
+                        if (componentsMoveXonly.Contains((object)compB))
+                            compB.Location = new System.Drawing.Point(compB.Location.X + diffX, compB.Location.Y);
+                        if (componentsMoveYonly.Contains((object)compB))
+                            compB.Location = new System.Drawing.Point(compB.Location.X, compB.Location.Y + diffY);
+
+                        break;
+                    case "Label":
+                        Label compL = (Label)objComp;
+                        if (componentsResizeXonly.Contains((object)compL))
+                            compL.Width += diffX;
+                        if (componentsResizeYonly.Contains((object)compL))
+                            compL.Height += diffY;
+
+                        // location
+                        if (componentsMoveXonly.Contains((object)compL))
+                            compL.Location = new System.Drawing.Point(compL.Location.X + diffX, compL.Location.Y);
+                        if (componentsMoveYonly.Contains((object)compL))
+                            compL.Location = new System.Drawing.Point(compL.Location.X, compL.Location.Y + diffY);
+                        break;
+                    case "NumericUpDown":
+                        NumericUpDown compN = (NumericUpDown)objComp;
+                        if (componentsResizeXonly.Contains((object)compN))
+                            compN.Width += diffX;
+                        if (componentsResizeYonly.Contains((object)compN))
+                            compN.Height += diffY;
+
+                        // location
+                        if (componentsMoveXonly.Contains((object)compN))
+                            compN.Location = new System.Drawing.Point(compN.Location.X + diffX, compN.Location.Y);
+                        if (componentsMoveYonly.Contains((object)compN))
+                            compN.Location = new System.Drawing.Point(compN.Location.X, compN.Location.Y + diffY);
+                        break;
+                    case "CheckBox":
+                        CheckBox compC = (CheckBox)objComp;
+                        if (componentsResizeXonly.Contains((object)compC))
+                            compC.Width += diffX;
+                        if (componentsResizeYonly.Contains((object)compC))
+                            compC.Height += diffY;
+
+                        // location
+                        if (componentsMoveXonly.Contains((object)compC))
+                            compC.Location = new System.Drawing.Point(compC.Location.X + diffX, compC.Location.Y);
+                        if (componentsMoveYonly.Contains((object)compC))
+                            compC.Location = new System.Drawing.Point(compC.Location.X, compC.Location.Y + diffY);
+                        break;
+                    case "TextBox":
+                        TextBox compT = (TextBox)objComp;
+                        if (componentsResizeXonly.Contains((object)compT))
+                            compT.Width += diffX;
+                        if (componentsResizeYonly.Contains((object)compT))
+                            compT.Height += diffY;
+
+                        // location
+                        if (componentsMoveXonly.Contains((object)compT))
+                            compT.Location = new System.Drawing.Point(compT.Location.X + diffX, compT.Location.Y);
+                        if (componentsMoveYonly.Contains((object)compT))
+                            compT.Location = new System.Drawing.Point(compT.Location.X, compT.Location.Y + diffY);
+                        break;
+                    case "ListBox":
+                        ListBox compLstbox = (ListBox)objComp;
+                        if (componentsResizeXonly.Contains((object)compLstbox))
+                            compLstbox.Width += diffX;
+                        if (componentsResizeYonly.Contains((object)compLstbox)) { 
+                            compLstbox.Height += diffY;
+                            compLstbox.Refresh();
+                            
+                        }
+
+                        // location
+                        if (componentsMoveXonly.Contains((object)compLstbox))
+                            compLstbox.Location = new System.Drawing.Point(compLstbox.Location.X + diffX, compLstbox.Location.Y);
+                        if (componentsMoveYonly.Contains((object)compLstbox))
+                            compLstbox.Location = new System.Drawing.Point(compLstbox.Location.X, compLstbox.Location.Y + diffY);
+                        break;
+                        
+                    default:
+                        
+                        break;
+                }
+            }
+
+           
+        }
+
+        private void paexecAboutLabel_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("PaExec is the redistributable version of PsExec (pretty much the same).\r\nAnd required for a faster hacking experience.", "PaExec?", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void downloadPaexecBtn_Click(object sender, EventArgs e)
+        {
+            string powershellCommand = "wget \"\"\"https://www.poweradmin.com/paexec/paexec.exe\"\"\" -OutFile $env:SystemRoot\\system32\\paexec.exe";
+
+            var proc2 = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = "psexec.exe",
+                    Arguments = $"\\\\{ipBox.Text} -u {usrBox.Text} -p {passwordBox.Text} -s -d -accepteula powershell.exe /c {powershellCommand}",
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true,
+
+                    CreateNoWindow = true
+                }
+            };
+            proc2.Start();
+            proc2.Close();
+        }
+
+        private void preferencesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /// DO NOT FUCKING CHANGE ANYTHING HERE 
+            /// IDK WHY IT FUCKS EVERYTHING UP
+            
+            try
+            {
+                prefForm.Show();
+            }
+            catch (Exception){
+                prefForm = new PrefForm(this);
+                prefForm.Show();
+            }
+        }
+
     }
 }

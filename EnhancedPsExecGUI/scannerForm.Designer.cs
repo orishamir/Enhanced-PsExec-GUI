@@ -59,6 +59,7 @@
             this.networkPCsBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.networkPCsBox.Size = new System.Drawing.Size(928, 579);
             this.networkPCsBox.TabIndex = 1;
+            this.networkPCsBox.SelectedIndexChanged += new System.EventHandler(this.networkPCsBox_SelectedIndexChanged);
             // 
             // getPCSBox
             // 
@@ -81,7 +82,7 @@
             this.importBtn.Name = "importBtn";
             this.importBtn.Size = new System.Drawing.Size(149, 47);
             this.importBtn.TabIndex = 3;
-            this.importBtn.Text = "Import Now";
+            this.importBtn.Text = "Import";
             this.importBtn.UseVisualStyleBackColor = true;
             this.importBtn.Click += new System.EventHandler(this.ImportBtn_Click);
             // 

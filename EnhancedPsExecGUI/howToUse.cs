@@ -38,5 +38,10 @@ namespace EnhancedPsExec
         {
             System.Diagnostics.Process.Start("https://www.nirsoft.net/utils/nircmd.html");
         }
+
+        private void PaExecLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.poweradmin.com/paexec/");
+        }
     }
 }
