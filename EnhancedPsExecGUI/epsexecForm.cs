@@ -80,6 +80,7 @@ namespace EnhancedPsExecGUI
         public int incByX = 0;
         public int incByY = 0;
 
+        public bool noPaExec = false; //dont_use_paexec_on_remote_pc
 
         public bool ignoreNotConnected = false;
         public bool ignoreIpEmpty = false;
@@ -209,10 +210,11 @@ namespace EnhancedPsExecGUI
                     "; Feel free to edit this",
                     "; Do not get rid of any setting.set it to true / false",
                     "",
-                    "ignore_ip_warn = true",
-                    "ignore_not_connected_warn = false",
-                    "always_on_top = false",
-                    "hide_in_taskbar = false"
+                    "ignore_ip_warn                 = true",
+                    "ignore_not_connected_warn      = false",
+                    "always_on_top                  = false",
+                    "hide_in_taskbar                = false",
+                    "dont_use_paexec_on_remote_pc   = false"
                     });
             }
 
@@ -234,6 +236,7 @@ namespace EnhancedPsExecGUI
             this.hideInTaskbarToolStripMenuItem.Checked = Boolean.Parse(data.GetKey("hide_in_taskbar"));
             this.ShowInTaskbar = !hideInTaskbarToolStripMenuItem.Checked;
             
+            this.noPaExec = Boolean.Parse(data.GetKey("dont_use_paexec_on_remote_pc"));
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -623,7 +626,7 @@ namespace EnhancedPsExecGUI
         private void RunBeepSoundBtn_Click(object sender, EventArgs e)
         {
             // if not connected
-            if (injectedCmdProc == null) {
+            if (injectedCmdProc == null || noPaExec) {
 
                 var proc2 = new Process
                 {
@@ -782,7 +785,7 @@ namespace EnhancedPsExecGUI
             else if (middleMouseBtn.Checked)
                 leftRightMiddle = "middle";
 
-            if (injectedCmdProc == null)
+            if (injectedCmdProc == null || noPaExec)
             {
                 var proc2 = new Process
                 {
@@ -808,7 +811,7 @@ namespace EnhancedPsExecGUI
             string moveY = moveMouseYBox.Text;
 
             // if not connected
-            if (injectedCmdProc == null)
+            if (injectedCmdProc == null || noPaExec)
             {
                 var proc2 = new Process
                 {
@@ -894,7 +897,7 @@ namespace EnhancedPsExecGUI
             sendMe = sendMe.Replace("\r", "");
             //Console.WriteLine(sendMe);
 
-            if (injectedCmdProc == null)
+            if (injectedCmdProc == null || noPaExec)
             {
                 var proc2 = new Process
                 {
@@ -956,10 +959,11 @@ namespace EnhancedPsExecGUI
             lines.Add(";   Feel free to edit this");
             lines.Add(";   Do not get rid of any setting. set it to true/false");
             lines.Add("");
-            lines.Add("ignore_ip_warn            = " + ignoreIpEmpty.ToString().ToLower());
-            lines.Add("ignore_not_connected_warn = " + ignoreNotConnected.ToString().ToLower());
-            lines.Add("always_on_top             = " + this.TopMost.ToString().ToLower());
-            lines.Add("hide_in_taskbar           = " + (!this.ShowInTaskbar).ToString().ToLower());
+            lines.Add("ignore_ip_warn                 = " + ignoreIpEmpty.ToString().ToLower());
+            lines.Add("ignore_not_connected_warn      = " + ignoreNotConnected.ToString().ToLower());
+            lines.Add("always_on_top                  = " + this.TopMost.ToString().ToLower());
+            lines.Add("hide_in_taskbar                = " + (!this.ShowInTaskbar).ToString().ToLower());
+            lines.Add("dont_use_paexec_on_remote_pc   = " + (noPaExec.ToString().ToLower()));
 
             try
             {
@@ -1440,10 +1444,13 @@ namespace EnhancedPsExecGUI
             lines.Add(";   Feel free to edit this");
             lines.Add(";   Do not get rid of any setting. set it to true/false");
             lines.Add("");
-            lines.Add("ignore_ip_warn            = " + ignoreIpEmpty.ToString().ToLower());
-            lines.Add("ignore_not_connected_warn = " + ignoreNotConnected.ToString().ToLower());
-            lines.Add("always_on_top             = " + this.TopMost.ToString().ToLower());
-            lines.Add("hide_in_taskbar           = " + (!this.ShowInTaskbar).ToString().ToLower());
+            lines.Add("ignore_ip_warn                 = " + ignoreIpEmpty.ToString().ToLower());
+            lines.Add("ignore_not_connected_warn      = " + ignoreNotConnected.ToString().ToLower());
+            lines.Add("always_on_top                  = " + this.TopMost.ToString().ToLower());
+            lines.Add("hide_in_taskbar                = " + (!this.ShowInTaskbar).ToString().ToLower());
+            lines.Add("dont_use_paexec_on_remote_pc   = " + (noPaExec.ToString().ToLower()));
+            
+            File.WriteAllLines(configPath, lines.ToArray());
             try
             {
                 prefForm.hideInTaskbarBox.Checked = !this.ShowInTaskbar;
@@ -1452,8 +1459,6 @@ namespace EnhancedPsExecGUI
             {
                 // THIS GETS REMOVED AND EVERYTHING COLLAPSES?
             }
-            
-
             File.WriteAllLines(configPath, lines.ToArray());
         }
 
@@ -1504,7 +1509,7 @@ namespace EnhancedPsExecGUI
                     if (i != "" && i != null)
                         newItems.Add(i);
                 string procname = newItems[0];
-                if (injectedCmdProc == null)
+                if (injectedCmdProc == null || noPaExec)
                 {
                     proc2 = new Process
                     {
@@ -1540,7 +1545,7 @@ namespace EnhancedPsExecGUI
                         newItems.Add(i);
                 string procname = newItems[0];
 
-                if (injectedCmdProc == null)
+                if (injectedCmdProc == null || noPaExec)
                 {
                     proc2 = new Process
                     {
@@ -1576,7 +1581,7 @@ namespace EnhancedPsExecGUI
                         newItems.Add(i);
                 string procname = newItems[0];
 
-                if (injectedCmdProc == null)
+                if (injectedCmdProc == null || noPaExec)
                 {
                     proc2 = new Process
                     {
@@ -1903,7 +1908,7 @@ namespace EnhancedPsExecGUI
 
         private void paexecAboutLabel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("PaExec is the redistributable version of PsExec (pretty much the same).\r\nAnd required for a faster hacking experience.", "PaExec?", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("PaExec is the redistributable version of PsExec (pretty much the same).\r\nAnd required for some of Enhanced-PsExec's functionallity,\r\n and provides a faster hacking experience.\r\n\r\nIt is recommended for it to be installed on the TARGET PC. making it detectable.", "PaExec?", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void downloadPaexecBtn_Click(object sender, EventArgs e)

@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ignoreEmptyIpBox = new System.Windows.Forms.CheckBox();
             this.ignoreNotConnectedBox = new System.Windows.Forms.CheckBox();
             this.alwaysOnTopBox = new System.Windows.Forms.CheckBox();
             this.hideInTaskbarBox = new System.Windows.Forms.CheckBox();
+            this.noPaexecBox = new System.Windows.Forms.CheckBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // ignoreEmptyIpBox
@@ -82,11 +85,35 @@
             this.hideInTaskbarBox.UseVisualStyleBackColor = true;
             this.hideInTaskbarBox.Click += new System.EventHandler(this.updateConfig);
             // 
+            // noPaexecBox
+            // 
+            this.noPaexecBox.AutoSize = true;
+            this.noPaexecBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.noPaexecBox.ForeColor = System.Drawing.Color.Red;
+            this.noPaexecBox.Location = new System.Drawing.Point(35, 320);
+            this.noPaexecBox.Name = "noPaexecBox";
+            this.noPaexecBox.Size = new System.Drawing.Size(795, 29);
+            this.noPaexecBox.TabIndex = 4;
+            this.noPaexecBox.Text = "Don\'t Use PaExec On the Remote PC (NOT RECOMMENDED, slower but more hidden)";
+            this.toolTip1.SetToolTip(this.noPaexecBox, "Some of the features require PaExec.exe to be installed on the REMOTE PC, which c" +
+        "an be detected by a sysadmin");
+            this.noPaexecBox.UseVisualStyleBackColor = true;
+            this.noPaexecBox.Click += new System.EventHandler(this.updateConfig);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutomaticDelay = 1;
+            this.toolTip1.AutoPopDelay = 10000;
+            this.toolTip1.InitialDelay = 1;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ReshowDelay = 0;
+            // 
             // PrefForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 561);
+            this.ClientSize = new System.Drawing.Size(843, 605);
+            this.Controls.Add(this.noPaexecBox);
             this.Controls.Add(this.hideInTaskbarBox);
             this.Controls.Add(this.alwaysOnTopBox);
             this.Controls.Add(this.ignoreNotConnectedBox);
@@ -106,5 +133,7 @@
         public System.Windows.Forms.CheckBox ignoreNotConnectedBox;
         public System.Windows.Forms.CheckBox alwaysOnTopBox;
         public System.Windows.Forms.CheckBox hideInTaskbarBox;
+        public System.Windows.Forms.CheckBox noPaexecBox;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
