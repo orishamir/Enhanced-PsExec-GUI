@@ -1,3 +1,11 @@
+"""
+I don't use this anymore since I just rewrote everything in C#
+instead of in Py and convert to exe and some not nice stuff...
+but i'll leave it here.
+
+
+"""
+
 import os
 import shutil
 """Convert all .py files to .exe files"""
